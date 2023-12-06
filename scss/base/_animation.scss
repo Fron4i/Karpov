@@ -1,0 +1,23 @@
+.image-banner {
+	width: 30%;
+	top: 23%;
+	left: -5%;
+	transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(-10deg) skew(0deg, 0deg);
+	animation: pulse 8s ease-in-out infinite;
+	will-change: transform;
+}
+
+@keyframes pulse {
+	from {
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(-10deg)
+			skew(0deg, 0deg);
+	}
+	50% {
+		transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(10deg) rotateZ(10deg)
+			skew(0deg, 0deg);
+	}
+	to {
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(-10deg)
+			skew(0deg, 0deg);
+	}
+}
