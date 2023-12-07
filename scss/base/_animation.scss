@@ -14,7 +14,7 @@
 		bottom: auto;
 		right: auto;
 		position: absolute;
-		animation: pulse_1 8s ease-in infinite;
+		animation: pulse_1 7s linear infinite;
 		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(10deg) skew(0deg, 0deg);
 	}
 
@@ -24,7 +24,7 @@
 		bottom: auto;
 		right: 0%;
 		position: absolute;
-		animation: pulse_2 7s ease-out infinite;
+		animation: pulse_2 9s linear infinite;
 		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(-10deg)
 			skew(0deg, 0deg);
 	}
