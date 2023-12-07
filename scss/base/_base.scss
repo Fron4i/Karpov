@@ -37,6 +37,33 @@ h3 {
 	line-height: 1em;
 }
 
+h4 {
+	color: $midnight-blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 1em;
+}
+
+h5 {
+	color: $midnight-blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.2em;
+}
+
+h6 {
+	color: $midnight-blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2em;
+}
+
 a {
 	font-weight: 500;
 	color: $midnight-blue;
@@ -57,64 +84,13 @@ a {
 	display: none !important;
 }
 
-.brand {
+.brand__img {
 	width: 120px;
 	height: 48px;
 }
 
-.nav-menu-wrapper {
-	justify-content: space-between;
-	align-items: center;
-	display: flex;
-	padding-top: 25px;
-}
-
-.nav-menu {
-	text-align: right;
-	justify-content: space-between;
-	align-items: center;
-	display: flex;
-	width: 55%;
-}
-
-.nav-item-title {
-	padding: 15px 25px;
-}
-
-.button-header {
-	border: 2px solid $primary;
-	background-color: $primary;
-	color: $white;
-	text-align: center;
-	text-transform: capitalize;
-	border-radius: 55px;
-	flex: none;
-	justify-content: center;
-	padding: 14px 28px;
-	font-size: 16px;
-	font-weight: 500;
-	transition: all 0.3s;
-	display: flex;
-
-	&:hover {
-		background-color: $white;
-		border-color: $primary;
-		color: $midnight-blue;
-		outline: 0;
-	}
-}
-
-.button-header:hover .link-button {
-	color: $midnight-blue;
-}
-
-.link-button {
-	color: $white;
-
-	&:hover {
-		color: $midnight-blue;
-		outline: 0;
-	}
+.main {
+	padding-top: 104px;
 }
 // Media
 

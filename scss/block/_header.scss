@@ -1,25 +1,24 @@
-#animationWindow {
-	width: 300px;
-	height: 300px;
-	border: 2px solid red;
+.header_fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
 }
-.block {
-	width: 100px;
-	height: 100px;
-	background-color: pink;
+.header__nav-wrapper {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	height: 104px;
 }
-#animationWindow2 {
-	width: 750px;
-	height: 750px;
-	border: 2px solid blue;
+
+.nav-desktop {
+	text-align: right;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	width: 560px;
 }
-.footer {
-	height: 1000px;
+
+.nav-desktop__item {
+	padding: 0px;
 }
-.main {
-	background-color: cornsilk;
-}
-.pin-spacer {
-	background-color: yellowgreen;
-}
-//opacity:0,

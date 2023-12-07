@@ -13,61 +13,103 @@
 			</div>
 			<h1>ScrollTrigger Tutorial for Beginners</h1>
 		</header>-->
-		<header class="header">
+		<header class="header_fixed">
 			<div class="container">
-				<div class="nav-menu-wrapper">
-					<a href="/">
-						<img class="brand" src="./img/main_Img/logo.svg" />
+				<div class="header__nav-wrapper">
+					<a class="brand" href="/">
+						<img class="brand__img" src="./img/main_Img/logo.svg" />
 					</a>
-					<div class="nav-menu">
-						<div class="nav-item-title">
+					<div class="nav-desktop">
+						<div class="nav-desktop__item">
 							<a href="">О нас</a>
 						</div>
-						<div class="nav-item-title">
+						<div class="nav-desktop__item">
 							<a href="">Услуги</a>
 						</div>
-						<div class="nav-item-title">
+						<div class="nav-desktop__item">
 							<a href="">Кейсы</a>
 						</div>
-						<div class="nav-item-title">
+						<div class="nav-desktop__item">
 							<a href="">Контакты</a>
 						</div>
 					</div>
-					<a class="link-button" href="#">
-						<div class="button-header">Заказы</div>
+					<a class="button__link" href="#">
+						<div class="button button--blue">Заказать</div>
 					</a>
 				</div>
 			</div>
 		</header>
 		<main class="main">
-			<div id="animationWindow"></div>
+			<section class="welcome">
+				<div class="image-banner image-banner--left">
+					<img class="image-banner__img" src="./img/home/welcome/left.webp" />
+				</div>
+				<div class="image-banner image-banner--right">
+					<img class="image-banner__img" src="./img/home/welcome/right.webp" />
+				</div>
+				<div class="container">
+					<div class="welcome__wrapper">
+						<div class="welcome__title">
+							<div class="welcome__line-absolute"></div>
+							<h1 class="welcom__main-title">Системный анализ, индивидуальный подход к каждому бизнесу.</h1>
+							<p class="welcom__main-subtitle">У нас есть яйца, чтобы привести ваш бизнес в порядок!</p>
+							<div class="welcom__button-wrapper">
+								<a class="button__link" href="#">
+									<div class="button button--blue">О нас</div>
+								</a>
+								<a class="button__link" href="#">
+									<div class="button button--blue-active">Заказать</div>
+								</a>
+							</div>
+						</div>
+						<div class="welcome__info">
+							<div class="blue-block">
+								<div class="blue-block__full-block">
+									<div class="blue-block__top-title-wrapper">
+										<div class="blue-block__top-text">Новых клиентов</div>
+										<div class="blue-block__top-figure">800</div>
+									</div>
+									<div class="blue-block__bottom-text">Доверяют нам</div>
+								</div>
+								<div class="blue-block__full-block blue-block__end">
+									<a class="button__link" href="#">
+										<div class="button button--white">Услуги</div>
+									</a>
+								</div>
+							</div>
+							<div class="image-block"></div>
+							<div class="light-block">
+								<div class="light-block__top-text-wrapper">
+									<h4>CRM</h4>
+									<div class="light-block__subtitle">
+										Хотите увеличить продажи?<br />
+										Не теряйте клиентов!
+									</div>
+								</div>
+								<a class="button__link" href="#">
+									<div class="button button--blue-active">Подробнее</div>
+								</a>
+								<div class="light-block__cross-image-wrapper">
+									<img class="light-block__plus light-block__plus--full" src="./img/home/welcome/plus-full.svg" />
+									<img class="light-block__plus light-block__plus--empty" src="./img/home/welcome/plus-empty.svg" />
+								</div>
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta quae quasi possimus consequatur nihil voluptatum eveniet quaerat
+							sunt rerum sed blanditiis quas, error neque eaque aliquid! Recusandae, incidunt est?
+						</p>
+					</div>
+				</div>
+			</section>
 		</main>
+		<!--<main class="main">
+			<div id="animationWindow"></div>
+		</main>-->
 		<!--<main class="main2">
 			<div id="animationWindow2"></div>
 		</main>-->
-		<footer class="footer">
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quasi sapiente vel ipsa iusto facilis, modi rem dolores praesentium, est doloremque
-				autem ea impedit eius deserunt fugiat quam expedita quia!
-			</p>
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quasi sapiente vel ipsa iusto facilis, modi rem dolores praesentium, est doloremque
-				autem ea impedit eius deserunt fugiat quam expedita quia!
-			</p>
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quasi sapiente vel ipsa iusto facilis, modi rem dolores praesentium, est doloremque
-				autem ea impedit eius deserunt fugiat quam expedita quia!
-			</p>
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quasi sapiente vel ipsa iusto facilis, modi rem dolores praesentium, est doloremque
-				autem ea impedit eius deserunt fugiat quam expedita quia!
-			</p>
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quasi sapiente vel ipsa iusto facilis, modi rem dolores praesentium, est doloremque
-				autem ea impedit eius deserunt fugiat quam expedita quia!
-			</p>
-			fdskljjjjjjjjj
-		</footer>
+		<footer class="footer"></footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
