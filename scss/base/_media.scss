@@ -1,0 +1,30 @@
+@media screen and (min-width: 1280px) {
+	.image-block {
+		max-width: 528px;
+		margin-left: -13%;
+	}
+	//! saasd
+	.light-block__subtitle {
+		min-width: 275px;
+	}
+
+	.welcome__line-absolute {
+		top: 11%;
+		bottom: auto;
+		left: 37%;
+		right: auto;
+	}
+
+	.welcome__info {
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 479px) {
+}

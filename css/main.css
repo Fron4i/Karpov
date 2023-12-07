@@ -242,7 +242,7 @@ a:hover {
   vertical-align: middle;
 }
 .image-banner--left {
-  top: 15%;
+  top: 7.5%;
   left: -3%;
   bottom: auto;
   right: auto;
@@ -251,7 +251,7 @@ a:hover {
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(10deg) skew(0deg, 0deg);
 }
 .image-banner--right {
-  top: 10%;
+  top: 5%;
   left: auto;
   bottom: auto;
   right: 0%;
@@ -524,6 +524,18 @@ a:hover {
     max-width: 528px;
     margin-left: -13%;
   }
+  .light-block__subtitle {
+    min-width: 275px;
+  }
+  .welcome__line-absolute {
+    top: 11%;
+    bottom: auto;
+    left: 37%;
+    right: auto;
+  }
+  .welcome__info {
+    justify-content: space-between;
+  }
 }
 .header_fixed {
   position: fixed;
@@ -612,17 +624,65 @@ a:hover {
   display: flex;
 }
 
-@media screen and (min-width: 1280px) {
-  .light-block__subtitle {
-    min-width: 275px;
+.home-hero-logos {
+  margin: 80px auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+  white-space: nowrap;
+  animation: fadeIn 0.4s ease backwards;
+  animation-delay: 0.4s;
+}
+
+.home-hero-carousel-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.home-hero-carousel-row {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  animation: marquee-horizontal 30s linear infinite;
+}
+
+.home-hero-logo {
+  display: flex;
+  margin-right: 32px;
+  margin-left: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-hero-logos-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0) 20%, hsla(0, 0%, 100%, 0) 80%, #fff);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  .welcome__line-absolute {
-    top: 11%;
-    bottom: auto;
-    left: 37%;
-    right: auto;
+  to {
+    opacity: auto;
+    transform: translateY(0px);
   }
-  .welcome__info {
-    justify-content: space-between;
+}
+@keyframes marquee-horizontal {
+  from {
+    transform: translateX(0) translateZ(0);
+  }
+  to {
+    transform: translateX(-100%) translateZ(0);
   }
 }/*# sourceMappingURL=main.css.map */
