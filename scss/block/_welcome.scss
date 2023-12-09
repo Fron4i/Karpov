@@ -24,14 +24,15 @@
 
 .welcom__main-title {
 	max-width: 800px;
-	letter-spacing: -3px;
 	position: relative;
 }
 
 .welcome__line-absolute {
-	width: 307px;
-	height: 89px;
-	opacity: 0.2;
+	top: 1.5%;
+
+	width: 233px;
+	height: 65px;
+	opacity: 0.11;
 	background-image: url("./../img/home/welcome/line.webp");
 	background-position: 0 0;
 	background-repeat: no-repeat;

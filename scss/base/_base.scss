@@ -13,19 +13,18 @@ h1 {
 	color: $midnight-blue;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-size: 60px;
-	font-weight: 600;
-	line-height: 1.2em;
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 1.04em;
 }
 
 h2 {
 	color: $midnight-blue;
-	letter-spacing: -2.3px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-size: 46px;
-	font-weight: 600;
-	line-height: 1em;
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 1.04em;
 }
 
 h3 {
@@ -33,8 +32,8 @@ h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 36px;
-	font-weight: 600;
-	line-height: 1em;
+	font-weight: 400;
+	line-height: 1.04em;
 }
 
 h4 {
@@ -42,30 +41,29 @@ h4 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 26px;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1em;
 }
 
-h5 {
-	color: $midnight-blue;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 1.2em;
-}
+//h5 {
+//	color: $midnight-blue;
+//	margin-top: 10px;
+//	margin-bottom: 10px;
+//	font-size: 24px;
+//	font-weight: 500;
+//	line-height: 1.2em;
+//}
 
-h6 {
-	color: $midnight-blue;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 1.2em;
-}
+//h6 {
+//	color: $midnight-blue;
+//	margin-top: 10px;
+//	margin-bottom: 10px;
+//	font-size: 20px;
+//	font-weight: 500;
+//	line-height: 1.2em;
+//}
 
 a {
-	font-weight: 500;
 	color: $midnight-blue;
 	transition: color 0.2s ease-in;
 
@@ -84,49 +82,6 @@ a {
 	display: none !important;
 }
 
-.brand__img {
-	width: 120px;
-	height: 48px;
-}
-
 .main {
 	padding-top: 104px;
-}
-
-// Fonts
-
-@font-face {
-	font-family: "Pretendard";
-	src: url("./../font/1.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Pretendard";
-	src: url("./../font/2.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Pretendard";
-	src: url("./../font/3.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Pretendard";
-	src: url("./../font/4.woff") format("woff");
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Pretendard";
-	src: url("./../font/5.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
 }
