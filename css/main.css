@@ -177,14 +177,12 @@ a:hover {
   will-change: transform;
 }
 .image-banner__img {
-  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
 .image-banner--left {
-  top: 12%;
+  top: 28%;
   left: 0%;
-  width: 25%;
   bottom: auto;
   right: auto;
   position: absolute;
@@ -192,7 +190,6 @@ a:hover {
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-20deg) rotateZ(10deg) skew(0deg, 0deg);
 }
 .image-banner--right {
-  width: 25%;
   top: 19%;
   left: auto;
   bottom: auto;
@@ -572,18 +569,22 @@ a:hover {
 }
 
 .home-hero-logos {
-  margin: 83px auto;
+  margin: 83px 0;
   display: flex;
   width: 100%;
   align-items: center;
   font-weight: 500;
   white-space: nowrap;
+  justify-content: center;
   animation: fadeIn 0.4s ease backwards;
   animation-delay: 0.4s;
 }
 
 .home-hero-carousel-wrap {
   position: relative;
+  right: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   overflow: hidden;
   padding-top: 4px;
@@ -593,6 +594,7 @@ a:hover {
 .home-hero-carousel-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
   animation: marquee-horizontal 30s linear infinite;
 }
@@ -626,34 +628,42 @@ a:hover {
   }
 }
 @keyframes marquee-horizontal {
-  from {
-    transform: translateX(0) translateZ(0);
+  0% {
+    transform: translateX(0%) translateZ(0);
   }
-  to {
+  100% {
     transform: translateX(-100%) translateZ(0);
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (width >= 1920px) {
   .image-banner--left {
     left: 9%;
-    top: 0% !important;
+    top: 2%;
   }
   .image-banner--right {
     right: 10%;
-    top: 10% !important;
+    top: 6%;
+  }
+  .image-block {
+    max-width: 528px;
+    margin-left: -13%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (width >= 1440px) and (width < 1920px) {
   .image-banner--left {
-    width: 25%;
-    top: -2% !important;
+    top: 4%;
+    left: 1%;
+  }
+  .image-block {
+    max-width: 528px;
+    margin-left: -13%;
   }
   .image-banner--right {
-    width: 25%;
-    top: 7% !important;
+    right: 5%;
+    top: 7%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (width >= 1280px) and (width < 1440px) {
   .image-block {
     max-width: 528px;
     margin-left: -13%;
@@ -669,17 +679,39 @@ a:hover {
     gap: 35px;
   }
   .image-banner--left {
-    top: 12%;
+    width: 25%;
+    top: 9%;
+    left: 2%;
   }
   .image-banner--right {
-    top: 8%;
+    width: 23.5%;
+    right: 4%;
+    top: 13%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .image-block {
+    max-width: 41vw;
+    margin-left: -15%;
+  }
+  .nav-desktop {
+    width: 55%;
+    gap: 35px;
+  }
+  .image-banner--left {
+    top: 14%;
+    width: 25%;
+  }
+  .image-banner--right {
+    top: 16%;
+    width: 25%;
   }
 }
 @media screen and (max-width: 991px) {
   .image-block {
     height: 280px;
-    max-width: 456px;
-    margin-left: -21%;
+    max-width: 53.5vw;
+    margin-left: -18%;
   }
   .light-block {
     height: 280px;
@@ -703,12 +735,12 @@ a:hover {
   }
   .image-banner--left {
     top: 11%;
-    left: -5%;
+    left: -2%;
     width: 30%;
   }
   .image-banner--right {
     right: -3%;
-    top: 14%;
+    top: 13%;
     width: 30%;
   }
   .blue-block__full-block.blue-block__end {
@@ -768,13 +800,13 @@ a:hover {
     display: none;
   }
   .image-banner--left {
-    top: 6%;
-    width: 40%;
+    top: 5%;
+    width: 34%;
   }
   .image-banner--right {
-    right: -2%;
+    right: 5%;
     top: 18%;
-    width: 40%;
+    width: 34%;
   }
 }
 @media screen and (max-width: 479px) {
@@ -802,17 +834,17 @@ a:hover {
     height: 55px;
   }
   .button {
-    padding: 3vw 7vw;
+    padding: 3vw 9vw;
   }
   .blue-block__full-block {
     padding: 6vw 0vw 6vw 6vw;
-    height: 61vw;
+    height: 70vw;
     width: 60vw;
   }
   .blue-block__full-block.blue-block__end {
     padding-right: 1vw;
-    padding-left: 1vw;
-    padding-bottom: 4vw;
+    padding-left: 3vw;
+    padding-bottom: 6vw;
   }
   .blue-block__top-text,
   .blue-block__bottom-text {
@@ -825,8 +857,8 @@ a:hover {
     font-size: calc(12vw + 20px);
   }
   .blue-block {
-    width: 82vw;
-    height: 62vw;
+    width: 93vw;
+    height: 70.5vw;
     background-size: contain;
   }
   .image-block {
@@ -843,12 +875,24 @@ a:hover {
   }
   .image-banner--left {
     top: auto;
-    bottom: 32%;
-    left: 0%;
+    bottom: 29%;
+    left: -2%;
     right: auto;
+    width: 45%;
   }
   .image-banner--right {
     right: 2%;
     top: 24%;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .image-banner--left {
+    bottom: 33%;
+    left: 2%;
+  }
+  .image-banner--right {
+    right: 2%;
+    top: 25%;
   }
 }/*# sourceMappingURL=main.css.map */

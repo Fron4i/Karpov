@@ -1,29 +1,21 @@
 .home-hero-logos {
-	margin: 83px auto;
+	margin: 83px 0;
 	display: flex;
 	width: 100%;
 	align-items: center;
 	font-weight: 500;
 	white-space: nowrap;
+	justify-content: center;
 
 	animation: fadeIn 0.4s ease backwards;
 	animation-delay: 0.4s;
 }
 
-//.home-hero-logo.home-hero-logo--first {
-//	margin-left: 0;
-//}
-
-//.home-hero-logo {
-//	display: flex;
-//	margin-right: 28px;
-//	margin-left: 28px;
-//	justify-content: center;
-//	align-items: center;
-//}
-
 .home-hero-carousel-wrap {
 	position: relative;
+	right: 0;
+	left: 0;
+	width: 100%;
 	display: flex;
 	overflow: hidden;
 	padding-top: 4px;
@@ -31,8 +23,10 @@
 }
 
 .home-hero-carousel-row {
+	//width: 30%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	flex: 0 0 auto;
 	animation: marquee-horizontal 30s linear infinite;
 }
@@ -68,11 +62,11 @@
 }
 
 @keyframes marquee-horizontal {
-	from {
-		transform: translateX(0) translateZ(0);
+	0% {
+		transform: translateX(0%) translateZ(0);
 	}
 
-	to {
+	100% {
 		transform: translateX(-100%) translateZ(0);
 	}
 }

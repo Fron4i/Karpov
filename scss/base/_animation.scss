@@ -3,15 +3,15 @@
 	will-change: transform;
 
 	&__img {
-		max-width: 100%;
+		//max-width: 100%;
 		display: inline-block;
 		vertical-align: middle;
 	}
 
 	&--left {
-		top: 12%;
+		top: 28%;
 		left: 0%;
-		width: 25%;
+		//width: 25%;
 
 		bottom: auto;
 		right: auto;
@@ -21,7 +21,7 @@
 	}
 
 	&--right {
-		width: 25%;
+		//width: 25%;
 
 		top: 19%;
 		left: auto;
