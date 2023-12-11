@@ -1,3 +1,65 @@
+$(".nav-mobil__li").click(function () {
+	if (!$(this).hasClass("upp")) {
+		$(".nav-mobil__li").removeClass("upp")
+		$(this).toggleClass("upp")
+	} else {
+		$(".nav-mobil__li").removeClass("upp")
+	}
+})
+
+let styleYes = document.createElement("style")
+styleYes.innerHTML = `
+				.nav-mobil {
+					opacity: 1;
+					transition: transform 450ms ease-out;
+					transform: translateX(0px) translateY(0px);
+				}
+			`
+
+let styleNo = document.createElement("style")
+styleNo.innerHTML = `
+				.nav-mobil {
+					opacity: 1;
+					transition: transform 450ms ease-in;
+					transform: translateX(-400px) translateY(0px);
+				}
+			`
+
+let styleStart = document.createElement("style")
+styleStart.innerHTML = `
+				.nav-mobil {
+					opacity: 0;
+					transition: transform 450ms ease-in;
+					transform: translateX(-400px) translateY(0px);
+				}
+			`
+
+document.head.appendChild(styleStart)
+
+$(".menu-button").click(function () {
+	if (!$(".menu-button").hasClass(".open-mobil-button")) {
+		$(".menu-button").toggleClass(".open-mobil-button")
+		document.head.appendChild(styleYes)
+	} else {
+		$(".menu-button").toggleClass(".open-mobil-button")
+		document.head.appendChild(styleNo)
+	}
+	//$(".nav-mobil").toggleClass("none")
+})
+
+$(".nav-mobil__close-menu-button").click(function () {
+	//$(".nav-mobil").toggleClass("none")
+	$(".menu-button").toggleClass(".open-mobil-button")
+	document.head.appendChild(styleNo)
+
+	$(".nav-mobil__li").removeClass("upp")
+})
+
+const heightBody = $("body").outerHeight()
+
+let ss = heightBody + "px"
+$(".nav-mobil").css("height", ss)
+
 function LottieScrollTrigger(vars) {
 	let playhead = { frame: 0 },
 		target = gsap.utils.toArray(vars.target)[0],
