@@ -97,7 +97,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	.welcom__main-title {
+	.main-title {
 		max-width: 800px;
 	}
 	.main {
@@ -129,21 +129,23 @@
 	h1 {
 		font-size: 35px;
 	}
+	.welcome {
+		padding-top: 50px;
+	}
 	.nav-mobil {
 		display: block;
-		width: 320px;
 	}
 	.menu-button {
 		display: block;
 	}
-	.welcom__main-title {
+	.main-title {
 		max-width: 500px;
 	}
 	.main {
 		padding-top: 65px;
 	}
 	.header__nav-wrapper {
-		height: 75px;
+		height: 65px;
 	}
 	.welcom__main-subtitle {
 		margin-bottom: 30px;
@@ -190,7 +192,7 @@
 	}
 	.image-banner--right {
 		right: 5%;
-		top: 18%;
+		top: 16%;
 		width: 34%;
 	}
 }
@@ -199,8 +201,8 @@
 	h1 {
 		font-size: 29px;
 	}
-	.nav-mobil {
-		width: 85%;
+	.welcome {
+		padding-top: 35px;
 	}
 	.image-banner {
 		&--left {
@@ -251,8 +253,8 @@
 	//	font-size: 4.5vw;
 	//}
 	.blue-block {
-		width: 93vw;
-		height: 70.5vw;
+		width: 90vw;
+		height: 68.5vw;
 		//height: 300px;
 		background-size: contain;
 	}
@@ -271,24 +273,83 @@
 	}
 	.image-banner--left {
 		top: auto;
-		bottom: 29%;
+		bottom: 31%;
 		left: -2%;
 		right: auto;
-		width: 45%;
+		width: 40%;
 	}
 	.image-banner--right {
 		right: 2%;
-		top: 24%;
-		width: 45%;
+		top: 20%;
+		width: 42%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.image-banner--left {
+		bottom: 33%;
+		left: -2%;
+		right: auto;
+		width: 42%;
+	}
+	.blue-block {
+		width: 89vw;
+		height: 67vw;
+	}
+	.blue-block__full-block {
+		padding: 6vw 0vw 8vw 6vw;
+		height: calc(70vw);
+		width: calc(60vw);
+	}
+	.blue-block__full-block.blue-block__end {
+		padding-right: 1vw;
+		padding-left: 3vw;
+		padding-bottom: 8vw;
 	}
 }
 @media screen and (max-width: 390px) {
 	.image-banner--left {
-		bottom: 33%;
-		left: 2%;
+		bottom: 32%;
+		left: -3%;
+		width: 52%;
 	}
 	.image-banner--right {
 		right: 2%;
-		top: 25%;
+		top: 21%;
+		width: 42%;
+	}
+	.blue-block {
+		width: 87vw;
+		height: 66vw;
+	}
+	.blue-block__full-block {
+		padding: 6vw 0vw 10vw 6vw;
+		height: calc(70vw);
+		width: calc(60vw);
+	}
+	.blue-block__full-block.blue-block__end {
+		padding-right: 1vw;
+		padding-left: 3vw;
+		padding-bottom: 10vw;
+	}
+}
+//@media screen and (max-width: 380px) {
+//	.image-banner--left {
+//		bottom: 32%;
+//		left: 0%;
+//		width: 44%;
+//	}
+//	.image-banner--right {
+//		right: 2%;
+//		top: 23%;
+//	}
+//}
+@media screen and (max-width: 350px) {
+	.image-banner--left {
+		bottom: 34.5%;
+		left: 4%;
+	}
+	.image-banner--right {
+		right: 2%;
+		top: 23%;
 	}
 }

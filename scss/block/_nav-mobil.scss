@@ -1,4 +1,5 @@
 .nav-mobil {
+	font-weight: 500;
 	display: flex;
 	flex-direction: column;
 	height: 0;
@@ -7,10 +8,10 @@
 	left: 0;
 	top: 0;
 	background-color: #fff;
-	display: none;
+	width: 100%;
 }
 .nav-mobil__header {
-	height: 75px;
+	height: 65px;
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 15px;
@@ -19,6 +20,7 @@
 	display: flex;
 }
 .nav-mobil__close-menu-button {
+	height: 18px;
 	margin-top: 2px;
 	cursor: pointer;
 	padding: 0 20px 0 0;
@@ -76,6 +78,7 @@
 }
 
 .nav-mobil__link-level-1 {
+	font-size: 18px;
 	color: $midnight-blue;
 	text-transform: capitalize;
 	margin-top: 10px;
@@ -84,7 +87,7 @@
 }
 
 .nav-mobel__link-icon {
-	font-size: 16px;
+	font-size: 17px;
 	width: 1em;
 	height: 1em;
 	margin: auto 20px auto auto;
@@ -174,4 +177,8 @@
 
 .w-icon-dropdown-toggle:before {
 	content: "";
+}
+
+.nav-mobil__link--active-url {
+	color: $primary;
 }
