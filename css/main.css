@@ -840,8 +840,11 @@ a:hover {
   width: 50vw;
 }
 
-#animationWindow2 {
+#animationWindow2,
+#animationWindow3,
+#animationWindow {
   width: 30vw;
+  height: 30vh;
   margin-left: 4vw;
 }
 
@@ -861,6 +864,28 @@ a:hover {
 
 .item {
   height: 100vh;
+  border: 2px solid red;
+}
+
+.item--title {
+  padding-top: 110%;
+}
+
+.item__title {
+  margin-bottom: 36px;
+  max-width: 80%;
+}
+
+.item__text {
+  max-width: 90%;
+  margin-bottom: 55px;
+}
+
+.item__button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
 }
 
 .left {
@@ -990,6 +1015,9 @@ a:hover {
   h1 {
     font-size: 35px;
   }
+  h2 {
+    font-size: 30px;
+  }
   .welcome {
     padding-top: 50px;
   }
@@ -1060,6 +1088,9 @@ a:hover {
 @media screen and (max-width: 479px) {
   h1 {
     font-size: 29px;
+  }
+  h1 {
+    font-size: 24px;
   }
   .welcome {
     padding-top: 35px;

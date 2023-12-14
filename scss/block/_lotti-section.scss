@@ -29,8 +29,11 @@
 	//height: 29.5vw;
 	//border: 2px solid red;
 }
-#animationWindow2 {
+#animationWindow2,
+#animationWindow3,
+#animationWindow {
 	width: 30vw;
+	height: 30vh;
 	margin-left: 4vw;
 	//height: calc(100% / 2);
 	//border: 2px solid blue;
@@ -51,7 +54,33 @@
 }
 
 .item {
+	//display: flex;
+	//align-items: center;
+	//justify-content: left;
+	//flex-direction: column;
 	height: 100vh;
+	//width: 100%;
+	border: 2px solid red;
+}
+
+.item--title {
+	padding-top: 110%;
+}
+
+.item__title {
+	margin-bottom: 36px;
+	max-width: 80%;
+}
+.item__text {
+	max-width: 90%;
+
+	margin-bottom: 55px;
+}
+.item__button-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 20px;
 }
 
 .left {
