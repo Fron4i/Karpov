@@ -833,16 +833,13 @@ a:hover {
   align-items: start;
 }
 
-#animationWindow1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#animationWindow1,
+#animationWindow {
   width: 50vw;
 }
 
 #animationWindow2,
-#animationWindow3,
-#animationWindow {
+#animationWindow3 {
   width: 30vw;
   height: 30vh;
   margin-left: 4vw;

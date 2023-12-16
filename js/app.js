@@ -292,7 +292,7 @@ tl1.to("#animationWindow3", { opacity: 0, duration: 1 })
 
 let proxy = LottieProxy({
 	container: "#animationWindow",
-	path: "https://lottie.host/81d9f0ce-d6e8-46b7-a861-4eab86310e60/U0E0rtSX4t.json",
+	path: "./../img/c1.json",
 })
 
 proxy.onLoaded(init)
@@ -323,80 +323,44 @@ function init() {
 	let tl2 = gsap
 		.timeline({
 			scrollTrigger: {
-				trigger: "#animationWindow",
+				trigger: ".lotti-1",
 				start: "center center",
-				end: "1000%",
+				end: "+=600%",
 				markers: true,
-				scrub: true,
+				scrub: 1.3,
 				pin: true,
 			},
 			frame: proxy.lastFrame,
 		})
 		.to(proxy, {
-			duration: 150,
+			duration: 2,
 			scrollTrigger: {},
 			//frame: proxy.lastFrame,
-			frame: 30,
+			frame: 1,
 		})
 		.fromTo(
 			proxy,
 			{
-				duration: 50,
+				duration: 2,
 				scrollTrigger: {},
-				frame: 30,
+				frame: 1,
 			},
 			{
-				duration: 50,
+				duration: 47,
 				scrollTrigger: {},
-				frame: 60,
-			}
-		)
-		.fromTo(
-			proxy,
-			{
-				duration: 50,
-				scrollTrigger: {},
-				frame: 60,
+				frame: 48,
 			},
-			{
-				duration: 50,
-				scrollTrigger: {},
-				frame: 90,
-			}
+			">-10%"
 		)
-	//.fromTo(
-	//	proxy,
-	//	{
-	//		scrollTrigger: {
-	//			trigger: "#animationWindow",
-	//			start: "center center",
-	//			end: "1000%",
-	//			scrub: 1,
-	//			pin: true,
-	//		},
-	//		frame: 30,
-	//	},
-	//	{
-	//		scrollTrigger: {
-	//			trigger: "#animationWindow",
-	//			start: "center center",
-	//			end: "1000%",
-	//			scrub: 1,
-	//			pin: true,
-	//		},
-	//		frame: 50,
-	//	}
-	//)
-
-	tl2.to("#animationWindow", {
-		marginTop: 0,
-		opacity: 1,
-		duration: 90,
-		x: 100,
-	}).to("#animationWindow", {
-		opacity: 0,
-		duration: 50,
-	})
+		.to(
+			"#animationWindow",
+			{
+				ease: "power3.out",
+				opacity: 0,
+				duration: 10,
+			},
+			">-10%"
+		)
 
 	//gsap.timeline({
 	//	scrollTrigger: {

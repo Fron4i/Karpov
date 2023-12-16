@@ -21,17 +21,17 @@
 	align-items: start;
 	//margin-top: 50px;
 }
-#animationWindow1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#animationWindow1,
+#animationWindow {
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
 	width: 50vw;
 	//height: 29.5vw;
 	//border: 2px solid red;
 }
 #animationWindow2,
-#animationWindow3,
-#animationWindow {
+#animationWindow3 {
 	width: 30vw;
 	height: 30vh;
 	margin-left: 4vw;
