@@ -11,7 +11,9 @@
 	transition: all 0.3s;
 	display: flex;
 }
-
+.button--big-width {
+	padding: 14px 73px;
+}
 .button--white {
 	border: 2px solid $white;
 	background-color: $midnight-blue;

@@ -126,6 +126,9 @@
 }
 
 @media screen and (max-width: 767px) {
+	* {
+		cursor: none;
+	}
 	h1 {
 		font-size: 35px;
 	}
@@ -197,6 +200,9 @@
 		right: 5%;
 		top: 16%;
 		width: 34%;
+	}
+	.image-burger {
+		cursor: none;
 	}
 }
 
