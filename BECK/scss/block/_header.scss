@@ -1,0 +1,33 @@
+.header_fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
+}
+.header__nav-wrapper {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	height: 104px;
+}
+.nav-desktop {
+	text-align: right;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	width: 560px;
+	gap: 113px;
+}
+.nav-desktop__item {
+	padding: 0px;
+}
+.image-burger {
+	height: 20px;
+	text-align: right;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.menu-button {
+	display: none;
+}

@@ -102,6 +102,7 @@ let proxy1 = LottieProxy1({
 let proxy2 = LottieProxy2({
 	container: "#animationWindow2",
 	path: "./../img/c2.json",
+	//path: "./../img/c1.json",
 })
 
 proxy1.onLoaded(init1)

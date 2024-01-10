@@ -133,7 +133,7 @@ h2 {
   color: #001047;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: clamp(29px, 5vw, 50px);
+  font-size: 42px;
   font-weight: 400;
   line-height: 1.04em;
 }
@@ -589,7 +589,7 @@ a:hover {
   position: relative;
   right: 0;
   left: 0;
-  max-width: 1170px;
+  width: 100%;
   display: flex;
   overflow: hidden;
   padding-top: 4px;
@@ -813,16 +813,6 @@ a:hover {
   color: #1946da;
 }
 
-.element {
-  opacity: 0 !important;
-}
-
-.first-and-only {
-  width: 100% !important;
-  display: flex;
-  justify-content: center;
-}
-
 .lotti-section {
   display: flex;
   align-items: center;
@@ -832,8 +822,7 @@ a:hover {
 
 .lotti-section__title {
   text-align: center;
-  margin-bottom: 60px;
-  z-index: 1000;
+  margin-bottom: 53px;
 }
 
 .lotti-1 {
@@ -844,8 +833,7 @@ a:hover {
 }
 
 #animationWindow1 {
-  width: clamp(300px, 55vw, 830px);
-  z-index: 999;
+  width: 50vw;
 }
 
 #animationWindow2 {
@@ -874,17 +862,17 @@ a:hover {
 }
 
 .right {
-  padding-top: 15vh;
   width: 50%;
 }
 
 .item {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  height: 350vh;
+  border: 2px solid red;
 }
-.item + .item {
-  margin-top: 15vh;
+
+.item--title {
+  padding-top: 110%;
+  height: 50%;
 }
 
 .item__title {
@@ -909,7 +897,7 @@ a:hover {
 }
 
 .item--info {
-  margin-top: 100px;
+  height: 50%;
 }
 
 .item-info__wrapper-container {
@@ -944,52 +932,6 @@ a:hover {
 }
 .item-info__subtitle {
   line-height: 1.5em;
-}
-
-.wrap_2 {
-  opacity: 1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px 0;
-}
-
-.title {
-  grid-column: 1/5;
-  grid-row: 1;
-  position: relative;
-  font-size: 3.6rem;
-  font-weight: bold;
-  letter-spacing: 0.025em;
-  line-height: 1.1;
-  z-index: 2;
-}
-.title span:not(:first-child) {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.images {
-  grid-column: 4/-1;
-  grid-row: 1;
-  position: relative;
-}
-.images img {
-  width: 100%;
-  height: auto;
-}
-.images img:not(:first-child) {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.ppppp {
-  margin-top: 60vh;
 }
 
 @media screen and (width >= 1920px) {
@@ -1110,6 +1052,9 @@ a:hover {
   }
   h1 {
     font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
   }
   .welcome {
     padding-top: 50px;

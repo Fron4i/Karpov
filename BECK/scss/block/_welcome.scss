@@ -1,0 +1,60 @@
+.welcome {
+	min-height: 650px;
+	padding-top: 80px;
+	position: relative;
+	overflow: hidden;
+}
+.welcome__wrapper {
+	z-index: 2;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	position: relative;
+}
+
+.welcome__title {
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	position: relative;
+}
+
+.main-title {
+	max-width: 800px;
+	position: relative;
+}
+
+.welcome__line-absolute {
+	top: 1.5%;
+
+	width: 233px;
+	height: 65px;
+	opacity: 0.11;
+	background-image: url("./../img/home/welcome/line.webp");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+.welcom__main-subtitle {
+	margin: 10px 0 50px;
+}
+
+.welcom__button-wrapper {
+	grid-column-gap: 15px;
+	justify-content: center;
+	display: flex;
+}
+
+.welcome__info {
+	width: 100%;
+	min-height: 280px;
+	grid-column-gap: 30px;
+	justify-content: space-between;
+	margin-top: 100px;
+	display: flex;
+}

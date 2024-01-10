@@ -1,12 +1,3 @@
-.element {
-	opacity: 0 !important;
-}
-
-.first-and-only {
-	width: 100% !important;
-	display: flex;
-	justify-content: center;
-}
 .lotti-section {
 	display: flex;
 	align-items: center;
@@ -15,8 +6,7 @@
 }
 .lotti-section__title {
 	text-align: center;
-	margin-bottom: 60px;
-	z-index: 1000;
+	margin-bottom: 53px;
 }
 .lotti-1 {
 	//margin-top: 50px;
@@ -27,8 +17,7 @@
 }
 
 #animationWindow1 {
-	width: clamp(300px, 55vw, 830px);
-	z-index: 999;
+	width: 50vw;
 	//height: 50vh;
 }
 #animationWindow2 {
@@ -57,24 +46,17 @@
 }
 
 .right {
-	padding-top: 15vh;
 	width: calc(50%);
 }
 //!!!!!!!!!
 .item {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	//height: 100vh;
-	//height: calc(100vh);
-	//border: 2px solid red;
-	& + & {
-		margin-top: 15vh;
-	}
+	height: calc(350vh);
+	border: 2px solid red;
 }
 
 .item--title {
-	//height: 50%;
+	padding-top: 110%;
+	height: 50%;
 }
 
 .item__title {
@@ -97,7 +79,7 @@
 }
 
 .item--info {
-	margin-top: 100px;
+	height: 50%;
 }
 
 .item-info {
@@ -136,55 +118,4 @@
 	}
 }
 .item--info {
-}
-
-.wrap_2 {
-	opacity: 1;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr;
-	width: 100%;
-	max-width: 720px;
-	margin: 0 auto;
-	padding: 64px 0;
-}
-
-.title {
-	grid-column: 1 / 5;
-	grid-row: 1;
-	position: relative;
-	font-size: 3.6rem;
-	font-weight: bold;
-	letter-spacing: 0.025em;
-	line-height: 1.1;
-	z-index: 2;
-
-	span {
-		&:not(:first-child) {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-	}
-}
-
-.images {
-	grid-column: 4 / -1;
-	grid-row: 1;
-	position: relative;
-
-	img {
-		width: 100%;
-		height: auto;
-
-		&:not(:first-child) {
-			position: absolute;
-			top: 0;
-			right: 0;
-		}
-	}
-}
-
-.ppppp {
-	margin-top: 60vh;
 }
