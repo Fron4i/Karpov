@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +34,7 @@
 							</div>
 						</div>
 						<a class="button__link button-header" href="#">
-							<div class="button button--blue">Заказать</div>
+							<div class="button button--blue button--small">Заказать</div>
 						</a>
 						<div class="menu-button">
 							<img class="image-burger" src="./img/main_Img/menu-button.svg" />
@@ -146,19 +147,19 @@
 			<main class="main">
 				<section class="welcome">
 					<div class="image-banner image-banner--left">
-						<img class="image-banner__img" src="./img/home/welcome/left.webp" />
+						<img class="image-banner__img" data-aos="zoom-in" src="./img/home/welcome/left.webp" />
 					</div>
 					<div class="image-banner image-banner--right">
-						<img class="image-banner__img" src="./img/home/welcome/right.webp" />
+						<img class="image-banner__img" data-aos="zoom-in" src="./img/home/welcome/right.webp" />
 					</div>
 					<div class="container">
 						<div class="welcome__wrapper">
 							<div class="welcome__title">
 								<div class="welcome__line-absolute"></div>
-								<h1 class="main-title" data-aos="fade-up">Организующая сила информационных систем</h1>
+								<h1 class="main-title" data-aos="zoom-in">Организующая сила информационных систем</h1>
 								<!--У нас есть яйца, чтобы привести ваш бизнес в порядок!-->
 								<p class="welcom__main-subtitle"></p>
-								<div class="welcom__button-wrapper">
+								<div class="welcom__button-wrapper" data-aos="fade-up">
 									<a class="button__link" href="#">
 										<div class="button button--blue">О нас</div>
 									</a>
@@ -168,7 +169,7 @@
 								</div>
 							</div>
 							<div class="welcome__info">
-								<div class="blue-block">
+								<div class="blue-block" data-aos="fade-right">
 									<div class="blue-block__full-block">
 										<div class="blue-block__top-title-wrapper">
 											<div class="blue-block__top-text">Новых клиентов</div>
@@ -182,8 +183,8 @@
 										</a>
 									</div>
 								</div>
-								<div class="image-block"></div>
-								<div class="light-block">
+								<div class="image-block" data-aos="fade-left"></div>
+								<div class="light-block" data-aos="fade-left">
 									<div class="light-block__top-text-wrapper">
 										<h4>CRM</h4>
 										<div class="light-block__subtitle">
@@ -202,7 +203,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-hero-logos">
+					<div class="home-hero-logos" data-aos="fade-up">
 						<!--<div class="home-hero-logo home-hero-logo--first">Trusted by</div>-->
 						<div class="home-hero-carousel-wrap">
 							<div class="home-hero-carousel-row">
@@ -409,57 +410,73 @@
 						</div>
 					</div>
 				</section>
+				<!--<div class="scroll-container">
+					<div class="scroll-area">1</div>
+					<div class="scroll-area">2</div>
+					<div class="scroll-area">3</div>
+					<div class="scroll-area">4</div>
+				</div>-->
 				<section class="lotti-section">
-					<div class="container">
+					<div class="con">
 						<section class="lotti-1">
-							<h2 class="lotti-section__title main-title" data-aos="fade-up">Единство всех компонентов цифровой инфраструктуры</h2>
-							<div id="animationWindow1"></div>
+							<h2 class="lotti-section__title main-title animate-on-scroll-1">Единство всех компонентов цифровой инфраструктуры</h2>
+							<div id="animationWindow1" class="animate-on-scroll-1"></div>
 						</section>
-
+						<div id="fl1"></div>
+						<!--<div id="anchor2"></div>-->
+					</div>
+					<div class="flag"></div>
+					<div class="container">
 						<div class="wrap">
 							<div class="left">
 								<div class="lotti-2">
-									<div id="animationWindow2"></div>
+									<div id="animationWindow2" class="animate-on-scroll--left"></div>
 								</div>
 							</div>
 							<div class="right">
 								<div class="item">
-									<div class="item--title itiem-1">
-										<h2 class="item__title">Начните свой путь&nbsp;сегодня!</h2>
-										<p class="item__text">Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!</p>
-										<div class="item__button-wrapper">
-											<a class="button__link" href="#">
-												<div class="button button--blue">О нас</div>
-											</a>
-											<a class="button__link" href="#">
-												<div class="button button--blue-active button--big-width">Заказать</div>
-											</a>
+									<div id="anchor1"></div>
+									<div class="item--title">
+										<div class="item--title__wrap">
+											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<p class="item__text animate-on-scroll--right-4">
+												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+											</p>
+
+											<div class="item__button-wrapper animate-on-scroll--right-4">
+												<a class="button__link" href="#">
+													<div class="button button--blue button--resize-1">О нас</div>
+												</a>
+												<a class="button__link" href="#">
+													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="item--info ppppp">
-										<ul class="item-info__wrapper-container">
-											<li class="item-info__content-wrapper">
+									<div class="item--info">
+										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Лендинг</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Интернет магазин</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Чат бот</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Яндекс.Метрика</h4>
@@ -471,41 +488,46 @@
 								</div>
 								<div class="item">
 									<div class="item--title">
-										<h2 class="item__title">Начните свой путь&nbsp;сегодня!</h2>
-										<p class="item__text">Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!</p>
-										<div class="item__button-wrapper">
-											<a class="button__link" href="#">
-												<div class="button button--blue">О нас</div>
-											</a>
-											<a class="button__link" href="#">
-												<div class="button button--blue-active button--big-width">Заказать</div>
-											</a>
+										<div class="item--title__wrap">
+											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<p class="item__text animate-on-scroll--right-4">
+												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+											</p>
+
+											<div class="item__button-wrapper animate-on-scroll--right-4">
+												<a class="button__link" href="#">
+													<div class="button button--blue button--resize-1">О нас</div>
+												</a>
+												<a class="button__link" href="#">
+													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
+												</a>
+											</div>
 										</div>
 									</div>
 									<div class="item--info">
-										<ul class="item-info__wrapper-container">
-											<li class="item-info__content-wrapper">
+										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Лендинг</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Интернет магазин</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Чат бот</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Яндекс.Метрика</h4>
@@ -517,41 +539,46 @@
 								</div>
 								<div class="item">
 									<div class="item--title">
-										<h2 class="item__title">Начните свой путь&nbsp;сегодня!</h2>
-										<p class="item__text">Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!</p>
-										<div class="item__button-wrapper">
-											<a class="button__link" href="#">
-												<div class="button button--blue">О нас</div>
-											</a>
-											<a class="button__link" href="#">
-												<div class="button button--blue-active button--big-width">Заказать</div>
-											</a>
+										<div class="item--title__wrap">
+											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<p class="item__text animate-on-scroll--right-4">
+												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+											</p>
+
+											<div class="item__button-wrapper animate-on-scroll--right-4">
+												<a class="button__link" href="#">
+													<div class="button button--blue button--resize-1">О нас</div>
+												</a>
+												<a class="button__link" href="#">
+													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
+												</a>
+											</div>
 										</div>
 									</div>
 									<div class="item--info">
-										<ul class="item-info__wrapper-container">
-											<li class="item-info__content-wrapper">
+										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Лендинг</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Интернет магазин</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Чат бот</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Яндекс.Метрика</h4>
@@ -561,43 +588,48 @@
 										</ul>
 									</div>
 								</div>
-								<div class="item">
+								<div class="item" id="anchor3">
 									<div class="item--title">
-										<h2 class="item__title">Начните свой путь&nbsp;сегодня!</h2>
-										<p class="item__text">Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!</p>
-										<div class="item__button-wrapper">
-											<a class="button__link" href="#">
-												<div class="button button--blue">О нас</div>
-											</a>
-											<a class="button__link" href="#">
-												<div class="button button--blue-active button--big-width">Заказать</div>
-											</a>
+										<div class="item--title__wrap">
+											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<p class="item__text animate-on-scroll--right-4">
+												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+											</p>
+
+											<div class="item__button-wrapper animate-on-scroll--right-4">
+												<a class="button__link" href="#">
+													<div class="button button--blue button--resize-1">О нас</div>
+												</a>
+												<a class="button__link" href="#">
+													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
+												</a>
+											</div>
 										</div>
 									</div>
 									<div class="item--info">
-										<ul class="item-info__wrapper-container">
-											<li class="item-info__content-wrapper">
+										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Лендинг</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Интернет магазин</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Чат бот</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
 												</div>
 											</li>
-											<li class="item-info__content-wrapper">
+											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Яндекс.Метрика</h4>
@@ -611,28 +643,88 @@
 						</div>
 					</div>
 				</section>
-				<!--<section class="wrap_2">
-					<div class="title">
-						<span class="one">Efficacious</span>
-						<span class="two">Craven</span>
-						<span class="three">Intelligent</span>
-						<span class="four">Dazzling</span>
-					</div>
-					<div class="images">F
-						<img src="./img/home/welcome/left.webp" class="one" />
-						<img src="./img/home/welcome/left.webp" class="two" />
-						<img src="./img/home/welcome/left.webp" class="three" />
-						<img src="./img/home/welcome/left.webp" class="four" />
-					</div>
-				</section>-->
+				<div class="container">
+					<div class="flag-2"></div>
+
+					<section class="database">
+						<div id="anchor4"></div>
+
+						<div class="database__title-wrapper">
+							<div class="database__title">База знаний</div>
+							<h3 class="database__subtitle">Исследуйте нашу базу знаний для надежных и полезных решений.</h3>
+						</div>
+						<div class="database__cards-wrapper">
+							<div class="database__card">
+								<div class="database__card-image">
+									<img src="./img/home/before_footer/1.png" />
+								</div>
+								<div class="database__card-text-wrapper">
+									<div class="database__card-title">Bitrix24</div>
+									<div class="database__card-text">
+										Платформа для создания и управления веб-проектами, таких как интернет-магазины, корпоративные сайты.
+									</div>
+									<a class="database__card-link">
+										Далее
+										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+									</a>
+								</div>
+							</div>
+							<div class="database__card">
+								<div class="database__card-image">
+									<img src="./img/home/before_footer/2.png" />
+								</div>
+								<div class="database__card-text-wrapper">
+									<div class="database__card-title">Bitrix24</div>
+									<div class="database__card-text">
+										Платформа для создания и управления веб-проектами, таких как интернет-магазины, корпоративные сайты.
+									</div>
+									<a class="database__card-link">
+										Далее
+										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+									</a>
+								</div>
+							</div>
+							<div class="database__card">
+								<div class="database__card-image">
+									<img src="./img/home/before_footer/3.png" />
+								</div>
+								<div class="database__card-text-wrapper">
+									<div class="database__card-title-wrapper">
+										<div class="database__card-title">Bitrix24</div>
+										<div class="database__card-text">
+											Платформа для создания и управления веб-проектами, таких как интернет-магазины, корпоративные сайты.
+										</div>
+									</div>
+									<a class="database__card-link">
+										Далее
+										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<a class="button__link" href="#">
+							<div class="button button--blue button--average-width">Подробнее</div>
+						</a>
+					</section>
+				</div>
 			</main>
 			<footer class="footer">
+				<div class="block">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
+				</div>
+				<div class="block">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
+				</div>
+				<div class="block">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
+				</div>
 				<div class="block">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
 				</div>
 			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>

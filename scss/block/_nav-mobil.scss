@@ -7,8 +7,9 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	background-color: #fff;
 	width: 100%;
+	background-color: rgba(255, 255, 255, 0.75) !important;
+	backdrop-filter: blur(26px) !important;
 }
 .nav-mobil__header {
 	height: 65px;
@@ -30,7 +31,6 @@
 //.nav-mobil__close-icon {
 //}
 .nav-mobil__menu-wrapper {
-	background-color: $white;
 	flex-direction: column;
 	align-items: flex-start;
 	padding-top: 20px;
@@ -113,15 +113,12 @@
 	max-height: 0;
 
 	width: 320px;
-	background-color: $white;
 	border-style: none;
 	border-radius: 0;
 	flex-direction: column;
 	padding: 0 40px 0 20px;
 	display: flex;
 	position: static;
-}
-.nav-mobil__link-wrapper {
 }
 .nav-mobil__link-level-2 {
 	display: block;

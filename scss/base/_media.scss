@@ -1,4 +1,4 @@
-@media screen and (width >= 1920px) {
+@media screen and (width >= 2400px) {
 	.image-banner--left {
 		left: 9%;
 		top: 2%;
@@ -10,6 +10,109 @@
 	.image-block {
 		max-width: 528px;
 		margin-left: -13%;
+	}
+	.header__nav-wrapper {
+		height: 90px;
+	}
+}
+@media screen and (height >= 950px) and (height < 1450px) {
+	.item {
+		background-color: rgb(79, 79, 255);
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+	.button--resize-1 {
+		padding: 14px 38px;
+	}
+	.button--resize-2 {
+		padding: 14px 55px;
+	}
+	.wrap {
+		width: 100%;
+		margin-top: 8vh;
+	}
+	#animationWindow2 {
+		width: 65%;
+		//height: 50vh;
+		margin: 0 22% 0 auto;
+	}
+
+	.left {
+		width: 50%;
+	}
+
+	.right {
+		//padding-top: 15vh;
+		width: calc(50%);
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		width: 67%;
+	}
+
+	.item__title {
+		letter-spacing: 2.3px;
+		margin-bottom: 30px;
+		font-size: 47px;
+	}
+	.item__text {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.item__button-wrapper {
+		gap: 20px;
+	}
+
+	.item--info {
+		padding-top: 6.5vh;
+	}
+
+	.item-info {
+		&__wrapper-container {
+			padding: 30px;
+			gap: 30px;
+		}
+		&__content-wrapper {
+			gap: 40px;
+		}
+		&__icon-image {
+			width: 64px;
+		}
+		&__text-wrapper {
+			gap: 20px;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 24px;
+		}
+		&__subtitle {
+			font-size: 17px;
+			line-height: 24px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (width >= 1920px) and (width < 2400px) {
+	.image-banner--left {
+		left: 9%;
+		top: 2%;
+	}
+	.image-banner--right {
+		right: 10%;
+		top: 6%;
+	}
+	.image-block {
+		max-width: 528px;
+		margin-left: -13%;
+	}
+	.header__nav-wrapper {
+		height: 90px;
 	}
 }
 
@@ -30,9 +133,206 @@
 		top: 7%;
 	}
 }
-//@media screen and (max-width: 1440px) {
-//
-//}
+
+@media screen and (height >= 800px) and (height < 950px) {
+	.item {
+		background-color: rgba(0, 128, 0, 0.536);
+	}
+
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.button--resize-1 {
+		padding: 8px 36px;
+		font-size: 14px;
+	}
+	.button--resize-2 {
+		padding: 8px 42px;
+		font-size: 14px;
+	}
+	.wrap {
+		width: 100%;
+		margin-top: 8vh;
+	}
+	#animationWindow2 {
+		width: 56%;
+		//height: 50vh;
+		margin: -5% 20% 0 auto;
+	}
+
+	.left {
+		width: 50%;
+	}
+
+	.right {
+		//padding-top: 15vh;
+		width: calc(50%);
+	}
+	//#animationWindow2 {
+	//	width: 65%;
+	//	//height: 50vh;
+	//	margin: 0 5% 0 auto;
+	//}
+
+	//.left {
+	//	width: 40%;
+	//}
+
+	//.right {
+	//	//padding-top: 15vh;
+	//	width: 39%;
+	//}
+
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+	.item {
+		width: 80%;
+		margin: 0 0 0 0;
+	}
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+	.item--title__wrap {
+		width: 68%;
+	}
+
+	.item__title {
+		letter-spacing: 1.5px;
+		margin-bottom: 20px;
+		font-size: 42px;
+	}
+	.item__text {
+		margin-left: 3px;
+		font-size: 14px;
+		line-height: 21px;
+		margin-bottom: 20px;
+	}
+	.item__button-wrapper {
+		gap: 23.5px;
+	}
+
+	.item--info {
+		padding-top: 5.75vh;
+	}
+
+	.item-info {
+		&__wrapper-container {
+			padding: 23px;
+			gap: 23px;
+		}
+		&__content-wrapper {
+			gap: 28px;
+		}
+		&__icon-image {
+			width: 42px;
+		}
+		&__text-wrapper {
+			gap: 10px;
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 22px;
+		}
+		&__subtitle {
+			line-height: 20px;
+			font-size: 14px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 650px) and (height < 800px) {
+	.item {
+		background-color: rgba(0, 128, 0, 0.536);
+	}
+
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.button--resize-1 {
+		padding: 8px 32px;
+		font-size: 12px;
+	}
+	.button--resize-2 {
+		padding: 8px 38px;
+		font-size: 12px;
+	}
+	.wrap {
+		width: 100%;
+		margin-top: 8vh;
+	}
+	#animationWindow2 {
+		width: 52%;
+		//height: 50vh;
+		margin: 0 17% 0 auto;
+	}
+
+	.left {
+		width: 50%;
+	}
+
+	.right {
+		//padding-top: 15vh;
+		width: calc(50%);
+	}
+
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+	.item {
+		width: 76%;
+		margin: 0 0 0 0;
+	}
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+	.item--title__wrap {
+		width: 62%;
+	}
+
+	.item__title {
+		letter-spacing: 1.5px;
+		margin-bottom: 20px;
+		font-size: 38px;
+	}
+	.item__text {
+		margin-left: 3px;
+		font-size: 13px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.item__button-wrapper {
+		gap: 23.5px;
+	}
+
+	.item--info {
+		padding-top: 5vh;
+	}
+
+	.item-info {
+		&__wrapper-container {
+			padding: 21px;
+			gap: 20px;
+		}
+		&__content-wrapper {
+			gap: 24px;
+		}
+		&__icon-image {
+			width: 38px;
+		}
+		&__text-wrapper {
+			gap: 10px;
+		}
+		&__title {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		&__subtitle {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
 
 @media screen and (width >= 1280px) and (width < 1440px) {
 	.image-block {
@@ -64,6 +364,10 @@
 }
 
 @media screen and (max-width: 1279px) {
+	//.first-and-only {
+	//	width: 100vw !important;
+	//	justify-content: start;
+	//}
 	.image-block {
 		max-width: 41vw;
 		margin-left: -15%;
@@ -82,6 +386,16 @@
 	}
 }
 
+@media screen and (max-height: 991px) {
+	.lotti-section__title {
+		margin-bottom: 38px;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.lotti-1 {
+		left: auto !important;
+	}
+}
 @media screen and (max-width: 991px) {
 	.image-block {
 		height: 280px;
@@ -145,6 +459,10 @@
 	.main-title {
 		max-width: 500px;
 	}
+	.lotti-section__title {
+		font-size: 44px;
+		line-height: 46px;
+	}
 	.main {
 		padding-top: 65px;
 	}
@@ -205,8 +523,9 @@
 }
 
 @media screen and (max-width: 479px) {
-	h1 {
-		font-size: 29px;
+	.lotti-section__title {
+		font-size: 32px;
+		line-height: 34px;
 	}
 	h1 {
 		font-size: 24px;
