@@ -15,6 +15,16 @@
 		height: 90px;
 	}
 }
+@media screen and (height >= 1450px) {
+	.item {
+		& + & {
+			margin-top: 55vh;
+		}
+	}
+	.flag-2 {
+		margin: 40vh 0;
+	}
+}
 @media screen and (height >= 950px) and (height < 1450px) {
 	.item {
 		background-color: rgb(79, 79, 255);
@@ -156,7 +166,7 @@
 	#animationWindow2 {
 		width: 56%;
 		//height: 50vh;
-		margin: -5% 20% 0 auto;
+		margin: 0 20% 0 auto;
 	}
 
 	.left {

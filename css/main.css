@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -530,6 +531,13 @@ a:hover {
   overflow: hidden;
 }
 
+.welcome-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .welcome__wrapper {
   z-index: 2;
   flex-direction: column;
@@ -824,6 +832,18 @@ a:hover {
   color: #1946da;
 }
 
+#loadingElement {
+  /* Ваш стиль для элемента, который двигает страницу во время загрузки */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  z-index: 9999;
+}
+
 .element {
   opacity: 0 !important;
 }
@@ -841,7 +861,7 @@ a:hover {
 .animate-on-scroll--left {
   opacity: 0;
   transform: translateY(0px) translateX(-6.25rem);
-  transition: opacity 0.5s ease-out, transform 0.5s ease;
+  transition: opacity 0.55s ease-out, transform 0.55s ease;
 }
 
 .animate-on-scroll--right-1,
@@ -857,7 +877,7 @@ a:hover {
 .animate-on-scroll--left.show {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 200ms;
+  transition-delay: 250ms;
 }
 
 .animate-on-scroll--right-1.show {
@@ -957,6 +977,15 @@ a:hover {
   width: 100%;
   height: 1px;
   background-color: red;
+}
+
+.flag-3,
+.flag-4,
+.flag-5 {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 20vh 0;
 }
 
 #animationWindow1 {
@@ -1174,6 +1203,14 @@ a:hover {
     height: 90px;
   }
 }
+@media screen and (height >= 1450px) {
+  .item + .item {
+    margin-top: 55vh;
+  }
+  .flag-2 {
+    margin: 40vh 0;
+  }
+}
 @media screen and (height >= 950px) and (height < 1450px) {
   .item {
     background-color: rgb(79, 79, 255);
@@ -1290,7 +1327,7 @@ a:hover {
   }
   #animationWindow2 {
     width: 56%;
-    margin: -5% 20% 0 auto;
+    margin: 0 20% 0 auto;
   }
   .left {
     width: 50%;

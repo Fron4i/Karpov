@@ -99,14 +99,12 @@ window.addEventListener("load", animateOnScroll)
 
 //?fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
-//let scrollLength = `${90 * vh}px`
 let scrollLength = `${90 * vh}`
 
 function smoothScroll(event) {
 	event.preventDefault()
 
 	const delta = Math.max(-1, Math.min(1, event.wheelDelta || -event.detail))
-	//console.log(scrollLength)
 
 	const scrollAmount = scrollLength // Настройте количество пикселей, которое нужно прокрутить
 	const duration = 500 // Настройте время прокрутки по необходимости
@@ -169,31 +167,12 @@ setInterval(() => {
 		scrollLength = `${document.querySelector(".con").offsetHeight / 2.6}`
 		window.addEventListener("wheel", smoothScroll, { passive: false })
 		window.addEventListener("touchmove", smoothScroll, { passive: false })
-
-		//console.log("111")
 	} else if (!isElementVisible(element1) && isElementVisible(element2)) {
-		let elem1 = document.querySelector(".item:nth-child(2)").offsetHeight
-		let elem2 = document.querySelector(".item:nth-child(3)").offsetTop
-		let elem3 = document.querySelector(".item:nth-child(4)").offsetTop
-
-		let distance =
-			elem1 * 2 -
-			(document.querySelector(".right").offsetHeight -
-				document.querySelector(".item:nth-child(2)").offsetHeight * 3 -
-				document.querySelector(".item:first-child").offsetHeight) /
-				3
-
-		let distance2 = document.querySelector(".item:first-child").offsetHeight - document.querySelector("#anchor1").offsetHeight / 3
-		console.log(distance2, elem1 * 2, document.querySelector("#anchor1").offsetHeight / 3)
-
-		scrollLength = `${distance2}`
-		//scrollLength = `${document.querySelector(".item").offsetHeight * 1.48}`
+		scrollLength = `${200 * vh}`
 
 		window.addEventListener("wheel", smoothScroll, { passive: false })
 		window.addEventListener("touchmove", smoothScroll, { passive: false })
-		//console.log("222")
 	} else {
-		//console.log("remowe")
 		window.removeEventListener("wheel", smoothScroll)
 		window.removeEventListener("touchmove", smoothScroll)
 	}
@@ -205,19 +184,16 @@ function isElementVisible(element) {
 	const rect = element.getBoundingClientRect()
 	const windowHeight = window.innerHeight || document.documentElement.clientHeight
 
-	// Проверяем, виден ли элемент больше чем на 50%
-	//return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2
 	return rect.top <= windowHeight * 0.5 && rect.bottom >= windowHeight * 0.5
 }
 
 //~asffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 function remToPixels(rem) {
-	var fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
+	let fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
 	return rem * fontSize
 }
 
-var pixels = remToPixels(2.8125)
-//console.log(pixels)
+let pixels = remToPixels(2.8125)
 //?fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 	if (element == "flfl") {
@@ -228,7 +204,6 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 		const startPos = window.pageYOffset
 		const distance = rect - startPos
 		let startTime = null
-		//console.log(ln1, ln2, rect, startPos, distance)
 
 		function animation(currentTime) {
 			if (startTime === null) startTime = currentTime
@@ -240,7 +215,7 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 
 		function ease(t, b, c, d) {
 			t /= d / 2
-			const factor = 1.5 // Увеличьте этот коэффициент для более медленной прокрутки
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
 			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
 			t--
 			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
@@ -259,7 +234,6 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 		const startPos = window.pageYOffset
 		const distance = rect - (startPos + hehe * 2)
 		let startTime = null
-		console.log(header, hehe, rect, startPos, distance)
 
 		function animation(currentTime) {
 			if (startTime === null) startTime = currentTime
@@ -271,7 +245,97 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 
 		function ease(t, b, c, d) {
 			t /= d / 2
-			const factor = 1.5 // Увеличьте этот коэффициент для более медленной прокрутки
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
+			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
+			t--
+			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
+		}
+
+		requestAnimationFrame(animation)
+		//!2sadddddddddddddddddddddddddddddddddddddddddddd2
+	} else if (element == "ff66") {
+		let arnh = window.innerHeight
+		let item = document.querySelector(".item").offsetHeight
+		let header = document.querySelector(".header_fixed").offsetHeight
+		let hehe = (arnh - item) / 2 + header / 2
+
+		let rect = distanceFromTop
+
+		const startPos = window.pageYOffset
+		const distance = rect - (startPos + hehe * 2)
+		let startTime = null
+
+		function animation(currentTime) {
+			if (startTime === null) startTime = currentTime
+			const elapsedTime = currentTime - startTime
+			const scroll = ease(elapsedTime, startPos, distance, duration)
+			window.scrollTo(0, scroll)
+			if (elapsedTime < duration) requestAnimationFrame(animation)
+		}
+
+		function ease(t, b, c, d) {
+			t /= d / 2
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
+			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
+			t--
+			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
+		}
+
+		requestAnimationFrame(animation)
+		//!2sadddddddddddddddddddddddddddddddddddddddddddd2
+	} else if (element == "ff77") {
+		let arnh = window.innerHeight
+		let item = document.querySelector(".item").offsetHeight
+		let header = document.querySelector(".header_fixed").offsetHeight
+		let hehe = (arnh - item) / 2 + header / 2
+
+		let rect = distanceFromTop
+
+		const startPos = window.pageYOffset
+		const distance = rect - (startPos + hehe * 2)
+		let startTime = null
+
+		function animation(currentTime) {
+			if (startTime === null) startTime = currentTime
+			const elapsedTime = currentTime - startTime
+			const scroll = ease(elapsedTime, startPos, distance, duration)
+			window.scrollTo(0, scroll)
+			if (elapsedTime < duration) requestAnimationFrame(animation)
+		}
+
+		function ease(t, b, c, d) {
+			t /= d / 2
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
+			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
+			t--
+			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
+		}
+
+		requestAnimationFrame(animation)
+		//!2sadddddddddddddddddddddddddddddddddddddddddddd2
+	} else if (element == "ff88") {
+		let arnh = window.innerHeight
+		let item = document.querySelector(".item").offsetHeight
+		let header = document.querySelector(".header_fixed").offsetHeight
+		let hehe = (arnh - item) / 2 + header / 2
+
+		let rect = distanceFromTop
+
+		const startPos = window.pageYOffset
+		const distance = rect - (startPos + hehe * 2)
+		let startTime = null
+
+		function animation(currentTime) {
+			if (startTime === null) startTime = currentTime
+			const elapsedTime = currentTime - startTime
+			const scroll = ease(elapsedTime, startPos, distance, duration)
+			window.scrollTo(0, scroll)
+			if (elapsedTime < duration) requestAnimationFrame(animation)
+		}
+
+		function ease(t, b, c, d) {
+			t /= d / 2
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
 			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
 			t--
 			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
@@ -284,7 +348,6 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 		const startPos = window.pageYOffset
 		const distance = targetPos - startPos
 		let startTime = null
-		//console.log(distance)
 		function animation(currentTime) {
 			if (startTime === null) startTime = currentTime
 			const elapsedTime = currentTime - startTime
@@ -295,7 +358,7 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 
 		function ease(t, b, c, d) {
 			t /= d / 2
-			const factor = 1.5 // Увеличьте этот коэффициент для более медленной прокрутки
+			const factor = 0.995 // Увеличьте этот коэффициент для более медленной прокрутки
 			if (t < 1) return (c / 2) * Math.pow(t, factor) + b
 			t--
 			return (-c / 2) * (Math.pow(t, factor) * (t - 2) - 1) + b
@@ -307,49 +370,133 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 
 const flags1 = document.querySelectorAll(".flag")
 const flags2 = document.querySelectorAll(".flag-2")
+const flags3 = document.querySelectorAll(".flag-3")
+const flags4 = document.querySelectorAll(".flag-4")
+const flags5 = document.querySelectorAll(".flag-5")
 
-let counter1 = parseInt(localStorage.getItem("counter1")) || 0
-let counter2 = parseInt(localStorage.getItem("counter2")) || 0
+let counter1 = parseInt(localStorage.getItem("counter1")) || 1
+let counter2 = parseInt(localStorage.getItem("counter2")) || 1
+let counter3 = parseInt(localStorage.getItem("counter3")) || 1
+let counter4 = parseInt(localStorage.getItem("counter4")) || 1
+let counter5 = parseInt(localStorage.getItem("counter5")) || 1
 
-//counter1 = 0
-//counter2 = 0
-function handleVisibility1(entries) {
+setInterval(() => {
 	console.log(counter1, counter2)
+}, 100)
 
+window.onbeforeunload = function () {
+	sessionStorage.setItem("pageData", JSON.stringify(yourDataObject))
+}
+
+// Восстановление данных при загрузке страницы
+window.onload = function () {
+	var storedData = sessionStorage.getItem("pageData")
+	if (storedData) {
+		yourDataObject = JSON.parse(storedData)
+		// Восстановление состояния на основе данных
+	}
+}
+
+function handleVisibility1(entries) {
 	const entry = entries[0]
 	if (entry.isIntersecting) {
 		counter1++
 		localStorage.setItem("counter1", counter1) // Сохраняем значение счетчика в localStorage
 		if (counter1 % 2 === 1) {
-			smoothScrollTo1(document.getElementById("anchor1"), 1000)
-		} else {
 			smoothScrollTo1("flfl", 1000)
+			counter1 = 1
+			counter2 = 1
+			counter3 = 1
+			counter4 = 1
+			counter5 = 1
+			localStorage.setItem("counter1", counter1) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter2", counter2) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter3", counter3) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter4", counter4) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter5", counter5) // Сохраняем значение счетчика в localStorage
+		} else {
+			smoothScrollTo1(document.getElementById("anchor1"), 1000)
 		}
 	}
 }
-
 function handleVisibility2(entries) {
-	console.log(counter1, counter2)
-
 	const entry = entries[0]
 	if (entry.isIntersecting) {
 		counter2++
 		let lnlnElement = document.getElementById("anchor3")
 		let distanceFromTop = lnlnElement.offsetTop
-		//console.log(distanceFromTop + "px")
-		localStorage.setItem("counter2", counter2) // Сохраняем значение счетчика в localStorage
+		localStorage.setItem("counter2", counter2)
 		if (counter2 % 2 === 1) {
 			smoothScrollTo1("ffd", 1000, distanceFromTop)
-			//console.log(, 1000)
 		} else {
-			console.log("ffd2222")
+			counter1 = 2
+			counter2 = 2
+			counter3 = 2
+			counter4 = 2
+			counter5 = 2
+			localStorage.setItem("counter1", counter1) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter2", counter2) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter3", counter3) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter4", counter4) // Сохраняем значение счетчика в localStorage
+			localStorage.setItem("counter5", counter5) // Сохраняем значение счетчика в localStorage
 			smoothScrollTo1(document.getElementById("anchor4"), 1000)
+		}
+	}
+}
+function handleVisibility3(entries) {
+	const entry = entries[0]
+	if (entry.isIntersecting) {
+		counter3++
+		let lnlnElement1 = document.getElementById("anchor6")
+		let lnlnElement2 = document.getElementById("anchor7")
+		let distanceFromTop1 = lnlnElement1.offsetTop
+		let distanceFromTop2 = lnlnElement2.offsetTop
+		localStorage.setItem("counter3", counter3)
+		if (counter3 % 2 === 1) {
+			smoothScrollTo1(document.getElementById("anchor1"), 1000)
+		} else {
+			smoothScrollTo1("ff77", 1000, distanceFromTop2)
+		}
+	}
+}
+function handleVisibility4(entries) {
+	const entry = entries[0]
+	if (entry.isIntersecting) {
+		counter4++
+		let lnlnElement1 = document.getElementById("anchor7")
+		let lnlnElement2 = document.getElementById("anchor8")
+		let distanceFromTop1 = lnlnElement1.offsetTop
+		let distanceFromTop2 = lnlnElement2.offsetTop
+		localStorage.setItem("counter4", counter4)
+		if (counter4 % 2 === 1) {
+			smoothScrollTo1("ff77", 1000, distanceFromTop1)
+		} else {
+			smoothScrollTo1("ff88", 1000, distanceFromTop2)
+		}
+	}
+}
+function handleVisibility5(entries) {
+	const entry = entries[0]
+	if (entry.isIntersecting) {
+		counter5++
+		let lnlnElement1 = document.getElementById("anchor8")
+		let lnlnElement2 = document.getElementById("anchor3")
+		let distanceFromTop1 = lnlnElement1.offsetTop
+		let distanceFromTop2 = lnlnElement2.offsetTop
+		localStorage.setItem("counter5", counter5)
+		if (counter5 % 2 === 1) {
+			smoothScrollTo1("ff88", 1000, distanceFromTop1)
+		} else {
+			smoothScrollTo1("ffd", 1000, distanceFromTop2)
 		}
 	}
 }
 
 const observer1 = new IntersectionObserver(handleVisibility1)
 const observer2 = new IntersectionObserver(handleVisibility2)
+const observer3 = new IntersectionObserver(handleVisibility3)
+const observer4 = new IntersectionObserver(handleVisibility4)
+const observer5 = new IntersectionObserver(handleVisibility5)
 
 flags1.forEach((flag) => {
 	observer1.observe(flag)
@@ -357,10 +504,82 @@ flags1.forEach((flag) => {
 flags2.forEach((flag) => {
 	observer2.observe(flag)
 })
+flags3.forEach((flag) => {
+	observer3.observe(flag)
+})
+flags4.forEach((flag) => {
+	observer4.observe(flag)
+})
+flags5.forEach((flag) => {
+	observer5.observe(flag)
+})
 //?fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+//window.onload = function () {
+//	//*-/***** */
+//	// Получить элемент контейнера прокрутки
+//	let scrollContainer = document.querySelector(".scrolll")
+
+//	// Получить текущие координаты прокрутки
+//	let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+//	// Добавить временный стиль для блокировки прокрутки
+//	//scrollContainer.style.cssText = "position: fixed; width: 100%; height: 100%; overflow: hidden;"
+
+//	// Сохранить текущие координаты прокрутки в localStorage
+//	localStorage.setItem("scrollPosition", scrollTop)
+
+//	// Разблокировать прокрутку через 2 секунды
+//	setTimeout(function () {
+//		// Сбросить стили
+//		scrollContainer.style.cssText = ""
+
+//		// Получить сохраненные координаты прокрутки
+//		let savedScrollPosition = localStorage.getItem("scrollPosition") || 0
+
+//		// Переместиться на сохраненные координаты после окончания перезагрузки
+//		window.scrollTo(0, savedScrollPosition)
+
+//		// Удалить сохраненные координаты из localStorage
+//		localStorage.removeItem("scrollPosition")
+
+//		let loadingElement = document.getElementById("loadingElement")
+//		loadingElement.style.display = "none"
+//	}, 2000)
+
+//	//*** */ */
+//}
 
 document.addEventListener("DOMContentLoaded", function () {
-	//let top_bot = document.documentElement.clientHeight / 2 - 33.5 * vh + `px`
+	let counterLoad = parseInt(localStorage.getItem("counterLoad")) || 0
+
+	if (parseInt(localStorage.getItem("counterLoad")) == 0) {
+		counterLoad = 1
+		localStorage.setItem("counterLoad", counterLoad)
+		let scrollContainer = document.querySelector(".scrolll")
+
+		// Добавить временный стиль для блокировки прокрутки
+		scrollContainer.style.cssText = "position: fixed; width: 100%; height: 100%; overflow: hidden;"
+
+		// Разблокировать прокрутку через 2 секунды
+		setTimeout(function () {
+			scrollContainer.style.cssText = "" // Сбросить стили
+			let loadingElement = document.getElementById("loadingElement")
+			loadingElement.style.display = "none"
+		}, 2000)
+	} else {
+		let scrollContainer = document.querySelector(".scrolll")
+		let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+		localStorage.setItem("scrollPosition", scrollTop)
+		setTimeout(function () {
+			scrollContainer.style.cssText = ""
+			let savedScrollPosition = localStorage.getItem("scrollPosition") || 0
+			window.scrollTo(0, savedScrollPosition)
+			localStorage.removeItem("scrollPosition")
+			let loadingElement = document.getElementById("loadingElement")
+			loadingElement.style.display = "none"
+		}, 2000)
+	}
+
 	let top_bot = `36%`
 
 	let mediaQuery1150 = window.matchMedia("(max-width: 1150px)")
@@ -371,10 +590,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	function handleMediaQueryChange1150(mediaQuery) {
 		if (mediaQuery.matches) {
 			let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-			// Set the width of the element
 			let element = document.querySelector(".lotti-1")
 			element.style.width = screenWidth - 30 + "px"
-			// Получить среднюю позицию документа
 			top_bot = document.documentElement.clientHeight / 2 - 5 * vh + `px`
 		}
 	}
@@ -389,7 +606,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	function handleMediaQueryChange605(mediaQuery) {
 		if (mediaQuery.matches) {
 			top_bot = document.documentElement.clientHeight / 2 - 10 * vh + `px`
-			//element.style.transform = "translateY(-50%)"
 		}
 	}
 
@@ -457,8 +673,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	handleMediaQueryChange900(mediaQuery900)
 	handleMediaQueryChange605(mediaQuery605)
 	handleMediaQueryChange400(mediaQuery400)
-
-	//console.log(top_bot)
 
 	let heightScroll1 = 150
 	let heightScroll2 = 40
@@ -589,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Code to be executed after a delay of 1 second
 	//!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 	setTimeout(function () {
-		document.querySelector(".lotti-2").style.marginTop = `${document.querySelector(".right").offsetHeight / 18}px`
+		//document.querySelector(".lotti-2").style.marginTop = `${document.querySelector(".right").offsetHeight / 18}px`
 
 		let proxy2 = LottieProxy2({
 			container: "#animationWindow2",
@@ -691,9 +905,15 @@ document.addEventListener("DOMContentLoaded", function () {
 					scrollTrigger: {
 						trigger: "#animationWindow2",
 						pin: ".left",
-						start: "center center+=10%",
-						end: () => `+=${document.querySelector(".right").offsetHeight - document.querySelector("#animationWindow2").offsetHeight * 2.05}`,
-						scrub: 0.75,
+						start: "center center+=2%",
+						end: () =>
+							`+=${
+								document.querySelector(".right").offsetHeight -
+								document.querySelector("#animationWindow2").offsetHeight * 2.05 -
+								8 * vh +
+								document.querySelector(".right").offsetHeight / 12
+							}`,
+						scrub: 0.95,
 					},
 					frame: proxy2.lastFrame,
 				})
@@ -701,35 +921,35 @@ document.addEventListener("DOMContentLoaded", function () {
 					frame: 0,
 				})
 				.to(proxy2, {
-					duration: 0.15,
+					duration: 0.09,
 					frame: 12,
 				})
 				.to(proxy2, {
-					duration: 0.3,
+					duration: 0.1,
 					frame: 12,
-				})
-				.to(proxy2, {
-					duration: 0.15,
-					frame: 24,
 				})
 				.to(proxy2, {
 					duration: 0.3,
 					frame: 24,
 				})
 				.to(proxy2, {
-					duration: 0.15,
-					frame: 36,
+					duration: 0.1,
+					frame: 24,
 				})
 				.to(proxy2, {
 					duration: 0.3,
 					frame: 36,
 				})
 				.to(proxy2, {
-					duration: 0.15,
+					duration: 0.1,
+					frame: 36,
+				})
+				.to(proxy2, {
+					duration: 0.3,
 					frame: 48,
 				})
 				.to(proxy2, {
-					duration: 0.3,
+					duration: 0.1,
 					frame: 48,
 				})
 		}
@@ -737,8 +957,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		//!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
 		const elements = document.getElementsByClassName("pin-spacer")
-
-		//console.log(elements[0])
 
 		if (elements.length > 0) {
 			elements[0].classList.add("first-and-only")
@@ -754,27 +972,16 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector(".lotti-1").style.width = "100%"
 
 		//?fff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
 		setTimeout(() => {
 			let arnh = window.innerHeight
 			let item = document.querySelector(".item").offsetHeight
 			let header = document.querySelector(".header_fixed").offsetHeight
 			let hehe = (arnh - item) / 2 + header / 2
-			//console.log(arnh, "arnh")
-			//console.log(item, "item")
-			//console.log(header, "header")
-			//console.log(hehe, "arnh")
 
 			document.querySelector("#anchor1").style.height = `${hehe}px`
-		}, 100)
-		//setInterval(() => {
-		//	if (document.querySelector(".lotti-1").offsetTop > 0) {
-		//		//element.style.removeProperty("left")
-		//	}
-		//	//document.querySelector(".lotti-1").style.left = "auto"
-		//	//
-		//	//document.querySelector(".lotti-1").style.marginLeft = "-23px"
-		//	//document.querySelector(".lotti-1").style.width = `${elemW}`
-		//}, 10)
+			document.querySelector("#anchor4").style.height = `${hehe}px`
+		}, 700)
 		//!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-	}, 1300)
+	}, 1700)
 })

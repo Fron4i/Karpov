@@ -1,8 +1,16 @@
 .welcome {
+	//height: 100vh;
 	min-height: 650px;
 	padding-top: 80px;
 	position: relative;
 	overflow: hidden;
+}
+.welcome-cont {
+	//height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .welcome__wrapper {
 	z-index: 2;
