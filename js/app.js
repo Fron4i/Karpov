@@ -83,6 +83,8 @@ function isElementInViewport(element) {
 	)
 }
 
+let startLoadTime = new Date().getTime()
+
 function animateOnScroll() {
 	let elements = document.querySelectorAll(
 		".animate-on-scroll-1, .animate-on-scroll-2, .animate-on-scroll-3, .animate-on-scroll-4, .animate-on-scroll-5, .animate-on-scroll--left, .animate-on-scroll--right-1, .animate-on-scroll--right-2, .animate-on-scroll--right-3, .animate-on-scroll--right-4, .animate-on-scroll--right-5"
@@ -94,8 +96,18 @@ function animateOnScroll() {
 	}
 }
 
-window.addEventListener("scroll", animateOnScroll)
-window.addEventListener("load", animateOnScroll)
+function checkElapsedTime() {
+	let currentTime = new Date().getTime() // Текущее время
+	let elapsedTime = currentTime - startLoadTime // Вычисляем прошедшее время
+
+	if (elapsedTime >= 2200) {
+		// Если прошло больше или равно 2 секундам (2000 миллисекунд)
+		animateOnScroll() // Вызываем функцию анимации при прокрутке
+	}
+}
+
+window.addEventListener("scroll", checkElapsedTime)
+window.addEventListener("load", checkElapsedTime)
 
 //?fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
@@ -972,6 +984,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector(".lotti-1").style.width = "100%"
 
 		//?fff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+		//let style = document.createElement("style")
+		//style.innerHTML = `
+
+		//`
+		//document.head.appendChild(style)
 
 		setTimeout(() => {
 			let arnh = window.innerHeight

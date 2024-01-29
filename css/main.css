@@ -860,8 +860,8 @@ a:hover {
 
 .animate-on-scroll--left {
   opacity: 0;
-  transform: translateY(0px) translateX(-6.25rem);
-  transition: opacity 0.55s ease-out, transform 0.55s ease;
+  transform: translateY(0px) translateX(0);
+  transition: opacity 1.35s ease-out, transform 0.55s ease;
 }
 
 .animate-on-scroll--right-1,
@@ -973,10 +973,9 @@ a:hover {
 }
 
 .flag-2 {
-  margin: 15vh 0;
+  margin: 16vh 0 7vh 0;
   width: 100%;
   height: 1px;
-  background-color: red;
 }
 
 .flag-3,
@@ -991,6 +990,7 @@ a:hover {
 #animationWindow1 {
   width: clamp(300px, 63vw, 760px);
   z-index: 999;
+  overflow: visible;
 }
 
 .wrap {
@@ -1020,7 +1020,6 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid red;
 }
 .item + .item {
   margin-top: 20vh;
@@ -1095,7 +1094,6 @@ a:hover {
 }
 
 .database {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1203,18 +1201,74 @@ a:hover {
     height: 90px;
   }
 }
-@media screen and (height >= 1450px) {
+@media screen and (height >= 1500px) {
   .item + .item {
     margin-top: 55vh;
   }
-  .flag-2 {
-    margin: 40vh 0;
+}
+@media screen and (height >= 1200px) and (height < 1500px) {
+  .button--resize-1 {
+    font-size: 21px;
+    padding: 14px 38px;
+  }
+  .button--resize-2 {
+    font-size: 21px;
+    padding: 14px 55px;
+  }
+  .left {
+    width: 45%;
+  }
+  #animationWindow2 {
+    width: 80%;
+    margin: 0 27% 0 auto;
+  }
+  .right {
+    width: 55%;
+  }
+  .item + .item {
+    margin-top: 40vh;
+  }
+  .item--title__wrap {
+    width: 67%;
+  }
+  .item__title {
+    letter-spacing: 2.3px;
+    margin-bottom: 40px;
+    font-size: 55px;
+  }
+  .item__text {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .item__button-wrapper {
+    gap: 25px;
+  }
+  .item--info {
+    padding-top: 7.5vh;
+  }
+  .item-info__wrapper-container {
+    padding: 45px 0 45px 35px;
+    gap: 30px;
+  }
+  .item-info__content-wrapper {
+    gap: 40px;
+  }
+  .item-info__icon-image {
+    width: 64px;
+  }
+  .item-info__text-wrapper {
+    gap: 20px;
+  }
+  .item-info__title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .item-info__subtitle {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
-@media screen and (height >= 950px) and (height < 1450px) {
-  .item {
-    background-color: rgb(79, 79, 255);
-  }
+@media screen and (height >= 950px) and (height < 1200px) {
   .button--resize-1 {
     padding: 14px 38px;
   }
@@ -1310,9 +1364,6 @@ a:hover {
   }
 }
 @media screen and (height >= 800px) and (height < 950px) {
-  .item {
-    background-color: rgba(0, 128, 0, 0.536);
-  }
   .button--resize-1 {
     padding: 8px 36px;
     font-size: 14px;
@@ -1385,9 +1436,6 @@ a:hover {
   }
 }
 @media screen and (height >= 650px) and (height < 800px) {
-  .item {
-    background-color: rgba(0, 128, 0, 0.536);
-  }
   .button--resize-1 {
     padding: 8px 32px;
     font-size: 12px;

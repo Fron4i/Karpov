@@ -15,20 +15,97 @@
 		height: 90px;
 	}
 }
-@media screen and (height >= 1450px) {
+@media screen and (height >= 1500px) {
 	.item {
 		& + & {
 			margin-top: 55vh;
 		}
 	}
-	.flag-2 {
-		margin: 40vh 0;
-	}
 }
-@media screen and (height >= 950px) and (height < 1450px) {
-	.item {
-		background-color: rgb(79, 79, 255);
+@media screen and (height >= 1200px) and (height < 1500px) {
+	//.item {
+	//	background-color: rgb(130, 138, 110);
+	//}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+	.button--resize-1 {
+		font-size: 21px;
+		padding: 14px 38px;
 	}
+	.button--resize-2 {
+		font-size: 21px;
+		padding: 14px 55px;
+	}
+	.left {
+		width: 45%;
+	}
+
+	#animationWindow2 {
+		width: 80%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: calc(55%);
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 40vh;
+		}
+	}
+
+	.item--title__wrap {
+		width: 67%;
+	}
+
+	.item__title {
+		letter-spacing: 2.3px;
+		margin-bottom: 40px;
+		font-size: 55px;
+	}
+	.item__text {
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 7.5vh;
+	}
+
+	.item-info {
+		&__wrapper-container {
+			padding: 45px 0 45px 35px;
+			gap: 30px;
+		}
+		&__content-wrapper {
+			gap: 40px;
+		}
+		&__icon-image {
+			width: 64px;
+		}
+		&__text-wrapper {
+			gap: 20px;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		&__subtitle {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 950px) and (height < 1200px) {
+	//.item {
+	//	background-color: rgb(79, 79, 255);
+	//}
 	//??111111111111111111111111111111111111111111111111111111111111111111111111111
 	.button--resize-1 {
 		padding: 14px 38px;
@@ -145,9 +222,9 @@
 }
 
 @media screen and (height >= 800px) and (height < 950px) {
-	.item {
-		background-color: rgba(0, 128, 0, 0.536);
-	}
+	//.item {
+	//	background-color: rgba(0, 128, 0, 0.536);
+	//}
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -252,9 +329,9 @@
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 @media screen and (height >= 650px) and (height < 800px) {
-	.item {
-		background-color: rgba(0, 128, 0, 0.536);
-	}
+	//.item {
+	//	background-color: rgba(0, 128, 0, 0.536);
+	//}
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
