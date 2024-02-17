@@ -1,0 +1,86 @@
+.page-top-banner {
+	width: 100%;
+	display: var(--app-banner-visible, flex);
+	justify-content: center;
+	align-items: center;
+	background-color: #040a1b;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
+.page-top-banner__background {
+	height: 100%;
+	width: 100%;
+	background: url(https://umnico-cdn.com/production/landing/top-banner-poster-6fedff3….png) no-repeat;
+	background-size: cover;
+}
+
+.page-top-banner__inner {
+	height: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.container:after {
+	clear: both;
+}
+
+.page-top-banner__text {
+	color: #fff;
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-family:
+		Gotham Pro,
+		sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 400;
+}
+
+.page-top-banner__button {
+	display: block;
+	position: relative;
+	top: 0;
+	right: 38px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	background: none;
+	opacity: 1;
+	color: transparent;
+	z-index: 1;
+}
+
+.page-top-banner__button:before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.page-top-banner__button:after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.page-top-banner__button:after,
+.page-top-banner__button:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 4px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #fff;
+	border-radius: 20px;
+	transition: all 0.3s;
+}
+
+.page-top-banner__video {
+	position: absolute;
+	height: inherit;
+	width: 100vw;
+	object-fit: cover;
+}

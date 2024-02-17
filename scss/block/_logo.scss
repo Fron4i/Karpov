@@ -37,6 +37,12 @@
 	margin-left: 32px;
 	justify-content: center;
 	align-items: center;
+	& > img {
+		height: 47px;
+	}
+	& > span {
+		height: 47px;
+	}
 }
 
 .home-hero-logos-overlay {

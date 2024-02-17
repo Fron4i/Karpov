@@ -1,3 +1,661 @@
+//* Height (lotti)
+@media screen and (height >= 1500px) {
+	.item {
+		& + & {
+			margin-top: 40vh;
+		}
+	}
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		width: 100%;
+		height: 1px;
+		background-color: #fff;
+		margin: 60vh 0;
+	}
+	.footer__item-title {
+		line-height: 27px;
+		font-size: 18px;
+	}
+	.footer__item {
+		line-height: 27px;
+		font-size: 14px;
+	}
+}
+@media screen and (height >= 1200px) and (height < 1500px) {
+	.footer__item-title {
+		line-height: 27px;
+		font-size: 18px;
+	}
+	.footer__item {
+		line-height: 27px;
+		font-size: 14px;
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 40vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 18px;
+		padding: 14px 34px;
+	}
+	.button--resize-2 {
+		font-size: 18px;
+		padding: 14px 50px;
+	}
+	.left {
+		width: 45%;
+	}
+	.lotti-title-wrapper {
+		width: 74%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	#animationWindow2 {
+		width: 74%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: 49%;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 65px;
+	}
+
+	.item__title {
+		letter-spacing: 2.3px;
+		margin-bottom: 40px;
+		font-size: 45px;
+	}
+	.item__text {
+		font-size: 20px;
+		margin-bottom: 40px;
+		width: 90%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+		flex-wrap: nowrap;
+	}
+
+	.item--info {
+		padding-top: 6vh;
+	}
+	.lotti-title {
+		font-size: 25px;
+		line-height: 25px;
+		left: 50%;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 35px;
+			gap: 30px;
+		}
+		&__content-wrapper {
+			gap: 40px;
+		}
+		&__icon-image {
+			width: 64px;
+		}
+		&__text-wrapper {
+			gap: 20px;
+		}
+		&__title {
+			font-size: 25px;
+			line-height: 25px;
+		}
+		&__subtitle {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 950px) and (height < 1200px) {
+	.footer__item-title {
+		line-height: 27px;
+		font-size: 18px;
+	}
+	.footer__item {
+		line-height: 27px;
+		font-size: 14px;
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+	#animationWindow1 {
+		width: clamp(300px, 40vw, 740px);
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 33vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 15px;
+		padding: 12px 34px;
+	}
+	.button--resize-2 {
+		font-size: 15px;
+		padding: 12px 60px;
+	}
+	.left {
+		width: 45%;
+	}
+	.lotti-title-wrapper {
+		width: 62%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	#animationWindow2 {
+		width: 62%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: 41.5%;
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 50px;
+	}
+
+	.item__title {
+		letter-spacing: 2px;
+		margin-bottom: 25px;
+		font-size: 40px;
+	}
+	.item__text {
+		font-size: 17px;
+		line-height: 22px;
+		margin-bottom: 25px;
+		width: 90%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 4vh;
+	}
+	.lotti-title {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 30px;
+			gap: 25px;
+		}
+		&__content-wrapper {
+			gap: 25px;
+		}
+		&__icon-image {
+			width: 54px;
+		}
+		&__text-wrapper {
+			gap: 16px;
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 20px;
+		}
+		&__subtitle {
+			font-size: 15px;
+			line-height: 22px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 850px) and (height < 950px) {
+	.database__card {
+		width: 28.5%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.database__card-title {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.database__card-text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+	//~5555555555555555555555555555
+	.image-right {
+		width: 570px;
+	}
+	.image-right.width {
+		width: 550px;
+	}
+	.title-cube {
+		font-size: 40px;
+		line-height: 44px;
+		letter-spacing: 2px;
+	}
+	.paragraph-large {
+		margin-top: 26px;
+		margin-bottom: 26px;
+		font-size: 18px;
+	}
+	.list {
+		font-size: 18px;
+	}
+	//************************************
+
+	.lotti-section__title {
+		font-size: 46px;
+		line-height: 52px;
+		margin-bottom: 40px;
+	}
+	#animationWindow1 {
+		width: clamp(300px, 40vw, 690px);
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 35vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 12px;
+		padding: 10px 30px;
+	}
+	.button--resize-2 {
+		font-size: 12px;
+		padding: 10px 50px;
+	}
+	.left {
+		width: 45%;
+	}
+	.lotti-title-wrapper {
+		width: 56%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	#animationWindow2 {
+		width: 56%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: 34.75%;
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 40px;
+	}
+
+	.item__title {
+		letter-spacing: 1.8px;
+		margin-bottom: 25px;
+		font-size: 32px;
+	}
+	.item__text {
+		font-size: 15px;
+		line-height: 18px;
+		margin-bottom: 25px;
+		width: 90%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 4vh;
+	}
+	.lotti-title {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 25px;
+			gap: 20px;
+		}
+		&__content-wrapper {
+			gap: 20px;
+		}
+		&__icon-image {
+			width: 40px;
+		}
+		&__text-wrapper {
+			gap: 12px;
+		}
+		&__title {
+			font-size: 16px;
+			line-height: 16px;
+		}
+		&__subtitle {
+			font-size: 13px;
+			line-height: 20px;
+		}
+	}
+	////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 800px) and (height < 850px) {
+	.database__card {
+		width: 28.5%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.database__card-title {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.database__card-text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+	//~5555555555555555555555555555
+	.image-right {
+		width: 570px;
+	}
+	.image-right.width {
+		width: 550px;
+	}
+	.title-cube {
+		font-size: 38px;
+		line-height: 44px;
+		letter-spacing: 2px;
+	}
+	.paragraph-large {
+		margin-top: 26px;
+		margin-bottom: 26px;
+		font-size: 16px;
+	}
+	.list {
+		font-size: 16px;
+	}
+	.top-block-services {
+		margin-bottom: 40px;
+	}
+	//************************************
+
+	.lotti-section__title {
+		font-size: 42px;
+		line-height: 46px;
+		margin-bottom: 40px;
+		max-width: 700px;
+	}
+	#animationWindow1 {
+		width: clamp(300px, 40vw, 640px);
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 35vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 11px;
+		padding: 10px 25px;
+	}
+	.button--resize-2 {
+		font-size: 11px;
+		padding: 10px 45px;
+	}
+	.left {
+		width: 45%;
+	}
+	.lotti-title-wrapper {
+		width: 52%;
+		//height: 50vh;
+		margin: 0 22% 0 auto;
+	}
+	#animationWindow2 {
+		width: 52%;
+		//height: 50vh;
+		margin: 0 22% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: 33%;
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 40px;
+	}
+
+	.item__title {
+		letter-spacing: 1.8px;
+		margin-bottom: 20px;
+		font-size: 32px;
+	}
+	.item__text {
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+		width: 81%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 4vh;
+	}
+	.lotti-title {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 25px;
+			gap: 17px;
+		}
+		&__content-wrapper {
+			gap: 17px;
+		}
+		&__icon-image {
+			width: 36px;
+		}
+		&__text-wrapper {
+			gap: 12px;
+		}
+		&__title {
+			font-size: 16px;
+			line-height: 16px;
+		}
+		&__subtitle {
+			font-size: 12px;
+			line-height: 17px;
+		}
+	}
+	////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (height >= 650px) and (height < 800px) {
+	.lotti-section__title {
+		font-size: 36px;
+		line-height: 42px;
+		margin-bottom: 40px;
+		max-width: 700px;
+	}
+	#animationWindow1 {
+		width: clamp(690px, 63vw, 760px);
+	}
+	//~5555555555555555555555555555
+	.image-right {
+		width: 570px;
+	}
+	.image-right.width {
+		width: 550px;
+	}
+	.title-cube {
+		font-size: 38px;
+		line-height: 44px;
+		letter-spacing: 2px;
+	}
+	.paragraph-large {
+		margin-top: 26px;
+		margin-bottom: 26px;
+		font-size: 18px;
+	}
+	.list {
+		font-size: 18px;
+	}
+	.top-block-services {
+		margin-bottom: 40px;
+	}
+	//??111111111111111111111111111111111111111111111111111111111111111111111111111
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 35vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 10px;
+		padding: 9px 25px;
+	}
+	.button--resize-2 {
+		font-size: 10px;
+		padding: 9px 40px;
+	}
+	.left {
+		width: 45%;
+	}
+	.lotti-title-wrapper {
+		width: 48%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	#animationWindow2 {
+		width: 48%;
+		//height: 50vh;
+		margin: 0 27% 0 auto;
+	}
+	.right {
+		//padding-top: 15vh;
+		width: 31%;
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 40px;
+	}
+
+	.item__title {
+		letter-spacing: 1.8px;
+		margin-bottom: 20px;
+		font-size: 28px;
+	}
+	.item__text {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 20px;
+		width: 81%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 4vh;
+	}
+	.lotti-title {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 25px;
+			gap: 15px;
+		}
+		&__content-wrapper {
+			gap: 15px;
+		}
+		&__icon-image {
+			width: 36px;
+		}
+		&__text-wrapper {
+			gap: 8px;
+		}
+		&__title {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		&__subtitle {
+			font-size: 11px;
+			line-height: 15px;
+		}
+	}
+	////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+@media screen and (max-height: 991px) {
+	.lotti-section__title {
+		margin-bottom: 38px;
+	}
+}
+
+//? Width
 @media screen and (width >= 2400px) {
 	.image-banner--left {
 		left: 9%;
@@ -14,176 +672,9 @@
 	.header__nav-wrapper {
 		height: 90px;
 	}
-}
-@media screen and (height >= 1500px) {
-	.item {
-		& + & {
-			margin-top: 55vh;
-		}
+	.page-top-banner {
+		height: 60px;
 	}
-}
-@media screen and (height >= 1200px) and (height < 1500px) {
-	//.item {
-	//	background-color: rgb(130, 138, 110);
-	//}
-	//??111111111111111111111111111111111111111111111111111111111111111111111111111
-	.button--resize-1 {
-		font-size: 21px;
-		padding: 14px 38px;
-	}
-	.button--resize-2 {
-		font-size: 21px;
-		padding: 14px 55px;
-	}
-	.left {
-		width: 45%;
-	}
-
-	#animationWindow2 {
-		width: 80%;
-		//height: 50vh;
-		margin: 0 27% 0 auto;
-	}
-	.right {
-		//padding-top: 15vh;
-		width: calc(55%);
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	.item {
-		& + & {
-			margin-top: 40vh;
-		}
-	}
-
-	.item--title__wrap {
-		width: 67%;
-	}
-
-	.item__title {
-		letter-spacing: 2.3px;
-		margin-bottom: 40px;
-		font-size: 55px;
-	}
-	.item__text {
-		font-size: 20px;
-		margin-bottom: 40px;
-	}
-	.item__button-wrapper {
-		gap: 25px;
-	}
-
-	.item--info {
-		padding-top: 7.5vh;
-	}
-
-	.item-info {
-		&__wrapper-container {
-			padding: 45px 0 45px 35px;
-			gap: 30px;
-		}
-		&__content-wrapper {
-			gap: 40px;
-		}
-		&__icon-image {
-			width: 64px;
-		}
-		&__text-wrapper {
-			gap: 20px;
-		}
-		&__title {
-			font-size: 28px;
-			line-height: 28px;
-		}
-		&__subtitle {
-			font-size: 20px;
-			line-height: 24px;
-		}
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-}
-@media screen and (height >= 950px) and (height < 1200px) {
-	//.item {
-	//	background-color: rgb(79, 79, 255);
-	//}
-	//??111111111111111111111111111111111111111111111111111111111111111111111111111
-	.button--resize-1 {
-		padding: 14px 38px;
-	}
-	.button--resize-2 {
-		padding: 14px 55px;
-	}
-	.wrap {
-		width: 100%;
-		margin-top: 8vh;
-	}
-	#animationWindow2 {
-		width: 65%;
-		//height: 50vh;
-		margin: 0 22% 0 auto;
-	}
-
-	.left {
-		width: 50%;
-	}
-
-	.right {
-		//padding-top: 15vh;
-		width: calc(50%);
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	.item {
-		& + & {
-			margin-top: 20vh;
-		}
-	}
-
-	.item--title__wrap {
-		width: 67%;
-	}
-
-	.item__title {
-		letter-spacing: 2.3px;
-		margin-bottom: 30px;
-		font-size: 47px;
-	}
-	.item__text {
-		font-size: 18px;
-		margin-bottom: 30px;
-	}
-	.item__button-wrapper {
-		gap: 20px;
-	}
-
-	.item--info {
-		padding-top: 6.5vh;
-	}
-
-	.item-info {
-		&__wrapper-container {
-			padding: 30px;
-			gap: 30px;
-		}
-		&__content-wrapper {
-			gap: 40px;
-		}
-		&__icon-image {
-			width: 64px;
-		}
-		&__text-wrapper {
-			gap: 20px;
-		}
-		&__title {
-			font-size: 24px;
-			line-height: 24px;
-		}
-		&__subtitle {
-			font-size: 17px;
-			line-height: 24px;
-		}
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 @media screen and (width >= 1920px) and (width < 2400px) {
 	.image-banner--left {
@@ -201,11 +692,12 @@
 	.header__nav-wrapper {
 		height: 90px;
 	}
+	.page-top-banner {
+		height: 60px;
+	}
 }
-
 @media screen and (width >= 1440px) and (width < 1920px) {
 	.image-banner--left {
-		//width: 25%;
 		top: 4%;
 		left: 1%;
 	}
@@ -213,220 +705,54 @@
 		max-width: 528px;
 		margin-left: -13%;
 	}
-
 	.image-banner--right {
-		//width: 25%;
 		right: 5%;
 		top: 7%;
 	}
-}
 
-@media screen and (height >= 800px) and (height < 950px) {
-	//.item {
-	//	background-color: rgba(0, 128, 0, 0.536);
-	//}
-
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	.button--resize-1 {
-		padding: 8px 36px;
-		font-size: 14px;
+	//! Database
+	.database__card {
+		width: 25.5%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
-	.button--resize-2 {
-		padding: 8px 42px;
-		font-size: 14px;
+	.database__card-title {
+		font-size: 18px;
+		line-height: 26px;
 	}
-	.wrap {
-		width: 100%;
-		margin-top: 8vh;
+	.database__card-text {
+		font-size: 12px;
+		line-height: 20px;
 	}
-	#animationWindow2 {
-		width: 56%;
-		//height: 50vh;
-		margin: 0 20% 0 auto;
+	.database__subtitle {
+		letter-spacing: 1.8px;
+		font-size: 30px;
+		line-height: 38px;
 	}
-
-	.left {
-		width: 50%;
-	}
-
-	.right {
-		//padding-top: 15vh;
-		width: calc(50%);
-	}
-	//#animationWindow2 {
-	//	width: 65%;
-	//	//height: 50vh;
-	//	margin: 0 5% 0 auto;
-	//}
-
-	//.left {
-	//	width: 40%;
-	//}
-
-	//.right {
-	//	//padding-top: 15vh;
-	//	width: 39%;
-	//}
-
-	//??111111111111111111111111111111111111111111111111111111111111111111111111111
-	.item {
-		width: 80%;
-		margin: 0 0 0 0;
-	}
-
-	.item {
-		& + & {
-			margin-top: 20vh;
-		}
-	}
-	.item--title__wrap {
-		width: 68%;
-	}
-
-	.item__title {
-		letter-spacing: 1.5px;
+	.database__title-wrapper {
 		margin-bottom: 20px;
-		font-size: 42px;
+		gap: 10px;
 	}
-	.item__text {
-		margin-left: 3px;
-		font-size: 14px;
-		line-height: 21px;
-		margin-bottom: 20px;
+	.database__card-text-wrapper {
+		height: 180px;
 	}
-	.item__button-wrapper {
-		gap: 23.5px;
+	.database__cards-wrapper {
+		margin-bottom: 40px;
 	}
-
-	.item--info {
-		padding-top: 5.75vh;
-	}
-
-	.item-info {
-		&__wrapper-container {
-			padding: 23px;
-			gap: 23px;
-		}
-		&__content-wrapper {
-			gap: 28px;
-		}
-		&__icon-image {
-			width: 42px;
-		}
-		&__text-wrapper {
-			gap: 10px;
-		}
-		&__title {
-			font-size: 20px;
-			line-height: 22px;
-		}
-		&__subtitle {
-			line-height: 20px;
-			font-size: 14px;
-		}
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-}
-@media screen and (height >= 650px) and (height < 800px) {
-	//.item {
-	//	background-color: rgba(0, 128, 0, 0.536);
-	//}
-
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	.button--resize-1 {
-		padding: 8px 32px;
+	.database__card-link {
 		font-size: 12px;
 	}
-	.button--resize-2 {
-		padding: 8px 38px;
-		font-size: 12px;
+	.database__title {
+		font-size: 16px;
+		line-height: 24px;
 	}
-	.wrap {
-		width: 100%;
-		margin-top: 8vh;
-	}
-	#animationWindow2 {
-		width: 52%;
-		//height: 50vh;
-		margin: 0 17% 0 auto;
-	}
-
-	.left {
-		width: 50%;
-	}
-
-	.right {
-		//padding-top: 15vh;
-		width: calc(50%);
-	}
-
-	//??111111111111111111111111111111111111111111111111111111111111111111111111111
-	.item {
-		width: 76%;
-		margin: 0 0 0 0;
-	}
-	.item {
-		& + & {
-			margin-top: 20vh;
-		}
-	}
-	.item--title__wrap {
-		width: 62%;
-	}
-
-	.item__title {
-		letter-spacing: 1.5px;
-		margin-bottom: 20px;
-		font-size: 38px;
-	}
-	.item__text {
-		margin-left: 3px;
-		font-size: 13px;
-		line-height: 18px;
-		margin-bottom: 20px;
-	}
-	.item__button-wrapper {
-		gap: 23.5px;
-	}
-
-	.item--info {
-		padding-top: 5vh;
-	}
-
-	.item-info {
-		&__wrapper-container {
-			padding: 21px;
-			gap: 20px;
-		}
-		&__content-wrapper {
-			gap: 24px;
-		}
-		&__icon-image {
-			width: 38px;
-		}
-		&__text-wrapper {
-			gap: 10px;
-		}
-		&__title {
-			font-size: 18px;
-			line-height: 20px;
-		}
-		&__subtitle {
-			font-size: 14px;
-			line-height: 18px;
-		}
-	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
-
 @media screen and (width >= 1280px) and (width < 1440px) {
 	.image-block {
 		max-width: 528px;
 		margin-left: -13%;
 	}
-	//! saasd
 	.light-block__subtitle {
 		min-width: 275px;
 	}
@@ -442,19 +768,13 @@
 		top: 9%;
 		left: 2%;
 	}
-
 	.image-banner--right {
 		width: 23.5%;
 		right: 4%;
 		top: 13%;
 	}
 }
-
 @media screen and (max-width: 1279px) {
-	//.first-and-only {
-	//	width: 100vw !important;
-	//	justify-content: start;
-	//}
 	.image-block {
 		max-width: 41vw;
 		margin-left: -15%;
@@ -470,12 +790,6 @@
 	.image-banner--right {
 		top: 16%;
 		width: 25%;
-	}
-}
-
-@media screen and (max-height: 991px) {
-	.lotti-section__title {
-		margin-bottom: 38px;
 	}
 }
 @media screen and (max-width: 1100px) {
@@ -502,10 +816,13 @@
 		max-width: 800px;
 	}
 	.main {
-		padding-top: 80px;
+		padding-top: 130px;
 	}
 	.header__nav-wrapper {
 		height: 80px;
+	}
+	.page-top-banner {
+		height: 50px;
 	}
 	.welcome {
 		padding-top: 60px;
@@ -525,7 +842,6 @@
 		padding-right: 15px;
 	}
 }
-
 @media screen and (max-width: 767px) {
 	* {
 		cursor: none;
@@ -551,7 +867,7 @@
 		line-height: 46px;
 	}
 	.main {
-		padding-top: 65px;
+		padding-top: 115px;
 	}
 	.header__nav-wrapper {
 		height: 65px;
@@ -608,8 +924,12 @@
 		cursor: none;
 	}
 }
-
 @media screen and (max-width: 479px) {
+	.page-top-banner {
+		height: 66px;
+	}
+	.page-top-banner__text {
+	}
 	.lotti-section__title {
 		font-size: 32px;
 		line-height: 34px;
@@ -748,17 +1068,6 @@
 		padding-bottom: 10vw;
 	}
 }
-//@media screen and (max-width: 380px) {
-//	.image-banner--left {
-//		bottom: 32%;
-//		left: 0%;
-//		width: 44%;
-//	}
-//	.image-banner--right {
-//		right: 2%;
-//		top: 23%;
-//	}
-//}
 @media screen and (max-width: 350px) {
 	.image-banner--left {
 		bottom: 34.5%;
@@ -767,5 +1076,263 @@
 	.image-banner--right {
 		right: 2%;
 		top: 23%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.image-right {
+		width: 700px;
+	}
+	.image-right.width {
+		width: 550px;
+	}
+	.title-cube {
+		font-size: 38px;
+		line-height: 42px;
+		letter-spacing: 1.5px;
+	}
+	.paragraph-large {
+		margin-top: 26px;
+		margin-bottom: 26px;
+		font-size: 17px;
+	}
+	.list {
+		font-size: 18px;
+	}
+	.description-top-block {
+		max-width: 45%;
+	}
+	.top-block-services {
+		gap: 0;
+	}
+	.bottom-block-services {
+		grid-column-gap: 15px;
+	}
+	//************************************
+
+	#animationWindow1 {
+		width: clamp(690px, 63vw, 760px);
+	}
+	.lotti-section__title {
+		font-size: 48px;
+		line-height: 50px;
+		max-width: 730px;
+	}
+	//************************************
+
+	.flag-3,
+	.flag-4,
+	.flag-5 {
+		margin: 33vh 0;
+	}
+
+	.button--resize-1 {
+		font-size: 13px;
+		padding: 12px 30px;
+	}
+	.button--resize-2 {
+		font-size: 13px;
+		padding: 12px 45px;
+	}
+	.left {
+		width: 40%;
+	}
+	.lotti-title-wrapper {
+		width: 75%;
+		//height: 50vh;
+		margin: 0 15% 0 auto;
+	}
+	#animationWindow2 {
+		width: 75%;
+		//height: 50vh;
+		margin: 0 15% 0 auto;
+	}
+	.right {
+		max-width: 500px;
+		//padding-top: 15vh;
+		width: 55%;
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	.item {
+		& + & {
+			margin-top: 20vh;
+		}
+	}
+
+	.item--title__wrap {
+		padding-left: 30px;
+	}
+
+	.item__title {
+		letter-spacing: 2px;
+		margin-bottom: 25px;
+		font-size: 38px;
+	}
+	.item__text {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 25px;
+		width: 90%;
+	}
+	.item__button-wrapper {
+		gap: 25px;
+	}
+
+	.item--info {
+		padding-top: 4vh;
+	}
+	.lotti-title {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.item-info {
+		&__wrapper-container {
+			padding: 30px;
+			gap: 25px;
+		}
+		&__content-wrapper {
+			gap: 25px;
+		}
+		&__icon-image {
+			width: 54px;
+		}
+		&__text-wrapper {
+			gap: 16px;
+		}
+		&__title {
+			font-size: 19px;
+			line-height: 20px;
+		}
+		&__subtitle {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	.database__card-text {
+		font-size: clamp(14px, 1.6vw, 20px);
+		line-height: clamp(18px, 2.2vw, 24px);
+	}
+	.database__subtitle {
+		line-height: clamp(38px, 5vw, 46px);
+	}
+	.database__cards-wrapper {
+		gap: 2%;
+	}
+	.database__card {
+		width: 32%;
+	}
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	.footer__column:nth-child(2) {
+		width: fit-content;
+		//margin-right: -20px;
+		margin-left: 20px;
+		//& > * > .footer__item {
+		//	white-space: normal;
+		//}
+		//& > * > .footer__item-title {
+		//	white-space: normal;
+		//}
+	}
+	.wrapping {
+		white-space: normal;
+	}
+
+	.footer-wrapper {
+		padding-top: 77px;
+	}
+
+	.footer__item {
+		font-size: 12px;
+		line-height: 12px;
+		margin: 7.5px;
+	}
+	.footer__item-title {
+		font-size: 14px;
+		line-height: 14px;
+		margin: 6.5px;
+	}
+
+	.footer__logo {
+		min-width: 120px;
+	}
+
+	.footer__item-wrapper {
+		margin-top: 13px;
+		gap: 5px;
+		&--small-marign {
+			margin-top: 19px;
+			margin-bottom: 82px;
+		}
+		&--fix-height {
+			height: 147px;
+		}
+	}
+
+	.footer__title-footer {
+		height: 53px;
+	}
+
+	.footer__social-wrapper {
+		margin-top: 12px;
+		gap: 8px;
+	}
+	.footer__social-item {
+		width: 25px;
+		transition: opacity 0.3s;
+	}
+	.small-mail {
+		font-size: 11px;
+	}
+	//! Плашка внизу
+	.page-footer__bottom {
+		margin-top: 100px;
+		font-size: 14px;
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	#animationWindow1 {
+		width: clamp(580px, 63vw, 750px);
+	}
+	.lotti-section__title {
+		font-size: 42px;
+		line-height: 44px;
+		max-width: 600px;
+	}
+}
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+	#animationWindow1 {
+		width: clamp(480px, 80vw, 600px);
+	}
+	.lotti-section__title {
+		font-size: 34px;
+		line-height: 38px;
+	}
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+	#animationWindow1 {
+		width: clamp(320px, 100vw, 480px);
+	}
+	.lotti-section__title {
+		font-size: clamp(24px, 7vw, 30px);
+		line-height: clamp(28px, 7vw, 34px);
+		max-width: 400px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	#animationWindow1 {
+		width: clamp(280px, 100vw, 320px);
+	}
+	.lotti-section__title {
+		font-size: clamp(18px, 7vw, 24px);
+		line-height: clamp(22px, 7vw, 28px);
+		max-width: 280px;
 	}
 }

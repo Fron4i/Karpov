@@ -69,6 +69,7 @@
 	border: 2px solid $primary;
 	background-color: $primary;
 	color: $white;
+	letter-spacing: 0.6px;
 
 	&:hover {
 		background-color: $white;
@@ -91,4 +92,9 @@
 
 .button--small {
 	padding: 10px 35px;
+}
+
+.button--footer {
+	max-width: 143px;
+	color: $primary;
 }

@@ -1,0 +1,100 @@
+// Base style
+body {
+	color: $paragraph;
+	font-family: $font-main;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5em;
+	overflow-x: hidden;
+}
+//? баг с добавлением высоты после html
+.scrolll {
+	position: relative;
+	overflow: hidden;
+}
+//? /////////////
+
+.nobar::-webkit-scrollbar {
+	background-color: #ffffff00; /* Цвет фона скроллбара */
+}
+
+.nobar::-webkit-scrollbar-thumb {
+	background-color: #ffffff00; /* Цвет полосы скроллбара */
+}
+
+.nobar::-webkit-scrollbar-track {
+	background-color: #ffffff00; /* Цвет фона скроллбара */
+}
+
+h1 {
+	color: $midnight-blue;
+	//margin-top: 10px;
+	//margin-bottom: 10px;
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 1.04em;
+}
+
+h2 {
+	color: $midnight-blue;
+	//margin-top: 10px;
+	//margin-bottom: 10px;
+	font-size: clamp(29px, 5vw, 50px);
+	font-weight: 400;
+	line-height: 1.04em;
+}
+
+h3 {
+	color: $midnight-blue;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 1.04em;
+}
+
+h4 {
+	color: $midnight-blue;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 1em;
+}
+
+//h5 {
+//	color: $midnight-blue;
+//	margin-top: 10px;
+//	margin-bottom: 10px;
+//	font-size: 24px;
+//	font-weight: 500;
+//	line-height: 1.2em;
+//}
+
+//h6 {
+//	color: $midnight-blue;
+//	margin-top: 10px;
+//	margin-bottom: 10px;
+//	font-size: 20px;
+//	font-weight: 500;
+//	line-height: 1.2em;
+//}
+
+a {
+	color: $midnight-blue;
+	transition: color 0.2s ease-in;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+}
+
+.none {
+	display: none !important;
+}
+
+.main {
+	padding-top: 104px;
+}

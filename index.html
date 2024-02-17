@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="html nobar">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 		<title>Карпов и Партнёры</title>
 	</head>
-	<body class="body">
-		<div class="scrolll">
+
+	<body class="body nobar">
+		<div class="scrolll nobar">
 			<header class="header_fixed">
+				<div class="page-top-banner-div">
+					<a target="_blank" href="https://t.me/karpovpartners" class="page-top-banner">
+						<div class="page-top-banner__background">
+							<div class="page-top-banner__inner container">
+								<p class="page-top-banner__text">Присоединяйтесь к нам - здесь будет интересно!</p>
+								<button class="page-top-banner__button">×</button>
+							</div>
+						</div>
+						<div class="page-top-banner__overlay"></div>
+						<video
+							poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+							autoplay="autoplay"
+							loop="loop"
+							muted="muted"
+							playsinline=""
+							class="page-top-banner__video"
+						>
+							<!--<source src="https://umnico-cdn.com/production/landing/top-banner-0eaf40854dbbd9eb44d889771aa5df36.webm" type="video/webm" />-->
+							<source src="./img/banner/banner_tg_blue.mp4" type="video/mp4" />
+						</video>
+					</a>
+				</div>
 				<div class="container">
 					<div class="header__nav-wrapper">
 						<a class="brand" href="/">
@@ -34,7 +60,7 @@
 							</div>
 						</div>
 						<a class="button__link button-header" href="#">
-							<div class="button button--blue button--small">Заказать</div>
+							<div class="button button--blue button--small button--resize-1">Заказать</div>
 						</a>
 						<div class="menu-button">
 							<img class="image-burger" src="./img/main_Img/menu-button.svg" />
@@ -145,7 +171,20 @@
 				</div>
 			</div>
 			<main class="main">
-				<div id="loadingElement">Загрузка...</div>
+				<div class="preloader-wrapper" id="loadingElement">
+					<div class="preloader">
+						<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+						<lottie-player
+							class="preloader"
+							src="https://lottie.host/4f5ec044-d1b3-4f71-84b5-36c7fa2b8c70/mjbxGCp1C5.json"
+							background="transparent"
+							speed="0.75"
+							style="width: 12em; height: 12em"
+							loop
+							autoplay
+						></lottie-player>
+					</div>
+				</div>
 				<section class="welcome">
 					<div class="image-banner image-banner--left">
 						<img class="image-banner__img" data-aos="zoom-in" src="./img/home/welcome/left.webp" />
@@ -209,204 +248,299 @@
 						<div class="home-hero-carousel-wrap">
 							<div class="home-hero-carousel-row">
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
+									<img src="./img/home/welcome/slider/ebony_and_co_logo.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
+									<img src="./img/home/welcome/slider/private-glass.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
+									<img src="./img/home/welcome/slider/interstroy.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
+									<img src="./img/home/welcome/slider/tlc.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
+									<span class="logo__sign">
+										<svg width="31" height="47" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__b">
+											<path
+												d="M0 0.195068H21.472V5.71741H5.50972V24.2967H12.3899C14.6631 24.2967 16.5104 22.4528 16.5104 20.1831C16.5104 17.9113 14.6638 16.0689 12.3899 16.0689L9.27506 16.069V11.0069C10.2524 10.6757 11.3013 10.4961 12.3902 10.4961C13.505 10.4961 14.5785 10.6848 15.5755 11.0314C15.7053 11.0756 15.833 11.1233 15.9607 11.1738C18.1904 12.0544 20.0139 13.7382 21.0768 15.8676L21.0818 15.8781L21.0862 15.8873L21.0894 15.8936L21.1047 15.9249C21.1279 15.9722 21.1516 16.0208 21.174 16.0689C21.2827 16.299 21.383 16.5355 21.4721 16.7754C21.8728 17.8356 22.0903 18.9841 22.0903 20.1831C22.0903 21.3829 21.8721 22.5314 21.4721 23.5908C21.383 23.8315 21.2813 24.0686 21.1719 24.3002L21.1603 24.3253L21.1538 24.3397L21.1434 24.3619C21.1384 24.3721 21.1337 24.3825 21.129 24.3928C21.1242 24.4032 21.1195 24.4135 21.1146 24.4237C19.7696 27.1754 17.1575 29.1967 14.0382 29.7292C13.5689 29.8097 13.0888 29.8563 12.5994 29.8666L12.5936 29.8667C12.526 29.8681 12.4581 29.8688 12.3901 29.8688C12.3221 29.8688 12.2542 29.8681 12.1865 29.8667H5.50972V29.8688H0V0.195068Z"
+												fill="black"
+											></path>
+											<path id="blueLogoPath" d="M10.2671 16.0689H9.27502V9.83019L13.6825 5.71667H21.4725L10.2671 16.0689Z" fill="#33CCFF"></path>
+											<path
+												d="M27.2349 5.99384C25.6528 5.99384 24.3654 4.7085 24.3654 3.12778C24.3654 1.54776 25.6528 0.261719 27.2349 0.261719C28.8178 0.261719 30.1052 1.54706 30.1052 3.12778C30.1052 4.7078 28.8178 5.99384 27.2349 5.99384ZM27.2349 0.886149C25.9973 0.886149 24.9905 1.89155 24.9905 3.12778C24.9905 4.36401 25.9973 5.36941 27.2349 5.36941C28.4726 5.36941 29.4794 4.36401 29.4794 3.12778C29.4794 1.89155 28.4726 0.886149 27.2349 0.886149ZM27.2062 3.46315H26.7712V4.48539H26.1299V1.77017H27.176C27.8811 1.77017 28.4094 1.93505 28.4094 2.60859C28.4094 3.00921 28.1884 3.23793 27.8769 3.35791L28.5483 4.48469H27.7948L27.2062 3.46315ZM26.7712 2.30971V2.92361H27.1949C27.4987 2.92361 27.731 2.8752 27.731 2.61631C27.731 2.36584 27.4987 2.30901 27.1949 2.30901H26.7712V2.30971Z"
+												fill="black"
+											></path>
+										</svg>
+										<svg width="2" height="47" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__line">
+											<path d="M1.3274 0.208405H0.129761V29.8569H1.3274V0.208405Z" fill="black"></path>
+										</svg>
+										<svg width="89" height="47" viewBox="0 0 89 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__text">
+											<path
+												d="M0.490356 11.3576V0.209747H8.74686V1.99534H2.69059V4.4685H5.51246C8.04245 4.4685 9.74946 5.2978 9.74946 7.82358C9.74946 10.3936 8.05788 11.3576 5.40791 11.3576H0.490356ZM2.69059 9.57198H5.49001C6.78517 9.57198 7.4959 8.98895 7.4959 7.88322C7.4959 6.71785 6.76974 6.25409 5.45984 6.25409H2.68989V9.57198H2.69059Z"
+												fill="black"
+											></path>
+											<path
+												d="M17.0523 11.552C13.721 11.552 11.5804 9.22823 11.5804 5.76861C11.5804 2.30899 13.721 0 17.0523 0C20.3758 0 22.5171 2.30899 22.5171 5.76861C22.5241 9.23525 20.3828 11.552 17.0523 11.552ZM17.0523 9.80355C18.7965 9.80355 20.2411 8.40595 20.2411 5.77633C20.2411 3.16144 18.7965 1.76384 17.0523 1.76384C15.3081 1.76384 13.8635 3.16144 13.8635 5.77633C13.8705 8.40595 15.3151 9.80355 17.0523 9.80355Z"
+												fill="black"
+											></path>
+											<path
+												d="M38.2058 11.3576V0.209747H40.4068V4.08753H41.9187C44.7707 4.08753 46.8671 4.78212 46.8671 7.73378C46.8671 10.6553 44.7707 11.3653 41.9187 11.3653H38.2058V11.3576ZM40.4068 9.57198H41.9938C43.4237 9.57198 44.6136 9.26608 44.6136 7.72676C44.6136 6.14253 43.4314 5.8661 41.9938 5.8661H40.4068V9.57198Z"
+												fill="black"
+											></path>
+											<path
+												d="M49.795 11.3576V0.209747H51.9953V9.57198H56.1797V0.209747H58.3813V9.57198H62.558V0.209747H64.7589V11.3576H49.795Z"
+												fill="black"
+											></path>
+											<path
+												d="M71.4432 0.209747H73.6589L77.8362 11.3576H75.4479L74.6614 9.10121H70.3192L69.5334 11.3576H67.2869L71.4432 0.209747ZM70.9485 7.29317H74.0328L72.4914 2.89199L70.9485 7.29317Z"
+												fill="black"
+											></path>
+											<path
+												d="M79.7489 11.3576L82.7209 6.79222C81.3963 6.22462 80.5207 5.31253 80.5207 3.73602C80.5207 1.09097 82.5862 0.216766 85.4158 0.216766H88.8663V11.3653H86.666V7.43489H84.8313L82.3687 11.3576H79.7489ZM86.666 5.6486V1.98762H85.2804C83.7389 1.98762 82.7504 2.35386 82.7504 3.80338C82.7504 5.21571 83.7691 5.6486 85.2804 5.6486H86.666Z"
+												fill="black"
+											></path>
+											<path d="M3.92612 20.4357H0.490356V18.6501H9.57757V20.4357H6.12636V29.7979H3.92542V20.4357H3.92612Z" fill="black"></path>
+											<path
+												d="M15.9856 18.6501C18.2686 18.6501 20.8962 18.9714 20.8962 22.3412C20.8962 25.1877 18.6356 25.8752 16.0453 25.8752H14.3684V29.7979H12.1675V18.6501H15.9856ZM14.3684 20.376V24.1717H16.1877C17.5425 24.1717 18.6356 23.8357 18.6356 22.356C18.6356 20.5255 17.2212 20.376 16.0305 20.376H14.3684Z"
+												fill="black"
+											></path>
+											<path
+												d="M28.3217 29.9999C24.9905 29.9999 22.8499 27.6762 22.8499 24.2166C22.8499 20.757 24.9912 18.448 28.3217 18.448C31.6452 18.448 33.7865 20.757 33.7865 24.2166C33.7865 27.6762 31.6459 29.9999 28.3217 29.9999ZM28.3217 28.2438C30.0659 28.2438 31.5105 26.8462 31.5105 24.2166C31.5105 21.6017 30.0659 20.2041 28.3217 20.2041C26.5775 20.2041 25.1329 21.601 25.1329 24.2166C25.1329 26.8469 26.5775 28.2438 28.3217 28.2438Z"
+												fill="black"
+											></path>
+											<path
+												d="M65.07 18.6501H67.2857L71.4624 29.7979H69.0748L68.2883 27.5415H63.9468L63.1603 29.7979H60.9144L65.07 18.6501ZM64.5831 25.7405H67.6674L66.1246 21.3393L64.5831 25.7405Z"
+												fill="black"
+											></path>
+											<path d="M52.0519 25.0684V23.2674H55.0085V25.0684H52.0519Z" fill="black"></path>
+											<path
+												d="M36.6093 29.7979V18.6501H38.6902V26.3537L44.3718 18.6501H46.4528V29.7979H44.3718V22.0943L38.6902 29.7979H36.6093Z"
+												fill="black"
+											></path>
+											<path d="M52.5092 29.7979H50.309V18.6501H52.5092V29.7979Z" fill="black"></path>
+											<path
+												d="M59.5076 18.6501H57.0442L53.01 23.8279V24.2763L57.1193 29.7979H59.6802L55.3681 23.9697L59.5076 18.6501Z"
+												fill="black"
+											></path>
+											<path
+												d="M34.3654 0.209747V11.3576H32.1644V1.98762H28.1968L28.0846 4.84947C27.9871 8.07756 27.8523 11.3499 24.5737 11.3499H23.9374V9.39237L24.3941 9.35519C25.9285 9.21346 25.8387 7.19564 25.9587 4.06507L26.0787 0.209747H34.3654Z"
+												fill="black"
+											></path>
+											<path d="M43.7101 16.9164H38.6915V15.1231H45.0326L43.7101 16.9164Z" fill="black"></path>
+										</svg>
+									</span>
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
+									<img src="./img/home/welcome/slider/mr_doors.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/pipal.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/nebo_dekor.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/kzdm.svg" />
 								</div>
 							</div>
 							<div class="home-hero-carousel-row">
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
+									<img src="./img/home/welcome/slider/ebony_and_co_logo.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
+									<img src="./img/home/welcome/slider/private-glass.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
+									<img src="./img/home/welcome/slider/interstroy.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
+									<img src="./img/home/welcome/slider/tlc.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
+									<span class="logo__sign">
+										<svg width="31" height="47" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__b">
+											<path
+												d="M0 0.195068H21.472V5.71741H5.50972V24.2967H12.3899C14.6631 24.2967 16.5104 22.4528 16.5104 20.1831C16.5104 17.9113 14.6638 16.0689 12.3899 16.0689L9.27506 16.069V11.0069C10.2524 10.6757 11.3013 10.4961 12.3902 10.4961C13.505 10.4961 14.5785 10.6848 15.5755 11.0314C15.7053 11.0756 15.833 11.1233 15.9607 11.1738C18.1904 12.0544 20.0139 13.7382 21.0768 15.8676L21.0818 15.8781L21.0862 15.8873L21.0894 15.8936L21.1047 15.9249C21.1279 15.9722 21.1516 16.0208 21.174 16.0689C21.2827 16.299 21.383 16.5355 21.4721 16.7754C21.8728 17.8356 22.0903 18.9841 22.0903 20.1831C22.0903 21.3829 21.8721 22.5314 21.4721 23.5908C21.383 23.8315 21.2813 24.0686 21.1719 24.3002L21.1603 24.3253L21.1538 24.3397L21.1434 24.3619C21.1384 24.3721 21.1337 24.3825 21.129 24.3928C21.1242 24.4032 21.1195 24.4135 21.1146 24.4237C19.7696 27.1754 17.1575 29.1967 14.0382 29.7292C13.5689 29.8097 13.0888 29.8563 12.5994 29.8666L12.5936 29.8667C12.526 29.8681 12.4581 29.8688 12.3901 29.8688C12.3221 29.8688 12.2542 29.8681 12.1865 29.8667H5.50972V29.8688H0V0.195068Z"
+												fill="black"
+											></path>
+											<path id="blueLogoPath" d="M10.2671 16.0689H9.27502V9.83019L13.6825 5.71667H21.4725L10.2671 16.0689Z" fill="#33CCFF"></path>
+											<path
+												d="M27.2349 5.99384C25.6528 5.99384 24.3654 4.7085 24.3654 3.12778C24.3654 1.54776 25.6528 0.261719 27.2349 0.261719C28.8178 0.261719 30.1052 1.54706 30.1052 3.12778C30.1052 4.7078 28.8178 5.99384 27.2349 5.99384ZM27.2349 0.886149C25.9973 0.886149 24.9905 1.89155 24.9905 3.12778C24.9905 4.36401 25.9973 5.36941 27.2349 5.36941C28.4726 5.36941 29.4794 4.36401 29.4794 3.12778C29.4794 1.89155 28.4726 0.886149 27.2349 0.886149ZM27.2062 3.46315H26.7712V4.48539H26.1299V1.77017H27.176C27.8811 1.77017 28.4094 1.93505 28.4094 2.60859C28.4094 3.00921 28.1884 3.23793 27.8769 3.35791L28.5483 4.48469H27.7948L27.2062 3.46315ZM26.7712 2.30971V2.92361H27.1949C27.4987 2.92361 27.731 2.8752 27.731 2.61631C27.731 2.36584 27.4987 2.30901 27.1949 2.30901H26.7712V2.30971Z"
+												fill="black"
+											></path>
+										</svg>
+										<svg width="2" height="47" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__line">
+											<path d="M1.3274 0.208405H0.129761V29.8569H1.3274V0.208405Z" fill="black"></path>
+										</svg>
+										<svg width="89" height="47" viewBox="0 0 89 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__text">
+											<path
+												d="M0.490356 11.3576V0.209747H8.74686V1.99534H2.69059V4.4685H5.51246C8.04245 4.4685 9.74946 5.2978 9.74946 7.82358C9.74946 10.3936 8.05788 11.3576 5.40791 11.3576H0.490356ZM2.69059 9.57198H5.49001C6.78517 9.57198 7.4959 8.98895 7.4959 7.88322C7.4959 6.71785 6.76974 6.25409 5.45984 6.25409H2.68989V9.57198H2.69059Z"
+												fill="black"
+											></path>
+											<path
+												d="M17.0523 11.552C13.721 11.552 11.5804 9.22823 11.5804 5.76861C11.5804 2.30899 13.721 0 17.0523 0C20.3758 0 22.5171 2.30899 22.5171 5.76861C22.5241 9.23525 20.3828 11.552 17.0523 11.552ZM17.0523 9.80355C18.7965 9.80355 20.2411 8.40595 20.2411 5.77633C20.2411 3.16144 18.7965 1.76384 17.0523 1.76384C15.3081 1.76384 13.8635 3.16144 13.8635 5.77633C13.8705 8.40595 15.3151 9.80355 17.0523 9.80355Z"
+												fill="black"
+											></path>
+											<path
+												d="M38.2058 11.3576V0.209747H40.4068V4.08753H41.9187C44.7707 4.08753 46.8671 4.78212 46.8671 7.73378C46.8671 10.6553 44.7707 11.3653 41.9187 11.3653H38.2058V11.3576ZM40.4068 9.57198H41.9938C43.4237 9.57198 44.6136 9.26608 44.6136 7.72676C44.6136 6.14253 43.4314 5.8661 41.9938 5.8661H40.4068V9.57198Z"
+												fill="black"
+											></path>
+											<path
+												d="M49.795 11.3576V0.209747H51.9953V9.57198H56.1797V0.209747H58.3813V9.57198H62.558V0.209747H64.7589V11.3576H49.795Z"
+												fill="black"
+											></path>
+											<path
+												d="M71.4432 0.209747H73.6589L77.8362 11.3576H75.4479L74.6614 9.10121H70.3192L69.5334 11.3576H67.2869L71.4432 0.209747ZM70.9485 7.29317H74.0328L72.4914 2.89199L70.9485 7.29317Z"
+												fill="black"
+											></path>
+											<path
+												d="M79.7489 11.3576L82.7209 6.79222C81.3963 6.22462 80.5207 5.31253 80.5207 3.73602C80.5207 1.09097 82.5862 0.216766 85.4158 0.216766H88.8663V11.3653H86.666V7.43489H84.8313L82.3687 11.3576H79.7489ZM86.666 5.6486V1.98762H85.2804C83.7389 1.98762 82.7504 2.35386 82.7504 3.80338C82.7504 5.21571 83.7691 5.6486 85.2804 5.6486H86.666Z"
+												fill="black"
+											></path>
+											<path d="M3.92612 20.4357H0.490356V18.6501H9.57757V20.4357H6.12636V29.7979H3.92542V20.4357H3.92612Z" fill="black"></path>
+											<path
+												d="M15.9856 18.6501C18.2686 18.6501 20.8962 18.9714 20.8962 22.3412C20.8962 25.1877 18.6356 25.8752 16.0453 25.8752H14.3684V29.7979H12.1675V18.6501H15.9856ZM14.3684 20.376V24.1717H16.1877C17.5425 24.1717 18.6356 23.8357 18.6356 22.356C18.6356 20.5255 17.2212 20.376 16.0305 20.376H14.3684Z"
+												fill="black"
+											></path>
+											<path
+												d="M28.3217 29.9999C24.9905 29.9999 22.8499 27.6762 22.8499 24.2166C22.8499 20.757 24.9912 18.448 28.3217 18.448C31.6452 18.448 33.7865 20.757 33.7865 24.2166C33.7865 27.6762 31.6459 29.9999 28.3217 29.9999ZM28.3217 28.2438C30.0659 28.2438 31.5105 26.8462 31.5105 24.2166C31.5105 21.6017 30.0659 20.2041 28.3217 20.2041C26.5775 20.2041 25.1329 21.601 25.1329 24.2166C25.1329 26.8469 26.5775 28.2438 28.3217 28.2438Z"
+												fill="black"
+											></path>
+											<path
+												d="M65.07 18.6501H67.2857L71.4624 29.7979H69.0748L68.2883 27.5415H63.9468L63.1603 29.7979H60.9144L65.07 18.6501ZM64.5831 25.7405H67.6674L66.1246 21.3393L64.5831 25.7405Z"
+												fill="black"
+											></path>
+											<path d="M52.0519 25.0684V23.2674H55.0085V25.0684H52.0519Z" fill="black"></path>
+											<path
+												d="M36.6093 29.7979V18.6501H38.6902V26.3537L44.3718 18.6501H46.4528V29.7979H44.3718V22.0943L38.6902 29.7979H36.6093Z"
+												fill="black"
+											></path>
+											<path d="M52.5092 29.7979H50.309V18.6501H52.5092V29.7979Z" fill="black"></path>
+											<path
+												d="M59.5076 18.6501H57.0442L53.01 23.8279V24.2763L57.1193 29.7979H59.6802L55.3681 23.9697L59.5076 18.6501Z"
+												fill="black"
+											></path>
+											<path
+												d="M34.3654 0.209747V11.3576H32.1644V1.98762H28.1968L28.0846 4.84947C27.9871 8.07756 27.8523 11.3499 24.5737 11.3499H23.9374V9.39237L24.3941 9.35519C25.9285 9.21346 25.8387 7.19564 25.9587 4.06507L26.0787 0.209747H34.3654Z"
+												fill="black"
+											></path>
+											<path d="M43.7101 16.9164H38.6915V15.1231H45.0326L43.7101 16.9164Z" fill="black"></path>
+										</svg>
+									</span>
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
+									<img src="./img/home/welcome/slider/mr_doors.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/pipal.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/nebo_dekor.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/kzdm.svg" />
 								</div>
 							</div>
 							<div class="home-hero-carousel-row">
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
+									<img src="./img/home/welcome/slider/ebony_and_co_logo.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
+									<img src="./img/home/welcome/slider/private-glass.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
+									<img src="./img/home/welcome/slider/interstroy.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
+									<img src="./img/home/welcome/slider/tlc.svg" />
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
+									<span class="logo__sign">
+										<svg width="31" height="47" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__b">
+											<path
+												d="M0 0.195068H21.472V5.71741H5.50972V24.2967H12.3899C14.6631 24.2967 16.5104 22.4528 16.5104 20.1831C16.5104 17.9113 14.6638 16.0689 12.3899 16.0689L9.27506 16.069V11.0069C10.2524 10.6757 11.3013 10.4961 12.3902 10.4961C13.505 10.4961 14.5785 10.6848 15.5755 11.0314C15.7053 11.0756 15.833 11.1233 15.9607 11.1738C18.1904 12.0544 20.0139 13.7382 21.0768 15.8676L21.0818 15.8781L21.0862 15.8873L21.0894 15.8936L21.1047 15.9249C21.1279 15.9722 21.1516 16.0208 21.174 16.0689C21.2827 16.299 21.383 16.5355 21.4721 16.7754C21.8728 17.8356 22.0903 18.9841 22.0903 20.1831C22.0903 21.3829 21.8721 22.5314 21.4721 23.5908C21.383 23.8315 21.2813 24.0686 21.1719 24.3002L21.1603 24.3253L21.1538 24.3397L21.1434 24.3619C21.1384 24.3721 21.1337 24.3825 21.129 24.3928C21.1242 24.4032 21.1195 24.4135 21.1146 24.4237C19.7696 27.1754 17.1575 29.1967 14.0382 29.7292C13.5689 29.8097 13.0888 29.8563 12.5994 29.8666L12.5936 29.8667C12.526 29.8681 12.4581 29.8688 12.3901 29.8688C12.3221 29.8688 12.2542 29.8681 12.1865 29.8667H5.50972V29.8688H0V0.195068Z"
+												fill="black"
+											></path>
+											<path id="blueLogoPath" d="M10.2671 16.0689H9.27502V9.83019L13.6825 5.71667H21.4725L10.2671 16.0689Z" fill="#33CCFF"></path>
+											<path
+												d="M27.2349 5.99384C25.6528 5.99384 24.3654 4.7085 24.3654 3.12778C24.3654 1.54776 25.6528 0.261719 27.2349 0.261719C28.8178 0.261719 30.1052 1.54706 30.1052 3.12778C30.1052 4.7078 28.8178 5.99384 27.2349 5.99384ZM27.2349 0.886149C25.9973 0.886149 24.9905 1.89155 24.9905 3.12778C24.9905 4.36401 25.9973 5.36941 27.2349 5.36941C28.4726 5.36941 29.4794 4.36401 29.4794 3.12778C29.4794 1.89155 28.4726 0.886149 27.2349 0.886149ZM27.2062 3.46315H26.7712V4.48539H26.1299V1.77017H27.176C27.8811 1.77017 28.4094 1.93505 28.4094 2.60859C28.4094 3.00921 28.1884 3.23793 27.8769 3.35791L28.5483 4.48469H27.7948L27.2062 3.46315ZM26.7712 2.30971V2.92361H27.1949C27.4987 2.92361 27.731 2.8752 27.731 2.61631C27.731 2.36584 27.4987 2.30901 27.1949 2.30901H26.7712V2.30971Z"
+												fill="black"
+											></path>
+										</svg>
+										<svg width="2" height="47" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__line">
+											<path d="M1.3274 0.208405H0.129761V29.8569H1.3274V0.208405Z" fill="black"></path>
+										</svg>
+										<svg width="89" height="47" viewBox="0 0 89 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__sign__text">
+											<path
+												d="M0.490356 11.3576V0.209747H8.74686V1.99534H2.69059V4.4685H5.51246C8.04245 4.4685 9.74946 5.2978 9.74946 7.82358C9.74946 10.3936 8.05788 11.3576 5.40791 11.3576H0.490356ZM2.69059 9.57198H5.49001C6.78517 9.57198 7.4959 8.98895 7.4959 7.88322C7.4959 6.71785 6.76974 6.25409 5.45984 6.25409H2.68989V9.57198H2.69059Z"
+												fill="black"
+											></path>
+											<path
+												d="M17.0523 11.552C13.721 11.552 11.5804 9.22823 11.5804 5.76861C11.5804 2.30899 13.721 0 17.0523 0C20.3758 0 22.5171 2.30899 22.5171 5.76861C22.5241 9.23525 20.3828 11.552 17.0523 11.552ZM17.0523 9.80355C18.7965 9.80355 20.2411 8.40595 20.2411 5.77633C20.2411 3.16144 18.7965 1.76384 17.0523 1.76384C15.3081 1.76384 13.8635 3.16144 13.8635 5.77633C13.8705 8.40595 15.3151 9.80355 17.0523 9.80355Z"
+												fill="black"
+											></path>
+											<path
+												d="M38.2058 11.3576V0.209747H40.4068V4.08753H41.9187C44.7707 4.08753 46.8671 4.78212 46.8671 7.73378C46.8671 10.6553 44.7707 11.3653 41.9187 11.3653H38.2058V11.3576ZM40.4068 9.57198H41.9938C43.4237 9.57198 44.6136 9.26608 44.6136 7.72676C44.6136 6.14253 43.4314 5.8661 41.9938 5.8661H40.4068V9.57198Z"
+												fill="black"
+											></path>
+											<path
+												d="M49.795 11.3576V0.209747H51.9953V9.57198H56.1797V0.209747H58.3813V9.57198H62.558V0.209747H64.7589V11.3576H49.795Z"
+												fill="black"
+											></path>
+											<path
+												d="M71.4432 0.209747H73.6589L77.8362 11.3576H75.4479L74.6614 9.10121H70.3192L69.5334 11.3576H67.2869L71.4432 0.209747ZM70.9485 7.29317H74.0328L72.4914 2.89199L70.9485 7.29317Z"
+												fill="black"
+											></path>
+											<path
+												d="M79.7489 11.3576L82.7209 6.79222C81.3963 6.22462 80.5207 5.31253 80.5207 3.73602C80.5207 1.09097 82.5862 0.216766 85.4158 0.216766H88.8663V11.3653H86.666V7.43489H84.8313L82.3687 11.3576H79.7489ZM86.666 5.6486V1.98762H85.2804C83.7389 1.98762 82.7504 2.35386 82.7504 3.80338C82.7504 5.21571 83.7691 5.6486 85.2804 5.6486H86.666Z"
+												fill="black"
+											></path>
+											<path d="M3.92612 20.4357H0.490356V18.6501H9.57757V20.4357H6.12636V29.7979H3.92542V20.4357H3.92612Z" fill="black"></path>
+											<path
+												d="M15.9856 18.6501C18.2686 18.6501 20.8962 18.9714 20.8962 22.3412C20.8962 25.1877 18.6356 25.8752 16.0453 25.8752H14.3684V29.7979H12.1675V18.6501H15.9856ZM14.3684 20.376V24.1717H16.1877C17.5425 24.1717 18.6356 23.8357 18.6356 22.356C18.6356 20.5255 17.2212 20.376 16.0305 20.376H14.3684Z"
+												fill="black"
+											></path>
+											<path
+												d="M28.3217 29.9999C24.9905 29.9999 22.8499 27.6762 22.8499 24.2166C22.8499 20.757 24.9912 18.448 28.3217 18.448C31.6452 18.448 33.7865 20.757 33.7865 24.2166C33.7865 27.6762 31.6459 29.9999 28.3217 29.9999ZM28.3217 28.2438C30.0659 28.2438 31.5105 26.8462 31.5105 24.2166C31.5105 21.6017 30.0659 20.2041 28.3217 20.2041C26.5775 20.2041 25.1329 21.601 25.1329 24.2166C25.1329 26.8469 26.5775 28.2438 28.3217 28.2438Z"
+												fill="black"
+											></path>
+											<path
+												d="M65.07 18.6501H67.2857L71.4624 29.7979H69.0748L68.2883 27.5415H63.9468L63.1603 29.7979H60.9144L65.07 18.6501ZM64.5831 25.7405H67.6674L66.1246 21.3393L64.5831 25.7405Z"
+												fill="black"
+											></path>
+											<path d="M52.0519 25.0684V23.2674H55.0085V25.0684H52.0519Z" fill="black"></path>
+											<path
+												d="M36.6093 29.7979V18.6501H38.6902V26.3537L44.3718 18.6501H46.4528V29.7979H44.3718V22.0943L38.6902 29.7979H36.6093Z"
+												fill="black"
+											></path>
+											<path d="M52.5092 29.7979H50.309V18.6501H52.5092V29.7979Z" fill="black"></path>
+											<path
+												d="M59.5076 18.6501H57.0442L53.01 23.8279V24.2763L57.1193 29.7979H59.6802L55.3681 23.9697L59.5076 18.6501Z"
+												fill="black"
+											></path>
+											<path
+												d="M34.3654 0.209747V11.3576H32.1644V1.98762H28.1968L28.0846 4.84947C27.9871 8.07756 27.8523 11.3499 24.5737 11.3499H23.9374V9.39237L24.3941 9.35519C25.9285 9.21346 25.8387 7.19564 25.9587 4.06507L26.0787 0.209747H34.3654Z"
+												fill="black"
+											></path>
+											<path d="M43.7101 16.9164H38.6915V15.1231H45.0326L43.7101 16.9164Z" fill="black"></path>
+										</svg>
+									</span>
 								</div>
 								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
+									<img src="./img/home/welcome/slider/mr_doors.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/pipal.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/nebo_dekor.png" />
+								</div>
+								<div class="home-hero-logo">
+									<img src="./img/home/welcome/slider/kzdm.svg" />
 								</div>
 							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
-							<div class="home-hero-carousel-row">
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/1.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/2.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/3.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/4.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/5.svg" />
-								</div>
-								<div class="home-hero-logo">
-									<img src="./img/home/welcome/6.svg" />
-								</div>
-							</div>
+
 							<div class="home-hero-logos-overlay"></div>
 						</div>
 					</div>
@@ -421,8 +555,8 @@
 				<section class="lotti-section">
 					<div class="con">
 						<section class="lotti-1">
-							<h2 class="lotti-section__title main-title animate-on-scroll-1">Единство всех компонентов цифровой инфраструктуры</h2>
-							<div id="animationWindow1" class="animate-on-scroll-1"></div>
+							<h2 class="lotti-section__title main-title animate-on-scroll-1">Все компоненты цифровой инфраструктуры связаны воедино</h2>
+							<div id="animationWindow1" class="animate-on-scroll-11"></div>
 						</section>
 						<div id="fl1"></div>
 						<!--<div id="anchor2"></div>-->
@@ -431,12 +565,14 @@
 					<div class="container">
 						<div class="wrap">
 							<div class="left">
-								<div class="lotti-2">
-									<div id="animationWindow2" class="animate-on-scroll--left"></div>
-									<div class="lotti-title-1">Маркетинг</div>
-									<div class="lotti-title-2">Учетные системы</div>
-									<div class="lotti-title-3">CRM</div>
-									<div class="lotti-title-4">BI аналитика</div>
+								<div class="lotti-2 animate-on-scroll--left">
+									<div id="animationWindow2" class=""></div>
+									<div class="lotti-title-wrapper">
+										<div class="lotti-title">Маркетинг</div>
+										<div class="lotti-title">CRM</div>
+										<div class="lotti-title">Учетные системы</div>
+										<div class="lotti-title lotti-title--bi">BI аналитика</div>
+									</div>
 								</div>
 							</div>
 							<div class="right">
@@ -446,12 +582,12 @@
 										<div class="item--title__wrap">
 											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
 											<p class="item__text animate-on-scroll--right-4">
-												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса.
 											</p>
 
 											<div class="item__button-wrapper animate-on-scroll--right-4">
 												<a class="button__link" href="#">
-													<div class="button button--blue button--resize-1">О нас</div>
+													<div class="button button--blue button--resize-1">Подробнее</div>
 												</a>
 												<a class="button__link" href="#">
 													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
@@ -459,31 +595,32 @@
 											</div>
 										</div>
 									</div>
+									<div class="flag-title"></div>
 									<div class="item--info">
 										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Лендинг</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<p class="item-info__subtitle">Мы настроим целевой лендинг с уникальным дизайном и конверсией.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Интернет магазин</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Интернет-магазин</h4>
+													<p class="item-info__subtitle">Мы обеспечим комплексную поддержку для запуска онлайн-продаж.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
 												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Чат бот</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Чат-бот</h4>
+													<p class="item-info__subtitle">Мы настроим интеллектуального чат-бота для эффективного взаимодействия с клиентами.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/m4.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
 													<h4 class="item-info__title">Яндекс.Метрика</h4>
 													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
@@ -496,14 +633,12 @@
 								<div class="item" id="anchor7">
 									<div class="item--title">
 										<div class="item--title__wrap">
-											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
-											<p class="item__text animate-on-scroll--right-4">
-												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
-											</p>
+											<h2 class="item__title animate-on-scroll--right-4">Все управление в одном месте!</h2>
+											<p class="item__text animate-on-scroll--right-4">Проконсультируем и настроим CRM-систему индивидуально под ваш запрос.</p>
 
 											<div class="item__button-wrapper animate-on-scroll--right-4">
 												<a class="button__link" href="#">
-													<div class="button button--blue button--resize-1">О нас</div>
+													<div class="button button--blue button--resize-1">Подробнее</div>
 												</a>
 												<a class="button__link" href="#">
 													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
@@ -511,34 +646,36 @@
 											</div>
 										</div>
 									</div>
+									<div class="flag-title"></div>
+
 									<div class="item--info">
 										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/c1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Лендинг</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Битрикс24</h4>
+													<p class="item-info__subtitle">Система позволит настроить любые бизнес-процессы под нужды вашей компании.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/c2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Интернет магазин</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">AmoCRM</h4>
+													<p class="item-info__subtitle">Начните управлять всеми этапами продаж и маркетинговыми компаниями.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/c3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Чат бот</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Yclients</h4>
+													<p class="item-info__subtitle">Надежное решение для оптимизации работы компании в сфере услуг.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/c4.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Яндекс.Метрика</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">IP-телефония</h4>
+													<p class="item-info__subtitle">Гибкие технологии объединения телефонии и бизнес-систем.</p>
 												</div>
 											</li>
 										</ul>
@@ -548,14 +685,14 @@
 								<div class="item" id="anchor8">
 									<div class="item--title">
 										<div class="item--title__wrap">
-											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<h2 class="item__title animate-on-scroll--right-4">Учет для бизнеса любого масштаба!</h2>
 											<p class="item__text animate-on-scroll--right-4">
-												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+												Мы легко интегрируем программы 1С и МойСклад в Битрикс24, чтобы всё работало в одной системе.
 											</p>
 
 											<div class="item__button-wrapper animate-on-scroll--right-4">
 												<a class="button__link" href="#">
-													<div class="button button--blue button--resize-1">О нас</div>
+													<div class="button button--blue button--resize-1">Подробнее</div>
 												</a>
 												<a class="button__link" href="#">
 													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
@@ -563,34 +700,38 @@
 											</div>
 										</div>
 									</div>
+									<div class="flag-title"></div>
+
 									<div class="item--info">
 										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/u1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Лендинг</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Автоматизация</h4>
+													<p class="item-info__subtitle">Учетные системы позволяют сократить затраты времени на повторяющиеся операции.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/u2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Интернет магазин</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Контроль</h4>
+													<p class="item-info__subtitle">Систематизированный доступ к ключевым данным о доходах и расходах в одной системе.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/u3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Чат бот</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Аналитика</h4>
+													<p class="item-info__subtitle">Прогнозируйте и анализируйте эффективность разных направлений работы.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/u4.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Яндекс.Метрика</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Интеграция</h4>
+													<p class="item-info__subtitle">
+														Объединение CRM, складского учета и других модулей позволяет оптимизировать все процессы компании.
+													</p>
 												</div>
 											</li>
 										</ul>
@@ -600,14 +741,14 @@
 								<div class="item" id="anchor3">
 									<div class="item--title">
 										<div class="item--title__wrap">
-											<h2 class="item__title animate-on-scroll--right-4">Начните свой путь&nbsp;сегодня!</h2>
+											<h2 class="item__title animate-on-scroll--right-4">Превратите данные&nbsp;в&nbsp;прибыль!</h2>
 											<p class="item__text animate-on-scroll--right-4">
-												Получите консультацию по маркетингу и добейтесь максимального роста вашего бизнеса!
+												Все ваши отчеты в одном месте, в виде интерактивных диаграмм и понятных таблиц, доступны онлайн и всегда актуальны.
 											</p>
 
 											<div class="item__button-wrapper animate-on-scroll--right-4">
 												<a class="button__link" href="#">
-													<div class="button button--blue button--resize-1">О нас</div>
+													<div class="button button--blue button--resize-1">Подробнее</div>
 												</a>
 												<a class="button__link" href="#">
 													<div class="button button--blue-active button--big-width button--resize-2">Заказать</div>
@@ -615,34 +756,40 @@
 											</div>
 										</div>
 									</div>
+									<div class="flag-title"></div>
+
 									<div class="item--info">
 										<ul class="item-info__wrapper-container animate-on-scroll--right-3">
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/1.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/b1.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Лендинг</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Yandex DataLens</h4>
+													<p class="item-info__subtitle">
+														Ведущая российская BI-платформа. Работаем как с облачной, так и с opensource версиями.
+													</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/2.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/b2.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Интернет магазин</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">ETL</h4>
+													<p class="item-info__subtitle">
+														Создадим систему преобразования ваших данных перед их передачей в целевое место хранения.
+													</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/b3.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Чат бот</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Apache Superset</h4>
+													<p class="item-info__subtitle">Один из мощнейших opensource инструментов BI-аналитики с гибкой настройкой.</p>
 												</div>
 											</li>
 											<li class="item-info__content-wrapper animate-on-scroll--right-4">
-												<img src="./img/home/main/3.svg" class="item-info__icon-image" />
+												<img src="./img/home/main/b4.svg" class="item-info__icon-image" />
 												<div class="item-info__text-wrapper">
-													<h4 class="item-info__title">Яндекс.Метрика</h4>
-													<p class="item-info__subtitle">Наша компания предлагает полное решение для эффективного управления вашим бизнесом.</p>
+													<h4 class="item-info__title">Готовые решения</h4>
+													<p class="item-info__subtitle">Получите конкурентное преимущество с помощью бизнес-аналитических решений.</p>
 												</div>
 											</li>
 										</ul>
@@ -665,7 +812,7 @@
 						<div class="database__cards-wrapper">
 							<div class="database__card">
 								<div class="database__card-image">
-									<img src="./img/home/before_footer/1.png" />
+									<img src="./img/home/database/1.png" />
 								</div>
 								<div class="database__card-text-wrapper">
 									<div class="database__card-title">Bitrix24</div>
@@ -674,13 +821,13 @@
 									</div>
 									<a class="database__card-link">
 										Далее
-										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+										<img class="database__card-link-image" src="./img/home/database/arrow.svg" />
 									</a>
 								</div>
 							</div>
 							<div class="database__card">
 								<div class="database__card-image">
-									<img src="./img/home/before_footer/2.png" />
+									<img src="./img/home/database/2.png" />
 								</div>
 								<div class="database__card-text-wrapper">
 									<div class="database__card-title">Bitrix24</div>
@@ -689,61 +836,235 @@
 									</div>
 									<a class="database__card-link">
 										Далее
-										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+										<img class="database__card-link-image" src="./img/home/database/arrow.svg" />
 									</a>
 								</div>
 							</div>
 							<div class="database__card">
 								<div class="database__card-image">
-									<img src="./img/home/before_footer/3.png" />
+									<img src="./img/home/database/3.png" />
 								</div>
 								<div class="database__card-text-wrapper">
-									<div class="database__card-title-wrapper">
-										<div class="database__card-title">Bitrix24</div>
-										<div class="database__card-text">
-											Платформа для создания и управления веб-проектами, таких как интернет-магазины, корпоративные сайты.
-										</div>
+									<div class="database__card-title">Bitrix24</div>
+									<div class="database__card-text">
+										Платформа для создания и управления веб-проектами, таких как интернет-магазины, корпоративные сайты.
 									</div>
 									<a class="database__card-link">
 										Далее
-										<img class="database__card-link-image" src="./img/home/before_footer/arrow.svg" />
+										<img class="database__card-link-image" src="./img/home/database/arrow.svg" />
 									</a>
 								</div>
 							</div>
 						</div>
-						<a class="button__link" href="#">
-							<div class="button button--blue button--average-width">Подробнее</div>
+						<a class="button__link relativerrr" href="#">
+							<div class="button button--blue button--average-width button--resize-1">Подробнее</div>
 						</a>
 					</section>
 				</div>
 			</main>
+			<section class="cube">
+				<div class="container">
+					<div class="top-block-services">
+						<div class="description-top-block" data-aos="fade-right" data-aos-delay="300">
+							<h2 class="title-cube">Пора начинать - выберите свою CRM!</h2>
+							<div class="paragraph-large">Мы предоставляем широкий набор инструментов для администрирования вашего бизнеса.</div>
+							<ul role="list" class="list w-list-unstyled">
+								<li class="cube__li"><span class="check-icon blue"></span>Bitrix24</li>
+								<li class="cube__li"><span class="check-icon blue"></span>Amo</li>
+								<li class="cube__li"><span class="check-icon blue"></span>Yclients</li>
+							</ul>
+							<a class="button__link" href="#">
+								<div class="button button--blue button--resize-1">Подробнее</div>
+							</a>
+						</div>
+						<div class="image-right cube-img">
+							<img src="./img/home/cube/cube.webp" loading="lazy" class="image-cover" />
+						</div>
+					</div>
+					<div class="bottom-block-services">
+						<div class="image-right width nocube-img">
+							<img src="./img/home/cube/nocube.webp" loading="lazy" class="image-cover" />
+						</div>
+						<div class="description-top-block" data-aos="fade-left" data-aos-delay="300">
+							<h2 class="title-cube">Превращение идей в прибыль</h2>
+							<div class="paragraph-large paragraph-large-bottom-margin">
+								Мы предлагаем уникальный подход к созданию программных решений, учитывающий специфику каждого клиента.
+							</div>
+							<ul role="list" class="list w-list-unstyled">
+								<li class="cube__li"><span class="check-icon blue"></span>Разработка ПО</li>
+								<li class="cube__li"><span class="check-icon blue"></span>API интеграции</li>
+								<li class="cube__li"><span class="check-icon blue"></span>Техподдержка</li>
+							</ul>
+							<a class="button__link" href="#">
+								<div class="button button--blue button--resize-1">Подробнее</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 			<footer class="footer">
-				<div class="block">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
+				<div class="footer-wrapper container">
+					<div class="footer__column">
+						<a href="#">
+							<img class="footer__item-title footer__logo" src="./img/main_Img/logo.svg" />
+						</a>
+						<div class="footer__item-wrapper">
+							<a class="footer__item" href="#">Главная</a>
+							<a class="footer__item" href="#">О нас</a>
+							<a class="footer__item" href="#">Услуги</a>
+							<a class="footer__item" href="#">Кейсы</a>
+							<a class="footer__item" href="#">Контакты</a>
+							<div class="footer__social-wrapper">
+								<a href="#" title="Наш ВКонтакте" target="_blank" rel="noopener nofollow" draggable="false" class="page-footer__social-link"
+									><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+										<g clip-path="url(#clip0_6013_33960)">
+											<rect width="24" height="24" rx="12" fill="currentColor"></rect>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M15.418 12.867c.35.342.72.663 1.034 1.04.139.167.27.34.37.534.143.276.014.58-.233.596H15.05c-.397.032-.714-.127-.98-.399-.213-.216-.41-.447-.614-.672a1.448 1.448 0 00-.277-.246c-.21-.136-.393-.094-.513.125-.122.223-.15.47-.162.717-.016.363-.126.458-.49.475-.777.036-1.515-.082-2.201-.474-.604-.346-1.073-.834-1.481-1.387-.794-1.076-1.403-2.258-1.95-3.474-.123-.274-.033-.421.27-.427.502-.01 1.003-.009 1.506 0 .204.003.339.12.418.312a9.337 9.337 0 001.02 1.892c.111.157.225.314.386.424.178.122.314.082.398-.117a1.31 1.31 0 00.089-.397c.04-.464.045-.928-.025-1.39-.043-.29-.206-.476-.494-.53-.147-.029-.125-.083-.053-.167.123-.145.24-.235.471-.235h1.739c.274.054.334.177.372.452l.001 1.932c-.003.106.054.422.246.493.153.05.254-.073.347-.17.416-.442.713-.964.979-1.505.117-.237.219-.484.317-.731.073-.183.187-.273.393-.269l1.673.001c.05 0 .1.001.148.01.282.047.36.169.272.444-.137.432-.404.792-.665 1.154-.28.386-.577.759-.854 1.147-.255.355-.234.534.082.842z"
+												fill="#fff"
+											></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_6013_33960"><path fill="#4a4f55" d="M0 0h24v24H0z"></path></clipPath>
+										</defs></svg
+								></a>
+								<a href="#" title="Наш канал на YouTube" target="_blank" rel="noopener nofollow" draggable="false" class="page-footer__social-link"
+									><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+										<rect width="24" height="24" rx="12" fill="currentColor"></rect>
+										<path
+											d="M16.553 7.4l-.833-.09a34.223 34.223 0 00-7.5 0l-.8.09a1.892 1.892 0 00-1.231.688 2.15 2.15 0 00-.48 1.395v5.007a2.15 2.15 0 00.48 1.395c.316.385.755.63 1.232.687l.833.092c2.493.275 5.007.275 7.5 0l.799-.092a1.892 1.892 0 001.232-.687 2.15 2.15 0 00.48-1.395V9.483a2.15 2.15 0 00-.48-1.395 1.892 1.892 0 00-1.232-.687zm-2.854 4.965l-2.22 1.588a.406.406 0 01-.415-.002.443.443 0 01-.155-.158.48.48 0 01-.064-.219V10.4c0-.083.022-.165.062-.236a.442.442 0 01.166-.168.406.406 0 01.44.025l2.22 1.588a.442.442 0 01.141.163.477.477 0 01-.14.594h-.035z"
+											fill="#fff"
+										></path></svg
+								></a>
+								<a href="#" title="Наш Телеграм" target="_blank" rel="noopener nofollow" draggable="false" class="page-footer__social-link"
+									><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+										<g clip-path="url(#clip0_6013_34047)">
+											<path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="currentColor"></path>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M5.508 11.873c3.5-1.525 5.834-2.53 7.002-3.016 3.335-1.387 4.028-1.628 4.48-1.636.099-.001.32.023.465.14a.506.506 0 01.17.325c.017.094.036.306.02.473-.18 1.898-.962 6.506-1.36 8.632-.168.9-.5 1.202-.82 1.232-.698.064-1.227-.461-1.902-.904-1.057-.693-1.654-1.124-2.68-1.8-1.186-.781-.417-1.21.258-1.912.177-.184 3.25-2.979 3.309-3.232.007-.032.014-.15-.056-.212-.07-.063-.174-.041-.248-.024-.107.024-1.795 1.14-5.065 3.347-.48.33-.914.49-1.302.481-.43-.009-1.254-.242-1.867-.441-.752-.245-1.35-.374-1.298-.79.028-.215.325-.437.894-.663z"
+												fill="#fff"
+											></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_6013_34047"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath>
+										</defs></svg
+								></a>
+
+								<!--<a href="#">
+										<img class="footer__social-item" src="./img/home/footer/1.svg" data-hover="./img/home/footer/111.png" />
+									</a>
+									<a href="#">
+										<img class="footer__social-item" src="./img/home/footer/2.svg" data-hover="./img/home/footer/222.svg" />
+									</a>
+									<a href="#">
+										<img class="footer__social-item" src="./img/home/footer/3.svg" data-hover="./img/home/footer/333.svg" />
+									</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__item-title footer__title-footer">Маркетинг</div>
+						<div class="footer__item-wrapper footer__item-wrapper--fix-height">
+							<div class="footer__item-title">Сайты</div>
+							<a class="footer__item" href="#">Сайт WordPress</a>
+							<a class="footer__item" href="#">Сайт Tilda</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title">Дизайн</div>
+							<a class="footer__item" href="#">Сайт</a>
+							<a class="footer__item" href="#">Брендбук</a>
+							<a class="footer__item wrapping" href="#">Коммерческое предложение</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title">Метрика</div>
+							<a class="footer__item" href="#">Yandex.Metrica</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__item-title footer__title-footer">SEO</div>
+						<div class="footer__item-wrapper footer__item-wrapper--fix-height">
+							<a class="footer__item" href="#">SEO cайтов</a>
+							<a class="footer__item" href="#">SEO оптимизация</a>
+							<a class="footer__item" href="#">SEO аудит</a>
+							<a class="footer__item wrapping" href="#">SEO Подбор запросов</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title">Чат-бот</div>
+							<a class="footer__item" href="#">Чат-виджет</a>
+							<a class="footer__item" href="#">VK</a>
+							<a class="footer__item" href="#">Telegram</a>
+							<a class="footer__item" href="#">Viber</a>
+							<a class="footer__item" href="#">WhatsApp</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__item-title footer__title-footer">CRM</div>
+						<div class="footer__item-wrapper footer__item-wrapper--fix-height">
+							<a class="footer__item" href="#">Bitrix24</a>
+							<a class="footer__item" href="#">Amo</a>
+							<a class="footer__item" href="#">Yclients</a>
+							<a class="footer__item" href="#">PI-телефония</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title wrapping">Учетные системы</div>
+							<a class="footer__item" href="#">Мой Склад</a>
+							<a class="footer__item" href="#">1:С</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title">Разработка</div>
+							<a class="footer__item" href="#">Разработка ПО</a>
+							<a class="footer__item" href="#">API интеграции</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__item-title footer__title-footer">BI аналитика</div>
+						<div class="footer__item-wrapper footer__item-wrapper--fix-height">
+							<a class="footer__item" href="#">Yandex Datalens</a>
+							<a class="footer__item" href="#">ETL</a>
+							<a class="footer__item" href="#">Apache Superset</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<div class="footer__item-title">Техподдержка</div>
+							<a class="footer__item" href="#">Техподдержка</a>
+							<a class="footer__item" href="#">Сопровождение</a>
+							<a class="footer__item" href="#">Адаптация</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__item-title footer__title-footer">Остались вопросы?</div>
+						<div class="footer__item-wrapper footer__item-wrapper--small-marign">
+							<a class="button__link" href="#">
+								<div class="button button--blue-active button--footer">Написать</div>
+							</a>
+						</div>
+						<div class="footer__item-wrapper">
+							<a class="footer__item-title" href="tel:+88612176096">8 (861) 217 60 96</a>
+						</div>
+						<!--<div class="footer__item-wrapper">-->
+						<a class="footer__item-title small-mail" href="mailto:mail@karpovpartners.com">mail@karpovpartners.com</a>
+						<!--</div>-->
+					</div>
 				</div>
-				<div class="block">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
-				</div>
-				<div class="block">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
-				</div>
-				<div class="block">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sunt.</p>
+				<div role="contentinfo" class="page-footer__bottom">
+					<div class="page-footer__bottom-inner container">
+						<div class="copyright unselectable page-footer__copyright">©&nbsp;Карпов и Партнеры</div>
+						<div class="copyright unselectable page-footer__copyright">Создано Karpov&Partners</div>
+
+						<a href="#" class="landing-footer">Политика конфиденциальности</a>
+					</div>
 				</div>
 			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-		<!--<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>-->
-		<!--<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>-->
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>-->
-
 		<script src="./js/app.js"></script>
 	</body>
 </html>
