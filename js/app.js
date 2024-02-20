@@ -1,4 +1,25 @@
 let windowHeight = window.innerHeight || document.documentElement.clientHeight
+var startElement
+
+//
+
+//
+
+function handleTabTouchStart(event) {
+	startElement = event.target
+}
+
+function handleTabTouchEnd(event) {
+	var endElement = event.target
+	if (startElement === endElement) {
+		if (startElement.classList.contains("button") && startElement.closest(".wrap-mob")) {
+			window.location.href = "#"
+		}
+	}
+}
+
+document.addEventListener("touchstart", handleTabTouchStart)
+document.addEventListener("touchend", handleTabTouchEnd)
 
 // Calculate one vh in pixels
 let vh = windowHeight / 100
@@ -342,13 +363,13 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 		if (window.innerWidth > 480) {
 			hehe = (arnh - item) / 2 + header / 2
 		} else {
-			hehe = ((arnh - item) / 2 + header / 2) / 1.05
+			hehe = (arnh - item) / 2 + header / 2
 		}
 
 		let rect = distanceFromTop
 
 		const startPos = window.pageYOffset
-		const distance = rect - (startPos + hehe * 2)
+		const distance = rect - (startPos + hehe * 1.75)
 		let startTime = null
 		//
 		function animation(currentTime) {
@@ -750,20 +771,83 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 
 		setTimeout(() => {
-			let arnh = window.innerHeight
-			let item1 = document.querySelector(".item--title").offsetHeight
-			let item2 = document.querySelector(".item--info").offsetHeight
-			let header = document.querySelector(".header_fixed").offsetHeight
-			let hehe
 			if (window.innerWidth > 480) {
+				let arnh = window.innerHeight
+				let item1 = document.querySelector(".item--title").offsetHeight
+				let item2 = document.querySelector(".item--info").offsetHeight
+				let header = document.querySelector(".header_fixed").offsetHeight
+				let hehe
 				hehe = (arnh - item1 - item2) / 2 + header / 2
+				document.querySelector("#anchor1").style.height = `${hehe}px`
+				document.querySelector("#anchor4").style.height = `${hehe}px`
+				console.log(arnh, item1, item2, header, hehe)
 			} else {
-				hehe = ((arnh - item1 - item2) / 2 + header / 2) / 1.05
-			}
+				function getViewportHeight() {
+					var windowHeight = window.innerHeight // Получаем высоту окна браузера
 
-			document.querySelector("#anchor1").style.height = `${hehe}px`
-			document.querySelector("#anchor4").style.height = `${hehe}px`
-			//console.log(arnh, item1, item2, header, hehe)
+					// Проверяем, есть ли полоса прокрутки
+					var outerDiv = document.createElement("div")
+					outerDiv.style.visibility = "hidden"
+					outerDiv.style.overflow = "scroll"
+					outerDiv.style.width = "100px"
+					outerDiv.style.height = "100px"
+
+					var innerDiv = document.createElement("div")
+					innerDiv.style.height = "200px"
+
+					outerDiv.appendChild(innerDiv)
+					document.body.appendChild(outerDiv)
+
+					var hasScrollbar = outerDiv.offsetHeight > innerDiv.offsetHeight
+
+					document.body.removeChild(outerDiv)
+
+					// Если есть полоса прокрутки, вычитаем ее высоту из общей высоты
+					if (hasScrollbar) {
+						windowHeight -= getScrollbarHeight()
+					}
+					//var textElement = document.querySelector(".page-top-banner__text")
+
+					//// Добавляем значение в текст элемента
+					//textElement.textContent = `${windowHeight}`
+					return windowHeight
+				}
+
+				function getScrollbarHeight() {
+					var scrollDiv = document.createElement("div")
+					scrollDiv.style.height = "100px"
+					scrollDiv.style.overflow = "scroll"
+
+					document.body.appendChild(scrollDiv)
+					var scrollbarHeight = scrollDiv.offsetHeight - scrollDiv.clientHeight
+					document.body.removeChild(scrollDiv)
+
+					return scrollbarHeight
+				}
+
+				//let arnh = getViewportHeight()
+				//console.log(arnh)
+
+				////let arnh = window.innerHeight
+				//let item = document.querySelector(".item").offsetHeight
+				//let header = document.querySelector(".header_fixed").offsetHeight
+				//let hehe = (arnh - item + document.querySelector("#anchor4").offsetHeight / 0.5) / 2 + header / 2
+				//console.log(header)
+
+				//document.querySelector("#anchor1").style.height = `${hehe - 5 * vh}px`
+				//document.querySelector("#anchor4").style.height = `${hehe - 5 * vh}px`
+
+				let arnh = window.innerHeight
+				console.log(arnh)
+
+				let item = document.querySelector(".item").offsetHeight
+				let header = document.querySelector(".header_fixed").offsetHeight
+				let hehe = (arnh - item) / 2 + header / 2
+
+				document.querySelector("#anchor1").style.height = `${hehe + 14 * vh}px`
+				document.querySelector("#anchor4").style.height = `${hehe + 14 * vh}px`
+				// !!!! ОТСТУП
+			}
 		}, 10)
 	})
 
@@ -1297,7 +1381,6 @@ document.addEventListener("DOMContentLoaded", function () {
 							start: "center bottom",
 							end: "center 65%",
 							scrub: 2,
-							markers: true,
 						},
 						frame: proxy2_1.lastFrame,
 					})
@@ -1308,45 +1391,57 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 
 			function init2_2() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_2.lastFrame,
-				})
+				let lotti2 = gsap
+					.timeline({
+						scrollTrigger: {
+							trigger: "#animationWindow2_2",
+							pin: false,
+							start: "center bottom",
+							end: "center 65%",
+							scrub: 2,
+						},
+						frame: proxy2_2.lastFrame,
+					})
+					.to(proxy2_2, {
+						duration: 0.5,
+						frame: 12,
+					})
 			}
 
 			function init2_3() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_3.lastFrame,
-				})
+				let lotti2 = gsap
+					.timeline({
+						scrollTrigger: {
+							trigger: "#animationWindow2_3",
+							pin: false,
+							start: "center bottom",
+							end: "center 65%",
+							scrub: 2,
+						},
+						frame: proxy2_3.lastFrame,
+					})
+					.to(proxy2_3, {
+						duration: 0.5,
+						frame: 12,
+					})
 			}
 
 			function init2_4() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_4.lastFrame,
-				})
+				let lotti2 = gsap
+					.timeline({
+						scrollTrigger: {
+							trigger: "#animationWindow2_4",
+							pin: false,
+							start: "center bottom",
+							end: "center 65%",
+							scrub: 2,
+						},
+						frame: proxy2_4.lastFrame,
+					})
+					.to(proxy2_4, {
+						duration: 0.5,
+						frame: 12,
+					})
 			}
 		}
 
@@ -1385,13 +1480,86 @@ document.addEventListener("DOMContentLoaded", function () {
 				document.querySelector("#anchor1").style.height = `${hehe}px`
 				document.querySelector("#anchor4").style.height = `${hehe}px`
 			} else {
+				function getViewportHeight() {
+					var windowHeight = window.innerHeight // Получаем высоту окна браузера
+
+					// Проверяем, есть ли полоса прокрутки
+					var outerDiv = document.createElement("div")
+					outerDiv.style.visibility = "hidden"
+					outerDiv.style.overflow = "scroll"
+					outerDiv.style.width = "100px"
+					outerDiv.style.height = "100px"
+
+					var innerDiv = document.createElement("div")
+					innerDiv.style.height = "200px"
+
+					outerDiv.appendChild(innerDiv)
+					document.body.appendChild(outerDiv)
+
+					var hasScrollbar = outerDiv.offsetHeight > innerDiv.offsetHeight
+
+					document.body.removeChild(outerDiv)
+
+					// Если есть полоса прокрутки, вычитаем ее высоту из общей высоты
+					if (hasScrollbar) {
+						windowHeight -= getScrollbarHeight()
+					}
+					//var textElement = document.querySelector(".page-top-banner__text")
+
+					//// Добавляем значение в текст элемента
+					//textElement.textContent = `${windowHeight}`
+					return windowHeight
+				}
+
+				function getScrollbarHeight() {
+					var scrollDiv = document.createElement("div")
+					scrollDiv.style.height = "100px"
+					scrollDiv.style.overflow = "scroll"
+
+					document.body.appendChild(scrollDiv)
+					var scrollbarHeight = scrollDiv.offsetHeight - scrollDiv.clientHeight
+					document.body.removeChild(scrollDiv)
+
+					return scrollbarHeight
+				}
+
+				//const items = document.querySelectorAll(".item")
+				//items.forEach((item, index) => {
+				//	if (index > 0) {
+				//		// Condition to start from the second element
+				//		let arnh = window.innerHeight
+
+				//		let itema = item.offsetHeight
+				//		let header = document.querySelector(".header_fixed").offsetHeight
+				//		let hehe2 = (arnh - itema) / 2 + header / 2
+
+				//		if (index === 6) {
+				//			item.style.marginTop = `-${hehe2}px`
+				//			console.log("6")
+				//		} else if (index === 7) {
+				//			item.style.marginTop = `-${hehe2}px`
+				//			console.log("7")
+				//		} else {
+				//			item.style.marginTop = `-${hehe2 / 4}px`
+				//			console.log("else")
+				//		}
+				//	}
+				//})
+
+				//let arnh = getViewportHeight()
 				let arnh = window.innerHeight
+				console.log(arnh)
+
 				let item = document.querySelector(".item").offsetHeight
 				let header = document.querySelector(".header_fixed").offsetHeight
 				let hehe = (arnh - item) / 2 + header / 2
 
-				document.querySelector("#anchor1").style.height = `${hehe / 1.05}px`
-				document.querySelector("#anchor4").style.height = `${hehe / 1.05}px`
+				const addressBarHeight = window.outerHeight - window.innerHeight
+				console.log(`Высота адресной строки: ${addressBarHeight}px`)
+
+				document.querySelector("#anchor1").style.height = `${hehe + 5 * vh}px`
+				document.querySelector("#anchor4").style.height = `${hehe + 5 * vh}px`
+				// !!!! ОТСТУП
 			}
 		}, 700)
 

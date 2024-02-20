@@ -371,7 +371,10 @@
 	flex-direction: column;
 }
 
-#animationWindow2_1 {
+#animationWindow2_1,
+#animationWindow2_2,
+#animationWindow2_3,
+#animationWindow2_4 {
 	width: 60vw;
 	margin: 0 calc(20vw - 15px);
 }
@@ -407,6 +410,9 @@
 	margin-top: 7vh;
 	& > * {
 		width: 45%;
+	}
+	&--bi {
+		margin-top: 9vh;
 	}
 }
 

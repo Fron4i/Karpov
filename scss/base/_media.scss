@@ -960,6 +960,10 @@
 	}
 }
 @media screen and (max-width: 480px) {
+	.lotti-section__title {
+		margin-bottom: 42px;
+	}
+
 	.item--title__wrap {
 		padding-left: 30px;
 	}
@@ -1004,15 +1008,15 @@
 			gap: 12px;
 		}
 		&__title {
-			font-size: 20px;
-			line-height: 24px;
+			font-size: 19px;
+			line-height: 23px;
 		}
 		&__subtitle {
-			font-size: 14px;
-			line-height: 18px;
+			font-size: 13px;
+			line-height: 17px;
 		}
 	}
-
+	.flag-2,
 	.flag-3,
 	.flag-4,
 	.flag-5,
@@ -1020,7 +1024,7 @@
 	.flag-7,
 	.flag-8,
 	.flag-9 {
-		margin: 35vh 0;
+		margin: 40vh 0;
 	}
 	.page-top-banner {
 		height: 66px;
