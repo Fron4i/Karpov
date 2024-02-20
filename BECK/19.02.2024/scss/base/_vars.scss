@@ -1,0 +1,25 @@
+// Fonts
+$font-main: "Roboto", sans-serif;
+$font-footer: "Inter", sans-serif;
+
+// Colors
+$white: #fff;
+$primary: #1946da;
+$white-2: #fafafa;
+$black: #2b2b2b;
+$midnight-blue: #001047;
+$paragraph: #676c80;
+
+// Number
+$top-dk: 80px;
+$top-pl: 60px;
+//$top-mb:;
+
+@font-face {
+	font-family: "Fa solid 900";
+	src: url("https://assets.website-files.com/64c23c6ec82b2204b21af185/64c23c6fc82b2204b21af215_fa-solid-900.ttf")
+		format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

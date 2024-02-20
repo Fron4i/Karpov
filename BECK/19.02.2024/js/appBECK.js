@@ -107,62 +107,62 @@ function isElementInViewport(element) {
 	)
 }
 //~afsssssssssssssssssssssssss
+if (window.innerWidth <= 480) {
+	const texts = document.querySelectorAll(".lotti-title")
+	const flags = document.querySelectorAll(".flag-title")
 
-const texts = document.querySelector(".wrap").querySelectorAll(".lotti-title")
-const flags = document.querySelectorAll(".flag-title")
+	// Устанавливаем начальную прозрачность для надписей
+	texts.forEach((text) => {
+		text.style.opacity = "0"
+	})
 
-// Устанавливаем начальную прозрачность для надписей
-texts.forEach((text) => {
-	text.style.opacity = "0"
-})
+	let visibleIndex = -1 // Индекс видимой надписи
 
-let visibleIndex = -1 // Индекс видимой надписи
+	// Обрабатываем видимость флагов
+	flags.forEach((flag, index) => {
+		window.addEventListener("scroll", () => {
+			const rect = flag.getBoundingClientRect()
 
-// Обрабатываем видимость флагов
-flags.forEach((flag, index) => {
-	window.addEventListener("scroll", () => {
-		const rect = flag.getBoundingClientRect()
+			if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+				// Флаг виден на экране
 
-		if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-			// Флаг виден на экране
+				if (index !== visibleIndex) {
+					// Показываем текущую надпись
+					texts[index].style.opacity = "1"
+					texts[index].style.transition = "opacity 0.5s ease-in-out"
 
-			if (index !== visibleIndex) {
-				// Показываем текущую надпись
-				texts[index].style.opacity = "1"
-				texts[index].style.transition = "opacity 0.5s ease-in-out"
+					// Скрываем предыдущую надпись (если есть)
+					if (visibleIndex >= 0) {
+						texts[visibleIndex].style.opacity = "0"
+						texts[visibleIndex].style.transition = "opacity 0.5s ease-in-out"
+					}
 
-				// Скрываем предыдущую надпись (если есть)
-				if (visibleIndex >= 0) {
+					visibleIndex = index
+				}
+			} else if (index === visibleIndex) {
+				// Флаг не виден на экране, но был видимым ранее
+
+				// Проверяем, виден ли следующий флаг
+				let nextVisibleIndex = -1
+
+				for (let i = index + 1; i < flags.length; i++) {
+					const nextRect = flags[i].getBoundingClientRect()
+					if (nextRect.top >= 0 && nextRect.bottom <= window.innerHeight) {
+						nextVisibleIndex = i
+						break
+					}
+				}
+
+				if (nextVisibleIndex === -1) {
+					// Следующий флаг не виден, скрываем надпись
 					texts[visibleIndex].style.opacity = "0"
 					texts[visibleIndex].style.transition = "opacity 0.5s ease-in-out"
-				}
-
-				visibleIndex = index
-			}
-		} else if (index === visibleIndex) {
-			// Флаг не виден на экране, но был видимым ранее
-
-			// Проверяем, виден ли следующий флаг
-			let nextVisibleIndex = -1
-
-			for (let i = index + 1; i < flags.length; i++) {
-				const nextRect = flags[i].getBoundingClientRect()
-				if (nextRect.top >= 0 && nextRect.bottom <= window.innerHeight) {
-					nextVisibleIndex = i
-					break
+					visibleIndex = -1
 				}
 			}
-
-			if (nextVisibleIndex === -1) {
-				// Следующий флаг не виден, скрываем надпись
-				texts[visibleIndex].style.opacity = "0"
-				texts[visibleIndex].style.transition = "opacity 0.5s ease-in-out"
-				visibleIndex = -1
-			}
-		}
+		})
 	})
-})
-
+}
 //~afsssssssssssssssssssssssss
 
 let startLoadTime = new Date().getTime()
@@ -294,9 +294,6 @@ let pixels = remToPixels(2.8125)
 //?fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 // ТТТ
 function smoothScrollTo1(element, duration, distanceFromTop = 0) {
-	if (window.innerWidth <= 480) {
-		duration = 1500
-	}
 	if (element == "flfl") {
 		const ln1 = document.querySelector(".welcome").offsetHeight
 		const ln2 = document.querySelector(".con").offsetHeight * 0.5
@@ -337,13 +334,7 @@ function smoothScrollTo1(element, duration, distanceFromTop = 0) {
 		let arnh = window.innerHeight
 		let item = document.querySelector(".item").offsetHeight
 		let header = document.querySelector(".header_fixed").offsetHeight
-		let hehe
-
-		if (window.innerWidth > 480) {
-			hehe = (arnh - item) / 2 + header / 2
-		} else {
-			hehe = ((arnh - item) / 2 + header / 2) / 1.05
-		}
+		let hehe = (arnh - item) / 2 + header / 2
 
 		let rect = distanceFromTop
 
@@ -415,13 +406,8 @@ setTimeout(() => {
 
 	function getFlagPosition(elementSelector) {
 		let flagElement = document.querySelector(elementSelector)
-
-		if (flagElement) {
-			let flagPosition = flagElement.offsetTop
-			return flagPosition
-		} else {
-			return null
-		}
+		let flagPosition = flagElement.offsetTop
+		return flagPosition
 	}
 
 	// Устанавливаем значение counter1 в зависимости от положения страницы
@@ -437,7 +423,7 @@ setTimeout(() => {
 	let counter9 = getFlagPosition(".flag-9") < window.pageYOffset ? 2 : 1
 
 	setInterval(() => {
-		//console.log(counter1, counter2, counter3, counter4, counter5, counter6, counter7, counter8, counter9)
+		//console.log(counter1, counter2, counter3, counter4, counter5)
 	}, 100)
 
 	window.onbeforeunload = function () {
@@ -507,39 +493,27 @@ setTimeout(() => {
 			let distanceFromTop2 = lnlnElement2.offsetTop
 			if (counter4 % 2 === 1) {
 				smoothScrollTo1("ff77", 1000, distanceFromTop1)
+				//console.log("5")
 			} else {
 				smoothScrollTo1("ff88", 1000, distanceFromTop2)
+				//console.log("6")
 			}
 		}
 	}
 	function handleVisibility5(entries) {
-		if (window.innerWidth <= 480) {
-			const entry = entries[0]
-			if (entry.isIntersecting) {
-				counter5++
-				let lnlnElement1 = document.getElementById("anchor8")
-				let lnlnElement2 = document.getElementById("anchor9")
-				let distanceFromTop1 = lnlnElement1.offsetTop
-				let distanceFromTop2 = lnlnElement2.offsetTop
-				if (counter5 % 2 === 1) {
-					smoothScrollTo1("ff88", 1000, distanceFromTop1)
-				} else {
-					smoothScrollTo1("ff99", 1000, distanceFromTop2)
-				}
-			}
-		} else {
-			const entry = entries[0]
-			if (entry.isIntersecting) {
-				counter5++
-				let lnlnElement1 = document.getElementById("anchor8")
-				let lnlnElement2 = document.getElementById("anchor3")
-				let distanceFromTop1 = lnlnElement1.offsetTop
-				let distanceFromTop2 = lnlnElement2.offsetTop
-				if (counter5 % 2 === 1) {
-					smoothScrollTo1("ff88", 1000, distanceFromTop1)
-				} else {
-					smoothScrollTo1("ffd", 1000, distanceFromTop2)
-				}
+		const entry = entries[0]
+		if (entry.isIntersecting) {
+			counter5++
+			let lnlnElement1 = document.getElementById("anchor8")
+			let lnlnElement2 = document.getElementById("anchor9")
+			let distanceFromTop1 = lnlnElement1.offsetTop
+			let distanceFromTop2 = lnlnElement2.offsetTop
+			if (counter5 % 2 === 1) {
+				smoothScrollTo1("ff88", 1000, distanceFromTop1)
+				//console.log("7")
+			} else {
+				smoothScrollTo1("ff99", 1000, distanceFromTop2)
+				//console.log("8")
 			}
 		}
 	}
@@ -552,7 +526,7 @@ setTimeout(() => {
 			let lnlnElement2 = document.getElementById("anchor10")
 			let distanceFromTop1 = lnlnElement1.offsetTop
 			let distanceFromTop2 = lnlnElement2.offsetTop
-			if (counter6 % 2 === 1) {
+			if (counter5 % 2 === 1) {
 				smoothScrollTo1("ff99", 1000, distanceFromTop1)
 				//console.log("7")
 			} else {
@@ -570,7 +544,7 @@ setTimeout(() => {
 			let lnlnElement2 = document.getElementById("anchor11")
 			let distanceFromTop1 = lnlnElement1.offsetTop
 			let distanceFromTop2 = lnlnElement2.offsetTop
-			if (counter7 % 2 === 1) {
+			if (counter5 % 2 === 1) {
 				smoothScrollTo1("ff10", 1000, distanceFromTop1)
 				//console.log("7")
 			} else {
@@ -588,10 +562,12 @@ setTimeout(() => {
 			let lnlnElement2 = document.getElementById("anchor12")
 			let distanceFromTop1 = lnlnElement1.offsetTop
 			let distanceFromTop2 = lnlnElement2.offsetTop
-			if (counter8 % 2 === 1) {
+			if (counter5 % 2 === 1) {
 				smoothScrollTo1("ff11", 1000, distanceFromTop1)
+				//console.log("7")
 			} else {
 				smoothScrollTo1("ff12", 1000, distanceFromTop2)
+				//console.log("8")
 			}
 		}
 	}
@@ -604,10 +580,12 @@ setTimeout(() => {
 			let lnlnElement2 = document.getElementById("anchor3")
 			let distanceFromTop1 = lnlnElement1.offsetTop
 			let distanceFromTop2 = lnlnElement2.offsetTop
-			if (counter9 % 2 === 1) {
+			if (counter5 % 2 === 1) {
 				smoothScrollTo1("ff12", 1000, distanceFromTop1)
+				//console.log("7")
 			} else {
 				smoothScrollTo1("ffd", 1000, distanceFromTop2)
+				//console.log("8")
 			}
 		}
 	}
@@ -754,12 +732,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			let item1 = document.querySelector(".item--title").offsetHeight
 			let item2 = document.querySelector(".item--info").offsetHeight
 			let header = document.querySelector(".header_fixed").offsetHeight
-			let hehe
-			if (window.innerWidth > 480) {
-				hehe = (arnh - item1 - item2) / 2 + header / 2
-			} else {
-				hehe = ((arnh - item1 - item2) / 2 + header / 2) / 1.05
-			}
+			let hehe = (arnh - item1 - item2) / 2 + header / 2
 
 			document.querySelector("#anchor1").style.height = `${hehe}px`
 			document.querySelector("#anchor4").style.height = `${hehe}px`
@@ -769,36 +742,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	if (window.innerWidth <= 480) {
 		//!СКРЫТИЕ ШАПКИ
-		//let header = document.querySelector(".header_fixed")
-		//let isInteracting = false
-		//let isMoving = false
-		//let timeout
-		//function handleTouchStart() {
-		//	isInteracting = true
-		//	header.classList.add("hidden")
-		//}
-		//function handleTouchEnd() {
-		//	isInteracting = false
-		//	if (!isMoving) {
-		//		header.classList.remove("hidden")
-		//	}
-		//}
-		//function handleScroll() {
-		//	isMoving = true
-		//	if (!isInteracting) {
-		//		header.classList.add("hidden")
-		//	}
-		//	clearTimeout(timeout)
-		//	timeout = setTimeout(function () {
-		//		isMoving = false
-		//		if (!isInteracting) {
-		//			header.classList.remove("hidden")
-		//		}
-		//	}, 10)
-		//}
-		//window.addEventListener("touchstart", handleTouchStart)
-		//window.addEventListener("touchend", handleTouchEnd)
-		//window.addEventListener("scroll", handleScroll)
+
+		let prevScrollPos = window.pageYOffset
+		let header = document.querySelector(".header_fixed")
+
+		function handleScroll() {
+			let currentScrollPos = window.pageYOffset
+			if (prevScrollPos > currentScrollPos) {
+				header.classList.remove("hidden")
+			} else {
+				header.classList.add("hidden")
+			}
+			prevScrollPos = currentScrollPos
+		}
+
+		window.addEventListener("scroll", handleScroll)
 	}
 
 	//! Скролл на мобиле
@@ -997,12 +955,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 				element.remove()
 			}
-			if (document.querySelector(".wrap-mob")) {
-				const parentElement = document.querySelector(".wrap-mob")
-				removeElement(parentElement)
-			}
 
-			//~ Lotti
+			const parentElement = document.querySelector(".wrap-mob")
+			removeElement(parentElement)
 
 			let proxy2 = LottieProxy2({
 				container: "#animationWindow2",
@@ -1048,6 +1003,54 @@ document.addEventListener("DOMContentLoaded", function () {
 				return proxy2
 			}
 			function init2() {
+				//gsap.to(".wrap", {
+				//	autoAlpha: 0,
+				//	ease: "sine.out",
+				//	scrollTrigger: {
+				//		trigger: "#animationWindow2",
+				//		start: `top +=500%`,
+				//		end: `+=5%`,
+				//		markers: false,
+				//		scrub: 0.5,
+				//	},
+				//})
+				//gsap.to(".wrap", {
+				//	autoAlpha: 1,
+				//	ease: "power1.out",
+				//	scrollTrigger: {
+				//		trigger: ".lotti-2",
+				//		start: `top +=75%`,
+				//		end: `+=160%`,
+				//		markers: false,
+				//		scrub: 0.5,
+				//	},
+				//})
+				//88888
+				//gsap.set(".wrap", { autoAlpha: 0.01 })
+
+				//gsap.to(".wrap", {
+				//	autoAlpha: 1,
+				//	ease: "power1.out",
+				//	scrollTrigger: {
+				//		trigger: ".lotti-2",
+				//		start: `top +=70%`,
+				//		end: `+=40%`,
+				//		markers: false,
+				//		scrub: 0.5,
+				//	},
+				//})
+				//!!!!
+				//gsap.to(".right", {
+				//	scrollTrigger: {
+				//		trigger: ".lotti-2",
+				//		start: `top +=19%`,
+				//		end: `+=${document.querySelector(".item").offsetHeight - document.querySelector(".ppppp").offsetHeight * 1.67}`,
+				//		markers: false,
+				//		scrub: 0.5,
+				//		pin: ".itiem-1",
+				//	},
+				//})
+
 				let lotti2 = gsap
 					.timeline({
 						scrollTrigger: {
@@ -1108,246 +1111,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 				element.remove()
 			}
+			// Пример использования
 			const parentElement = document.querySelector(".wrap")
 			removeElement(parentElement)
-
-			//~ Lotti
-
-			let proxy2_1 = LottieProxy2_1({
-				container: "#animationWindow2_1",
-				path: "./img/lotti/lotti_2-mob-1.json",
-			})
-			let proxy2_2 = LottieProxy2_2({
-				container: "#animationWindow2_2",
-				path: "./img/lotti/lotti_2-mob-2.json",
-			})
-			let proxy2_3 = LottieProxy2_3({
-				container: "#animationWindow2_3",
-				path: "./img/lotti/lotti_2-mob-3.json",
-			})
-			let proxy2_4 = LottieProxy2_4({
-				container: "#animationWindow2_4",
-				path: "./img/lotti/lotti_2-mob-4.json",
-			})
-
-			proxy2_1.onLoaded(init2_1)
-			proxy2_2.onLoaded(init2_2)
-			proxy2_3.onLoaded(init2_3)
-			proxy2_4.onLoaded(init2_4)
-
-			function LottieProxy2_1(options) {
-				let animation = lottie.loadAnimation({
-					renderer: "svg",
-					loop: false,
-					autoplay: false,
-					...options,
-					container: gsap.utils.toArray(options.container)[0],
-				})
-
-				let frame = 0
-				let onLoad
-
-				let proxy2_1 = {
-					animation,
-					loaded: false,
-					get lastFrame() {
-						return animation.firstFrame + animation.totalFrames - 1
-					},
-					get frame() {
-						return frame
-					},
-					set frame(value) {
-						frame = value
-						this.loaded && animation.goToAndStop(frame, true)
-					},
-					onLoaded(cb) {
-						onLoad = cb
-					},
-				}
-
-				animation.addEventListener("DOMLoaded", () => {
-					proxy2_1.loaded = true
-					proxy2_1.frame = frame
-					onLoad && onLoad()
-				})
-
-				return proxy2_1
-			}
-			function LottieProxy2_2(options) {
-				let animation = lottie.loadAnimation({
-					renderer: "svg",
-					loop: false,
-					autoplay: false,
-					...options,
-					container: gsap.utils.toArray(options.container)[0],
-				})
-
-				let frame = 0
-				let onLoad
-
-				let proxy2_2 = {
-					animation,
-					loaded: false,
-					get lastFrame() {
-						return animation.firstFrame + animation.totalFrames - 1
-					},
-					get frame() {
-						return frame
-					},
-					set frame(value) {
-						frame = value
-						this.loaded && animation.goToAndStop(frame, true)
-					},
-					onLoaded(cb) {
-						onLoad = cb
-					},
-				}
-
-				animation.addEventListener("DOMLoaded", () => {
-					proxy2_2.loaded = true
-					proxy2_2.frame = frame
-					onLoad && onLoad()
-				})
-
-				return proxy2_2
-			}
-			function LottieProxy2_3(options) {
-				let animation = lottie.loadAnimation({
-					renderer: "svg",
-					loop: false,
-					autoplay: false,
-					...options,
-					container: gsap.utils.toArray(options.container)[0],
-				})
-
-				let frame = 0
-				let onLoad
-
-				let proxy2_3 = {
-					animation,
-					loaded: false,
-					get lastFrame() {
-						return animation.firstFrame + animation.totalFrames - 1
-					},
-					get frame() {
-						return frame
-					},
-					set frame(value) {
-						frame = value
-						this.loaded && animation.goToAndStop(frame, true)
-					},
-					onLoaded(cb) {
-						onLoad = cb
-					},
-				}
-
-				animation.addEventListener("DOMLoaded", () => {
-					proxy2_3.loaded = true
-					proxy2_3.frame = frame
-					onLoad && onLoad()
-				})
-
-				return proxy2_3
-			}
-			function LottieProxy2_4(options) {
-				let animation = lottie.loadAnimation({
-					renderer: "svg",
-					loop: false,
-					autoplay: false,
-					...options,
-					container: gsap.utils.toArray(options.container)[0],
-				})
-
-				let frame = 0
-				let onLoad
-
-				let proxy2_4 = {
-					animation,
-					loaded: false,
-					get lastFrame() {
-						return animation.firstFrame + animation.totalFrames - 1
-					},
-					get frame() {
-						return frame
-					},
-					set frame(value) {
-						frame = value
-						this.loaded && animation.goToAndStop(frame, true)
-					},
-					onLoaded(cb) {
-						onLoad = cb
-					},
-				}
-
-				animation.addEventListener("DOMLoaded", () => {
-					proxy2_4.loaded = true
-					proxy2_4.frame = frame
-					onLoad && onLoad()
-				})
-
-				return proxy2_4
-			}
-
-			function init2_1() {
-				let lotti2 = gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: "#animationWindow2_1",
-							pin: false,
-							start: "center bottom",
-							end: "center 65%",
-							scrub: 2,
-							markers: true,
-						},
-						frame: proxy2_1.lastFrame,
-					})
-					.to(proxy2_1, {
-						duration: 0.5,
-						frame: 12,
-					})
-			}
-
-			function init2_2() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_2.lastFrame,
-				})
-			}
-
-			function init2_3() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_3.lastFrame,
-				})
-			}
-
-			function init2_4() {
-				let lotti2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: "#animationWindow2_1",
-						pin: false,
-						start: "center bottom",
-						end: "center 65%",
-						scrub: 2,
-						markers: true,
-					},
-					frame: proxy2_4.lastFrame,
-				})
-			}
 		}
 
 		//!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -1376,25 +1142,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		//document.head.appendChild(style)
 
 		setTimeout(() => {
-			if (window.innerWidth > 480) {
-				let arnh = window.innerHeight
-				let item = document.querySelector(".item").offsetHeight
-				let header = document.querySelector(".header_fixed").offsetHeight
-				let hehe = (arnh - item) / 2 + header / 2
+			let arnh = window.innerHeight
+			let item = document.querySelector(".item").offsetHeight
+			let header = document.querySelector(".header_fixed").offsetHeight
+			let hehe = (arnh - item) / 2 + header / 2
 
-				document.querySelector("#anchor1").style.height = `${hehe}px`
-				document.querySelector("#anchor4").style.height = `${hehe}px`
-			} else {
-				let arnh = window.innerHeight
-				let item = document.querySelector(".item").offsetHeight
-				let header = document.querySelector(".header_fixed").offsetHeight
-				let hehe = (arnh - item) / 2 + header / 2
-
-				document.querySelector("#anchor1").style.height = `${hehe / 1.05}px`
-				document.querySelector("#anchor4").style.height = `${hehe / 1.05}px`
-			}
+			document.querySelector("#anchor1").style.height = `${hehe}px`
+			document.querySelector("#anchor4").style.height = `${hehe}px`
 		}, 700)
-
 		//!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 	}, 1700)
 })

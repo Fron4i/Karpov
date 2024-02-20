@@ -264,11 +264,6 @@
 	scroll-snap-type: y mandatory;
 }
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-.wrap-mob {
-	width: 100%;
-	margin-top: 8vh;
-}
-//******
 
 .item {
 	scroll-snap-align: start;
@@ -362,60 +357,3 @@
 	}
 }
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-.lotti-2-mob {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
-}
-
-#animationWindow2_1 {
-	width: 60vw;
-	margin: 0 calc(20vw - 15px);
-}
-
-.item--title-mob {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 27px;
-}
-.item--title-mob__wrap {
-	gap: 24px;
-	max-width: 90%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-content: center;
-}
-
-.item__title-mob {
-	text-align: center;
-}
-.item__text-mob {
-	text-align: center;
-}
-
-.lotti-title-wrapper-mob {
-}
-
-.item__button-wrapper-mob-1 {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	margin-top: 7vh;
-	& > * {
-		width: 45%;
-	}
-}
-
-.item__button-wrapper-mob {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	margin-top: 5vh;
-	& > * {
-		width: 45%;
-	}
-}

@@ -1,0 +1,21 @@
+// Base
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/animation";
+@import "./base/button";
+@import "./base/blocks";
+
+//Blocks
+@import "./block/header";
+@import "./block/banner-tg";
+@import "./block/welcome";
+@import "./block/logo";
+@import "./block/nav-mobil";
+@import "./block/lotti-section";
+@import "./block/database";
+@import "./block/cube";
+@import "./block/footer";
+
+// Base (media)
+@import "./base/media";
