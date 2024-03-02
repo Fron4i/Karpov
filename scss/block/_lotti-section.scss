@@ -56,8 +56,8 @@
 	opacity: 0;
 	transform: translateY(1.3rem);
 	transition:
-		opacity 0.5s ease,
-		transform 0.5s ease;
+		opacity 0.25s ease,
+		transform 0.25s ease;
 }
 .animate-on-scroll--left {
 	opacity: 0;
@@ -65,6 +65,13 @@
 	transition:
 		opacity 1.5s ease-out,
 		transform 0.55s ease;
+}
+.animate-on-scroll--left-2 {
+	opacity: 0;
+	transform: translateY(0px) translateX(-6.25rem);
+	transition:
+		opacity 0.5s ease-out,
+		transform 0.5s ease;
 }
 .animate-on-scroll--right-1,
 .animate-on-scroll--right-2,
@@ -74,13 +81,18 @@
 	opacity: 0;
 	transform: translateY(0px) translateX(6.25rem);
 	transition:
-		opacity 0.5s ease-out,
-		transform 0.5s ease;
+		opacity 0.25s ease-out,
+		transform 0.25s ease;
 }
 .animate-on-scroll--left.show {
 	opacity: 1;
 	transform: translateX(0);
 	transition-delay: 250ms;
+}
+.animate-on-scroll--left-2.show {
+	opacity: 1;
+	transform: translateX(0);
+	transition-delay: 100ms;
 }
 .animate-on-scroll--right-1.show {
 	opacity: 1;
@@ -111,18 +123,18 @@
 .animate-on-scroll-1.show {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 300ms;
+	transition-delay: 250ms;
 }
 .animate-on-scroll-11.show {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 150ms;
+	transition-delay: 25ms;
 }
 
 .animate-on-scroll-2.show {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 250ms;
+	transition-delay: 150ms;
 }
 
 .animate-on-scroll-3.show {

@@ -111,5 +111,117 @@ a {
 }
 
 .main {
-	padding-top: 104px;
+	padding-top: 155px;
+}
+
+@media screen and (min-width: 1025px) {
+	.up {
+		z-index: 1000;
+		bottom: 11.5%;
+		right: 4.6%;
+		position: fixed;
+		width: 90.5px;
+		height: 90.5px;
+		border-radius: 50%;
+		cursor: pointer;
+		pointer-events: all;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fcfcfc;
+		filter: drop-shadow(0px 0px 22px rgba(0, 16, 71, 0.2));
+		transition: all 0.55s;
+		opacity: 0;
+
+		&:hover {
+			filter: drop-shadow(0px 0px 22px rgba(68, 33, 193, 0.384));
+		}
+
+		& > img {
+			height: 42%;
+		}
+	}
+
+	.up-mob {
+		display: none;
+	}
+
+	.up-pc {
+		display: block;
+	}
+}
+@media screen and (max-width: 1025px) {
+	.up {
+		z-index: 1000;
+		bottom: 13%;
+		right: 4.4%;
+		position: fixed;
+		width: 74px;
+		height: 74px;
+		border-radius: 50%;
+		cursor: pointer;
+		pointer-events: all;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fcfcfc;
+		filter: drop-shadow(0px 0px 22px rgba(0, 16, 71, 0.2));
+		transition: all 0.15s;
+		transition: opacity 0.5s ease-out;
+		opacity: 0;
+
+		&:active {
+			filter: drop-shadow(0px 0px 22px rgba(68, 33, 193, 0.384));
+		}
+
+		& > img {
+			height: 48%;
+		}
+	}
+
+	.up-mob {
+		display: block;
+	}
+
+	.up-pc {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.up {
+		z-index: 1000;
+		bottom: 10%;
+		right: 6%;
+		position: fixed;
+		width: 47px;
+		height: 47px;
+		border-radius: 50%;
+		cursor: pointer;
+		pointer-events: all;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		background: rgba(201, 200, 200, 0.329);
+		backdrop-filter: blur(20.5px);
+		transition: background 0.15s;
+		transition: opacity 0.5s ease-out;
+
+		&:active {
+			background: rgba(123, 121, 233, 0.384);
+			backdrop-filter: blur(20.5px);
+		}
+
+		& > img {
+			height: 50%;
+		}
+	}
+
+	.up-mob {
+		display: block;
+	}
+
+	.up-pc {
+		display: none;
+	}
 }

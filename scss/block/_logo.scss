@@ -28,24 +28,28 @@
 	align-items: center;
 	justify-content: center;
 	flex: 0 0 auto;
-	animation: marquee-horizontal 30s linear infinite;
+	animation: marquee-horizontal 60s linear infinite;
 }
 
 .home-hero-logo {
 	display: flex;
-	margin-right: 32px;
-	margin-left: 32px;
+	margin-right: 27px;
+	margin-left: 27px;
 	justify-content: center;
 	align-items: center;
 	& > img {
-		height: 47px;
+		max-height: 45px;
 	}
 	& > span {
-		height: 47px;
+		max-height: 45px;
 	}
 }
-
+.smal-marg--full {
+	margin-right: 20px;
+	margin-left: 20px;
+}
 .home-hero-logos-overlay {
+	pointer-events: none;
 	position: absolute;
 	left: 0;
 	top: 0;

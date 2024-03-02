@@ -99,8 +99,12 @@
 }
 
 .page-top-banner__video {
+	max-height: 66px; /* Максимальная высота контейнера */
+	//width: 100vw;
+	height: 100%;
+	width: 100%;
+	overflow: hidden; /* Скрывает горизонтальное переполнение */
+	display: flex;
+	justify-content: center;
 	position: absolute;
-	height: inherit;
-	width: 100vw;
-	object-fit: cover;
 }

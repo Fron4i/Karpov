@@ -64,6 +64,13 @@
 	justify-content: start;
 	flex-direction: row;
 }
+.footer__social-wrapper-mob {
+	margin-top: 14px;
+	gap: 8px;
+	display: flex;
+	justify-content: start;
+	flex-direction: row;
+}
 .footer__social-item {
 	width: 25px;
 	transition: opacity 0.3s;
@@ -102,4 +109,94 @@
 	&:hover {
 		color: #9b9b9b;
 	}
+}
+
+.footer-wrapper-mob {
+	padding-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+	align-items: center;
+	flex-direction: column;
+}
+
+//! аккордион
+.accordion {
+	width: 100%;
+	margin-bottom: 50px;
+}
+.accordion-item {
+	border-top: 1px solid #9ca4ad54; /* Рамка сверху */
+	border-right: none; /* Рамка справа */
+	border-left: none; /* Рамка слева */
+	border-bottom: 1px solid #9ca4ad54;
+	&--bottom {
+		border-top: none;
+		border-right: none; /* Рамка справа */
+		border-left: none; /* Рамка слева */
+		border-bottom: 1px solid #9ca4ad54; /* Рамка сверху */
+	}
+}
+.accordion-button {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 27px;
+	width: 100%;
+	text-align: left;
+	padding: 12px 20px;
+	border: none;
+	background-color: #fafafa;
+	cursor: pointer;
+	outline: none;
+	position: relative; /* Для позиционирования стрелки */
+}
+
+.accordion-button .arrow {
+	position: absolute;
+	right: 20px; /* Стрелка справа */
+	top: 50%;
+	transform: translateY(-50%); /* Центрирование по вертикали */
+	background-image: url("./../img/main_Img/arrow.svg"); /* Путь к изображению стрелки */
+	background-size: cover;
+	width: 18px;
+	height: 18px;
+	transition: transform 0.3s ease; /* Плавный поворот */
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	background-color: fafafa;
+	& > p {
+		margin: 0px 20px 7px;
+		font-size: 12px;
+		line-height: 13px;
+		font-weight: 400;
+	}
+	& > p:first-child {
+		margin: 0px 20px 7px;
+		font-size: 12px;
+		line-height: 13px;
+		font-weight: 400;
+	}
+	& > p:last-child {
+		margin: 0px 20px 15px;
+		font-size: 12px;
+		line-height: 13px;
+		font-weight: 400;
+	}
+	& > p > a {
+		color: #676c80;
+		z-index: 300;
+		display: block;
+	}
+}
+
+.accordion-button.active .arrow {
+	transform: translateY(-50%) rotateZ(180deg); /* Поворот стрелки при активации */
+}
+
+.no-scroll {
+	overflow: hidden;
 }
